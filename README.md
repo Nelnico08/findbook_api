@@ -43,16 +43,7 @@ A little intro about the installation.
 ### Backend:
 
 ```
-$ git clone https://github.com/Nelnico08/findbook.git
-$ cd ../path/to/the/file/client/api
-$ npm install
-```
-
-### Frontend:
-
-```
-$ git clone https://github.com/Nelnico08/videogames.git
-$ cd ../path/to/the/file/client
+$ git clone https://github.com/Nelnico08/findbook_back.git
 $ npm install
 ```
 
