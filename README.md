@@ -74,7 +74,7 @@ $ npm install
   </li>
   <li>
     <label>Nuria Candela Córdoba</label>
-    <a href="#!">GitHub</a>
+    <a href="https://github.com/NurCord">GitHub</a>
     <a href="https://www.linkedin.com/in/nuria-candela-cordoba-a14135224/">LinkedIn</a>
   </li>
   <li>
