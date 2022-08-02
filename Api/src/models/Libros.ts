@@ -1,9 +1,10 @@
 import { Table, Model, Column, DataType, BelongsToMany } from "sequelize-typescript";
+import { iLibros } from "../types/Libros";
 import { Generos } from "./Generos";
 import { LibrosGeneros } from "./LibrosGeneros";
 
 @Table
-export class Libros extends Model {
+export class Libros extends Model<iLibros>{
     @Column
     name!: string;
 
