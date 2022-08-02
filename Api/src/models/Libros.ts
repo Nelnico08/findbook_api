@@ -1,4 +1,6 @@
-import { Table, Model, Column, DataType } from "sequelize-typescript";
+import { Table, Model, Column, DataType, BelongsToMany } from "sequelize-typescript";
+import { Generos } from "./Generos";
+import { LibrosGeneros } from "./LibrosGeneros";
 
 @Table
 export class Libros extends Model {
@@ -8,7 +10,7 @@ export class Libros extends Model {
     @Column
     author!: string;
 
-    @Column
+    @Column(DataType.ENUM('todos', 'infantil', 'adolecentes', 'adultos', 'sin clasificación'))
     category!: string;
 
     @Column
@@ -17,21 +19,24 @@ export class Libros extends Model {
     @Column
     publisher!: string;
 
-    @Column(DataType.STRING(500))
+    @Column(DataType.STRING(1000))
     description!: string;
 
     @Column
     image!: string;
 
-    @Column(DataType.ENUM('0', '1', '2', '3', '4', '5'))
-    rating!: string;
+    @Column
+    rating!: number;
 
     @Column
-    price!: string;
+    price!: number;
 
     @Column
-    released!: string;
+    released!: Date;
 
     @Column
     language!: string
+
+    @BelongsToMany(() => Generos, () => LibrosGeneros)
+    generos!: Generos[]
 }
