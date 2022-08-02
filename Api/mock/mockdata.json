@@ -3,14 +3,19 @@
     "id": 1,
     "name": "Renegados",
     "author": "Marissa Meyer",
-    "genre": ["Ciencia ficción", "Fantasía"],
-    "category": ["adolescentes", "adultos"],
+    "genre": [
+      "ficción"
+    ],
+    "category": [
+      "adolescentes",
+      "adultos"
+    ],
     "pages": 587,
     "publisher": "VRYA",
     "description": "Los Renegados son un sindicato de prodigios, humanos con habilidades extraordinarias, quienes surgieron de las ruinas de una sociedad destrozada y establecieron paz y orden donde reinaba el caos.Como campeones de la justicia, ellos son un símbolo de esperanza y coraje para todos... excepto para los villanos que alguna vez derrocaron. Nova tiene una razón para odiar a los Renegados, y tiene como misión la venganza. A medida que se acerca a su objetivo, conoce a Adrian, un Renegado que cree en la justicia. Y en Nova. Pero la lealtad de ella pertenece a un villano que tiene el poder de destruirlos a ambos.",
     "image": "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/646015.jpg",
     "rating": 5,
-    "price": 10.00, 
+    "price": 10.00,
     "released": "2018-02-21",
     "language": "español"
   },
@@ -18,14 +23,18 @@
     "id": 2,
     "name": "La granja de Zenón. Un día en la granja",
     "author": "El Reino Infantil",
-    "genre": ["Infantil"],
-    "category": ["Infantiles"],
+    "genre": [
+      "Infantil"
+    ],
+    "category": [
+      "Infantiles"
+    ],
     "pages": 22,
     "publisher": "Grupo Editorial Planeta S.A.I.",
     "description": "Un grupo de cotorras muy maleducadas se ha adueñado de los melocotoneros. El lorito Pepe y el gallo Bartolito corren a avisar a Zenón, quien tiene un plan infalible para capturarlas.",
     "image": "https://www.planetadelibros.com.ar/usuaris/libros/fotos/331/m_libros/portada_la-granja-de-zenon-un-dia-en-la-granja_el-reino-infantil_202107191813.jpg",
     "rating": 0,
-    "price": 6.00, 
+    "price": 6.00,
     "released": "2021-07-14",
     "language": "español"
   },
@@ -33,14 +42,20 @@
     "id": 3,
     "name": "El visitante",
     "author": "Stephen King",
-    "genre": ["Ciencia ficción", "Terror"],
-    "category": ["adolescentes", "adultos"],
+    "genre": [
+      "ficción",
+      "Terror"
+    ],
+    "category": [
+      "adolescentes",
+      "adultos"
+    ],
     "pages": 592,
     "publisher": "Penguin Random House Grupo Editorial",
     "description": "Un niño de once años ha sido brutalmente asesinado. Todas las pruebas apuntan a uno de los ciudadanos más queridos de Flint City: Terry Maitland, entrenador en la liga infantil, profesor de literatura, marido ejemplar y padre de dos niñas. El detective Ralph Anderson ordena su detención. Maitland tiene una coartada firme que demuestra que estuvo en otra ciudad cuando se cometió el crimen, pero las pruebas de ADN encontradas en el lugar de los hechos confirman que es culpable. Ante la justicia y la opinión pública Terry Maitland es un asesino y el caso está resuelto. Pero el detective Anderson no está satisfecho. Maitland parece un buen tipo, un ciudadano ejemplar, ¿acaso tiene dos caras? Y ¿cómo es posible que estuviera en dos sitios a la vez? La respuesta, como no podría ser de otra forma saliendo de la pluma de Stephen King, te hará desear no haber preguntado. La crítica ha dicho... «¿Puede una persona estar en dos sitios a la vez? Con Stephen King, nunca se sabe...» Woman «Una emocionante historia que trata de algunas de nuestras mayores fobias. Nos recuerda a It.» Kirkus Reviews «El inteligente uso de King de la medicina forense ayuda a cimentar la historia en una realidad clínica creíble, donde los miedos se muestran en su descarnada realidad.» Publishers Weekly «Fascinante. Otro libro asombrosamente oscuro, perfecto para sus millones de lectores.» Booklist «Hay mucho de oscuro y de sobrenatural en esta nueva novela de Stephen King. Pero lo más inquietante resulta ser el lado monstruoso de la naturaleza humana.» USA Today «Hazte un favor y léelo.» Associated Press En los blogs... «La trama es buenísima, los diálogos son estupendos y las escenas, totalmente inquietantes.» Blog Bitácora de mis lecturas «Una historia rotunda y una protagonista fuerte, brillante y capaz que lucha por lo que cree justo sin pararse ante nada ni nadie.» Blog Lectura directa «El visitante es una novela con vida, con fuerza y con una historia realmente potente.» Blog Papel de tinta neg",
     "image": "https://covers.alibrate.com/b/5bcf6c9a08b76e7a029b669d/f9105aac-2fa5-43ac-b7ec-eec51ead72f2/share",
     "rating": 5,
-    "price": 12.30, 
+    "price": 12.30,
     "released": "2021-03-01",
     "language": "español"
   }
