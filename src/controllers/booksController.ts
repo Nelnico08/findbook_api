@@ -10,22 +10,22 @@ export const getBooks = async (
   try {
     let { name } = req.query;
     const books = await Libros.findAll({
-        include:{
-            model: Generos,
-            attributes: ['genre'],
-            through:{
-                attributes:[]
-            }
-        }
+      include: {
+        model: Generos,
+        attributes: ["genre"],
+        through: {
+          attributes: [],
+        },
+      },
     });
     if (name) {
       let regExp = new RegExp(name.toString(), "i");
       let booksByName = books.filter(({ name }) => regExp.test(name));
-      res.json(
+      return res.json(
         booksByName.length ? booksByName : `No hay libros con nombre ${name}`
       );
     } else {
-      res.json(books.length ? books : "No hay libros.");
+      return res.json(books.length ? books : "No hay libros.");
     }
   } catch (error) {
     next(error);
@@ -81,10 +81,10 @@ export const getBooks = async (
 //             language,
 //         });
 
-//         res.json(book)
-        
+//         return res.json(book)
+
 //     }else{
-//         res.send("Faltan datos obligatorios")
+//         return res.send("Faltan datos obligatorios")
 //     }
 
 //   } catch (error) {
