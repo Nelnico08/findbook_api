@@ -1,0 +1,74 @@
+[
+    {
+        "genre": "arte"
+    },
+    {
+        "genre": "biografía"
+    },
+    {
+        "genre": "biología"
+    },
+    {
+        "genre": "comic"
+    },
+    {
+        "genre": "comida"
+    },
+    {
+        "genre": "computación"
+    },
+    {
+        "genre": "deporte"
+    },
+    {
+        "genre": "derecho"
+    },
+    {
+        "genre": "economía"
+    },
+    {
+        "genre": "estudio"
+    },
+    {
+        "genre": "ficción"
+    },
+    {
+        "genre": "historia"
+    },
+    {
+        "genre": "humor"
+    },
+    {
+        "genre": "infantil"
+    },
+    {
+        "genre": "juvenil"
+    },
+    {
+        "genre": "manga"
+    },
+    {
+        "genre": "matemática"
+    },
+    {
+        "genre": "medicina"
+    },
+    {
+        "genre": "novela"
+    },
+    {
+        "genre": "ocio - tiempo libre"
+    },
+    {
+        "genre": "política"
+    },
+    {
+        "genre": "salud - desarrollo personal"
+    },
+    {
+        "genre": "tecnología"
+    },
+    {
+        "genre": "terror"
+    }
+]
