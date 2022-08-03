@@ -1,6 +1,7 @@
 import { Router } from 'express';
-import { getExample } from '../controllers/example';
+
+import { getGenres } from '../controllers/Genre';
 
 export const router = Router();
 
-router.get('/example', getExample);
+router.get('/genres', getGenres);
