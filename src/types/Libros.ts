@@ -2,7 +2,7 @@ export interface iLibros {
     id?: number;
     name: string;
     author: string;
-    category: 'todos' | 'infantil' | 'adolecentes' | 'adultos' | 'sin clasificación'
+    category: 'todos' | '12+' | '16+' | '18+' | 'sin clasificación'
     pages: number;
     publisher: string
     description: string;
