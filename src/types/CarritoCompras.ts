@@ -1,3 +1,4 @@
+type items = string[]
 export interface iCarritoCompras {
-    items: string[]
+    items: items
 }
