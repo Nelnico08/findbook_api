@@ -11,7 +11,7 @@ export class Libros extends Model<iLibros>{
     @Column
     author!: string;
 
-    @Column(DataType.ENUM('todos', 'infantil', 'adolecentes', 'adultos', 'sin clasificación'))
+    @Column(DataType.ENUM('todos', '12+', '16+', '18+', 'sin clasificación'))
     category!: string;
 
     @Column
