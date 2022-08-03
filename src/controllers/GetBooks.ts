@@ -1,14 +1,11 @@
 import { NextFunction, Request, Response } from "express";
 import { Generos } from "../models/Generos";
 import { Libros } from "../models/Libros";
+import { LibrosGeneros } from "../models/LibrosGeneros";
 
-export const getBooks = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+export const getBooks = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    let { name } = req.query;
+    const { name } = req.query;
     const books = await Libros.findAll({
       include: {
         model: Generos,
@@ -32,62 +29,31 @@ export const getBooks = async (
   }
 };
 
-// export const postBooks = async (
-//   req: Request,
-//   res: Response,
-//   next: NextFunction
-// ) => {
-//   try {
-//     let {
-//       name,
-//       author,
-//       category,
-//       pages,
-//       publisher,
-//       description,
-//       image,
-//       rating,
-//       price,
-//       released,
-//       language,
-//       generos,
-//     } = req.body;
-
-//     if (
-//       name &&
-//       author &&
-//       category &&
-//       pages &&
-//       publisher &&
-//       description &&
-//       image &&
-//       rating &&
-//       price &&
-//       released &&
-//       language &&
-//       generos.length
-//     ) {
-//         const book = await Libros.create({
-//             name,
-//             author,
-//             category,
-//             pages,
-//             publisher,
-//             description,
-//             image,
-//             rating,
-//             price,
-//             released,
-//             language,
-//         });
-
-//         return res.json(book)
-
-//     }else{
-//         return res.send("Faltan datos obligatorios")
-//     }
-
-//   } catch (error) {
-//     next(error);
-//   }
-// };
+export const postBooks = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const { books } = req.body
+    if (!books) return res.json('Debes enviar los datos para crear un libro')
+    else {
+      const newBooks = await Libros.bulkCreate(books.map((b: any) => {
+        return {
+          name: b.name,
+          author: b.author,
+          category: b.category,
+          pages: b.pages,
+          publisher: b.publisher,
+          description: b.description,
+          image: b.image,
+          rating: b.rating,
+          price: b.price,
+          released: b.released,
+          language: b.language
+        }
+      }))
+      const getGenres = await books.map(async (b: any) => await b.genre.forEach(async (g: any) => await Generos.findOne({ where: { genre: g } })))
+      const resp = await newBooks.map((b: any, i) => getGenres[i].forEach(async (g: any) => await LibrosGeneros.create({ libroid: b.id, generoid: g.id })))
+      res.json('Funciona')
+    }
+  } catch (error) {
+    next(error);
+  }
+}
