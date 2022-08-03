@@ -6,3 +6,4 @@ export const router = Router();
 
 router.get('/books', getBooks);
 router.get('/genres', getGenres);
+console.log("testing")
