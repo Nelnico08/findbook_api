@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "name": "Renegados",
     "author": "Marissa Meyer",
     "genre": ["ficción"],
@@ -15,7 +14,6 @@
     "language": "español"
   },
   {
-    "id": 2,
     "name": "La granja de Zenón. Un día en la granja",
     "author": "El Reino Infantil",
     "genre": ["Infantil"],
@@ -30,7 +28,6 @@
     "language": "español"
   },
   {
-    "id": 3,
     "name": "El visitante",
     "author": "Stephen King",
     "genre": ["ficción", "Terror"],
