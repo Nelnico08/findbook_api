@@ -2,13 +2,8 @@
   {
     "name": "Renegados",
     "author": "Marissa Meyer",
-    "genre": [
-      "ficción"
-    ],
-    "category": [
-      "adolescentes",
-      "adultos"
-    ],
+    "genre": ["ficción"],
+    "category": "12+",
     "pages": 587,
     "publisher": "VRYA",
     "description": "Los Renegados son un sindicato de prodigios, humanos con habilidades extraordinarias, quienes surgieron de las ruinas de una sociedad destrozada y establecieron paz y orden donde reinaba el caos.Como campeones de la justicia, ellos son un símbolo de esperanza y coraje para todos... excepto para los villanos que alguna vez derrocaron. Nova tiene una razón para odiar a los Renegados, y tiene como misión la venganza. A medida que se acerca a su objetivo, conoce a Adrian, un Renegado que cree en la justicia. Y en Nova. Pero la lealtad de ella pertenece a un villano que tiene el poder de destruirlos a ambos.",
@@ -21,12 +16,8 @@
   {
     "name": "La granja de Zenón. Un día en la granja",
     "author": "El Reino Infantil",
-    "genre": [
-      "infantil"
-    ],
-    "category": [
-      "infantiles"
-    ],
+    "genre": ["infantil"],
+    "category": "todos",
     "pages": 22,
     "publisher": "Grupo Editorial Planeta S.A.I.",
     "description": "Un grupo de cotorras muy maleducadas se ha adueñado de los melocotoneros. El lorito Pepe y el gallo Bartolito corren a avisar a Zenón, quien tiene un plan infalible para capturarlas.",
@@ -39,14 +30,8 @@
   {
     "name": "El visitante",
     "author": "Stephen King",
-    "genre": [
-      "ficción",
-      "terror"
-    ],
-    "category": [
-      "adolescentes",
-      "adultos"
-    ],
+    "genre": ["ficción", "terror"],
+    "category": "16+",
     "pages": 592,
     "publisher": "Penguin Random House Grupo Editorial",
     "description": "Un niño de once años ha sido brutalmente asesinado. Todas las pruebas apuntan a uno de los ciudadanos más queridos de Flint City: Terry Maitland, entrenador en la liga infantil, profesor de literatura, marido ejemplar y padre de dos niñas. El detective Ralph Anderson ordena su detención. Maitland tiene una coartada firme que demuestra que estuvo en otra ciudad cuando se cometió el crimen, pero las pruebas de ADN encontradas en el lugar de los hechos confirman que es culpable. Ante la justicia y la opinión pública Terry Maitland es un asesino y el caso está resuelto. Pero el detective Anderson no está satisfecho. Maitland parece un buen tipo, un ciudadano ejemplar, ¿acaso tiene dos caras? Y ¿cómo es posible que estuviera en dos sitios a la vez? La respuesta, como no podría ser de otra forma saliendo de la pluma de Stephen King, te hará desear no haber preguntado. La crítica ha dicho... «¿Puede una persona estar en dos sitios a la vez? Con Stephen King, nunca se sabe...» Woman «Una emocionante historia que trata de algunas de nuestras mayores fobias. Nos recuerda a It.» Kirkus Reviews «El inteligente uso de King de la medicina forense ayuda a cimentar la historia en una realidad clínica creíble, donde los miedos se muestran en su descarnada realidad.» Publishers Weekly «Fascinante. Otro libro asombrosamente oscuro, perfecto para sus millones de lectores.» Booklist «Hay mucho de oscuro y de sobrenatural en esta nueva novela de Stephen King. Pero lo más inquietante resulta ser el lado monstruoso de la naturaleza humana.» USA Today «Hazte un favor y léelo.» Associated Press En los blogs... «La trama es buenísima, los diálogos son estupendos y las escenas, totalmente inquietantes.» Blog Bitácora de mis lecturas «Una historia rotunda y una protagonista fuerte, brillante y capaz que lucha por lo que cree justo sin pararse ante nada ni nadie.» Blog Lectura directa «El visitante es una novela con vida, con fuerza y con una historia realmente potente.» Blog Papel de tinta neg",
@@ -59,13 +44,8 @@
   {
     "name": "Destellos de belleza. anécdotas y escenas de una vida",
     "author": "Jonas Mekas",
-    "genre": [
-      "arte",
-      "biografía"
-    ],
-    "category": [
-      "todos"
-    ],
+    "genre": ["arte", "biografía"],
+    "category": "todos",
     "pages": 368,
     "publisher": "Caja Negra",
     "description": "Ha llegado el momento de contarles algo sobre mí. Una mini biografía relacionada con el lenguaje. Crecí en una pequeña aldea campesina en Lituania, en una zona que hablaba su propio dialecto. Solíamos reírnos del idioma oficial lituano y bromear al respecto. Luego ingresé en la escuela primaria y tuve que aprender el idioma oficial lituano. Luego, en la secundaria, comencé a aprender latín y francés. Tuve dos años de cada idioma. Cuando llegaron los soviéticos en 1940, declararon que el francés y el latín no eran aceptados. En cambio, impusieron el idioma ruso. Entonces comencé a aprender ruso. Dos años de estudios. Cuando llegaron los nazis en 1942, anunciaron que el ruso ya no era aceptable, solo el alemán. A partir de allí estudié alemán durante dos años más.",
@@ -78,12 +58,8 @@
   {
     "name": "El fantasma del faro",
     "author": "Liniers / Del Campo",
-    "genre": [
-      "arte"
-    ],
-    "category": [
-      "todos"
-    ],
+    "genre": ["arte"],
+    "category": "todos",
     "pages": 192,
     "publisher": "La Editorial Comun",
     "description": "Es verano en la costa de Maine: dos niñas y su padre se mudan a una casa al lado de un faro en ruinas, rodeado de muchos misterios e historias espeluznantes. Se hacen amigas de una joven, que parece simpática pero también un poco rara.",
@@ -96,12 +72,8 @@
   {
     "name": "MARVEL ZOMBIES REUNIOS 1",
     "author": "JIM ZUB",
-    "genre": [
-      "comic"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["comic"],
+    "category": "12+",
     "pages": 168,
     "publisher": "PANINI",
     "description": "Los Vengadores se han enfrentado a muchos peligros y han salvado la Tierra en multitud de ocasiones, pero nunca antes habían tenido que lidiar con una infección que está convirtiendo a la gente en zombi y que parece haberse originado dentro de la Torre Stark. Comienza así una carrera contrarreloj para impedir que el brote se extienda a toda Nueva York y al resto del planeta mientras buscan su origen y una posible cura.",
@@ -114,12 +86,8 @@
   {
     "name": "EL BATMAN QUE RIE 2.ED",
     "author": "SCOTT SNYDER / JAMES TYNION IV",
-    "genre": [
-      "comic"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["comic"],
+    "category": "12+",
     "pages": 232,
     "publisher": "ECC",
     "description": "“Un Batman que ríe... es un Batman que siempre gana.” Desencadenó el Multiverso Oscuro en la épica colección Noches oscuras:Metal. Ahora la superestrella Scott Snyder vuelve a unirse al aclamadodibujante Jock (Batman: Espejo oscuro) para dejar libre en Gotham Cityal más letal morador de esa realidad alternativa... ¡y el Caballero Oscuro original nunca volverá a ser el mismo! Mitad Batman. Mitad Joker. Combinando todo lo que hace del Cruzado de la Capa un héroe y del Príncipe Payaso un asesino, el Batman que ríe es el genio criminal más peligroso del Multiverso Oscuro. Y ha llegado a Gotham a fin de transformar el hogar de Bruce Wayne en un generador del mal. Y no viene solo. Desde otra de las realidades que integran en miríada el Multiverso Oscuro surge el Caballero Sombrío. Ese cruel justiciero recurrirá a cualquier arma a su disposición para garantizar que sus objetivos se queden bien muertos. Una guerra que no se parece en nada a ninguna —una guerra de Hombres Murciélago— ha dado comienzo. A medida que los más cercanos amigos de Batman, sus más mortíferos enemigos y sus dobles malignos del Multiverso se vean en medio del fuego cruzado, una sola pregunta prevalece: ¿Quién reirá el último? ¡Descubrid la respuesta en El Batman que ríe —la terrorífica reinvención de uno de los mejores héroes del cómic... y también de uno de sus mejores villanos— gracias al principal guionista de Batman de nuestros tiempos! Este volumen recopila la miniserie de siete episodios al completo y el especial dedicado al Caballero Sombrío.",
@@ -132,12 +100,8 @@
   {
     "name": "V DE VENDETTA (DC POCKET)",
     "author": "ALAN MOORE",
-    "genre": [
-      "comic"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["comic"],
+    "category": "12+",
     "pages": 288,
     "publisher": "ECC",
     "description": "V de Vendetta, además de ser una de las mayores obras maestras de la industria del cómic y una de las obras más personales de sus autores, Alan Moore y David Lloyd, es una historia espeluznante y terriblemente real acerca de la pérdida de la libertad y de la identidad del individuo que se ve inmerso en un mundo hostil, frío y totalitario. Con el trasfondo de una Inglaterra imaginaria que ha caído bajo la bota de un régimen fascista, se analiza tanto la vida bajo un estado policial asfixiante como el poder de la rebelión y la resistencia del espíritu humano ante la opresión y el totalitarismo.",
@@ -150,12 +114,8 @@
   {
     "name": "BATMAN: TRES JOKERS",
     "author": "GEOFF JOHNS",
-    "genre": [
-      "comic"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["comic"],
+    "category": "12+",
     "pages": 160,
     "publisher": "ECC",
     "description": "¿Quiénes son los tres Jokers? Batman no entiende cómo ni por qué, pero es un hecho indudable: el hombre al que lleva una vida entera persiguiendo no es un solo hombre. Hay tres Jokers. Ahora que conoce la increíble verdad, Bruce necesita respuestas reales. Junto a Barbara Gordon y Jason Todd, que fueron víctimas de la violencia del Joker, el Caballero Oscuro por fin se dispone a derrotar al maníaco de forma definitiva. A todos y cada uno de ellos. Geoff Johns, el guionista de títulos tan exitosos como El Reloj del Juicio Final y Batman: Tierra Uno, vuelve a unirse a Jason Fabok después de su colaboración en Liga de la Justicia: La Guerra de Darkseid para presentar uno de los acontecimientos más esperados del mundo del cómic en años. Este volumen integral recopila las tres entregas originales de Batman: Three Jokers.",
@@ -168,12 +128,8 @@
   {
     "name": "THUNDERBOLTS LA ASCENSION DE NORMAN MARVEL MUST HAVE",
     "author": "WARREN ELLIS / MIKE DEODATO JR.",
-    "genre": [
-      "comic"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["comic"],
+    "category": "12+",
     "pages": 304,
     "publisher": "PANINI",
     "description": "La etapa completa de Warren Ellis y Mike Deodato Jr. al frente de Thunderbolts. Uno de los más polémicos guionistas del cómic estadounidense transforma a Los Más Buscados de Marvel en el grupo de elite de Norman Osborn, en una despiadada visión del poder y los medios que utiliza. Veneno, Piedra Lunar, Bullseye, Pájaro Cantor, el Hombre Radiactivo, el Espadachín y Penitencia son las nuevas celebridades de América, siempre a la búsqueda de los superhumanos por registrar que se esconden entre nosotros. ¡Ellos son los nuevos y peligrosos Thunderbolts!",
@@ -186,12 +142,8 @@
   {
     "name": "NIGHTWING 1",
     "author": "TOM TAYLOR",
-    "genre": [
-      "comic"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["comic"],
+    "category": "12+",
     "pages": 24,
     "publisher": "ECC",
     "description": "Nightwing está de vuelta con una misión: proteger Blüdhaven. La ciudad adoptiva de Dick Grayson tiene un nuevo alcalde de sospechoso pasado, relacionado con el asesinato de los padres del que fuera el primer Robin de la historia. Con ayuda de Batgirl, el heroe descubrirá algunos secretos que están a punto de cambiar su vida para siempre. ¡Una nueva etapa que no te puedes perder, escrita por Tom Taylor y dibujada por Bruno Redondo, el equipo creativo que reinventó al Escuadrón Suicida!",
@@ -204,12 +156,8 @@
   {
     "name": "LOS DEFENSORES ¿Y QUIEN HEREDARA LA TIERRA? (MARVEL LIMITED EDITI ON)",
     "author": "JIM STARLIN / SAL BUSCEMA",
-    "genre": [
-      "comic"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["comic"],
+    "category": "12+",
     "pages": 472,
     "publisher": "PANINI",
     "description": "Libro de historietas encuadernado en cartoné de 472 páginas interiores en color más cubiertas en color que contiene la traducción de los comic books originales The Defenders números 12 al 25, Giant-Size Defenders números 1 al 4 y Marvel Two-In-One números 6 y 7 publicados en USA por Marvel Comics.",
@@ -222,12 +170,8 @@
   {
     "name": "DETECTIVE MARCIANO: IDENTIDAD",
     "author": "STEVE ORLANDO / RILEY ROSSMO",
-    "genre": [
-      "comic"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["comic"],
+    "category": "12+",
     "pages": 296,
     "publisher": "ECC",
     "description": "John Jones es uno de los policías más competentes de Midleton, Colorado. No obstante, mientras investiga un truculento asesinato, descubre que hay un elemento de su pasado que ha regresado para atormentarlo. Y es que Jones no es un humano normal. De hecho, ni siquiera es humano. Es J’onn J’onzz, el único superviviente de Marte, cuya civilización desapareció hace mucho tiempo. Como Detective Marciano, se ha enfrentado a numerosas amenazas en solitario y en compañía de la Liga de la Justicia, pero ¿sobrevivirá al caso más complicado de su carrera? El guionista Steve Orlando y el dibujante Riley Rossmo nos traen las aventuras contemporáneas de J’onn J’onzz en un volumen que recopila los números del 1 al 12 de la serie original Martian Manhunter.",
@@ -240,12 +184,8 @@
   {
     "name": "DRAGON BALL SUPER Nº 01",
     "author": "AKIRA TORIYAMA",
-    "genre": [
-      "manga"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["manga"],
+    "category": "todos",
     "pages": 192,
     "publisher": "PLANETA DE AGOSTINI",
     "description": "El mundo ha recuperado la paz, pero ¡¡una nueva amenaza se cierne ahora sobre él!!¿¡Esta vez, el enemigo llega desde el“sexto universo”!? ¡¡Empieza una nueva obra de Dragon Ball que, bajo las directrices originales de Akira Toriyama, retoma el hilo de la historia original!!",
@@ -258,12 +198,8 @@
   {
     "name": "DRAGON BALL SUPER Nº 02",
     "author": "AKIRA TORIYAMA / TOYOTARO",
-    "genre": [
-      "manga"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["manga"],
+    "category": "todos",
     "pages": 216,
     "publisher": "PLANETA DE AGOSTINI",
     "description": "¡El esperado segundo tomo de Dragon Ball Super! A instancias de los dioses de la destrucción, se celebra un torneo de artes marciales entre las selecciones del sexto universo y del séptimo universo, al cual pertenece Goku, para determinar quién se hará con las superbolas de dragón. En el equipo rival figuran un saiyano y Frost, un individuo idéntico a Freezer. ¿¡Hasta dónde llega el poder del caballeroso Frost, al que Goku debe enfrentarse!?",
@@ -276,12 +212,8 @@
   {
     "name": "ONE PIECE PARTY Nº 01",
     "author": "EIICHIRO ODA",
-    "genre": [
-      "manga"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["manga"],
+    "category": "12+",
     "pages": 184,
     "publisher": "PLANETA DE AGOSTINI",
     "description": "Aquí empieza este spin-off de One Piece repleto de gags humorísticos :) ¡¡Disfrutad de las cinco historias cortas que contiene!! ¡¡Se avecinan un montón de aventuras en las que veréis desfilar a todos los personajes de la serie original!!",
@@ -294,12 +226,8 @@
   {
     "name": "ONE PIECE PARTY Nº 02",
     "author": "EIICHIRO ODA",
-    "genre": [
-      "manga"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["manga"],
+    "category": "12+",
     "pages": 192,
     "publisher": "PLANETA DE AGOSTINI",
     "description": "¡¡Aquí teneis la segunda y descarada entrega de este spin-off de One Piece repleto de gags humorísticos!! ¡¡Disfrutad de las cinco historias cortas que contiene, entre ellas la emocionante aventura de Ace!!",
@@ -312,12 +240,8 @@
   {
     "name": "PLANETA MANGA Nº 01",
     "author": "VV.AA.",
-    "genre": [
-      "manga"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["manga"],
+    "category": "12+",
     "pages": 320,
     "publisher": "PLANETA DE AGOSTINI",
     "description": "Antología en formato revista manga japonesa de obras por autores nacionales. Antología en formato revista manga japonesa de obras por autores nacionales (manga, ilustraciones, artículos). Algunas historias serán autoconclusivas, otras serializadas. Los relatos serán de género diverso: shônen, seinen, yuri...",
@@ -330,12 +254,8 @@
   {
     "name": "PLANETA MANGA Nº 02",
     "author": "VV.AA.",
-    "genre": [
-      "manga"
-    ],
-    "category": [
-      "adolecentes"
-    ],
+    "genre": ["manga"],
+    "category": "12+",
     "pages": 320,
     "publisher": "PLANETA DE AGOSTINI",
     "description": "¡Nuevo número de la nueva sensación de manga de autores nacionales! Tras la exitosa acogida del primer número, llegan nuevos capítulos de las series favoritas de nuestros lectores, como Gryphoon (de Luis Montes); Alter Ego (de Ana C. Sánchez), Good Game! (de Blanca Mira y Kaoru Okino), La historia del manga (de Marc Bernabé, Oriol Estrada y Marian Company), Shion (de Alba Cardona) y Aron Fire (de Álvaro Jaudenes), junto a nuevas historias cortas de Santi Casas, Sara Soler, Ernest Sala y Ken Niimura, así como el estreno de series nuevas: Wing, de Senshiru y Meadow Queen, de Alicia López.",
