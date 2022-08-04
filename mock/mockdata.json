@@ -303,7 +303,7 @@
     "description": "Edición en español y rimada del famoso clásico de Dr. Seuss sobre la protección del medio ambiente!.",
     "image": "https://images-us.bookshop.org/ingram/9780525707318.jpg?height=500&v=v2",
     "rating": 5,
-    "price": 15.80,
+    "price": 15.8,
     "released": "2019-03-26",
     "language": "español"
   },
@@ -347,6 +347,62 @@
     "rating": 5,
     "price": 12.08,
     "released": "2001-09-04",
+    "language": "español"
+  },
+  {
+    "name": "Todo running",
+    "author": "Carlos Andrada",
+    "genre": ["deporte"],
+    "category": "todos",
+    "pages": 368,
+    "publisher": "Penguin Random House Grupo Editorial",
+    "description": "En los últimos tiempos, correr se convirtió en más, mucho más que dirigirse de un punto a otro en el menor tiempo posible. Esta actividad, que históricamente estuvo reservada a atletas entrenados, hoy es parte esencial de la vida de un gran número de aficionados en todo el mundo. Carlos Andrada, médico, ultramaratonista y estudioso del tema, recorre la historia de las carreras, los grandes cambios a través de los siglos, los personajes salientes de la especialidad; detalla la biomecánica del corredor (la patada, la zancada, la respiración, qué tipo de zapatillas conviene utilizar según las características de cada persona); analiza su fisiología (energía, consumo de oxígeno, pruebas de evaluación física, reacciones del organismo ante la exigencia física y las condiciones extremas de clima y altura); da pautas sobre el entrenamiento (cómo, cuándo, cuánto y dónde correr, los sistemas más utilizados, el sobreentrenamiento, la elongación); pone el acento en la nutrición (qué dieta seguir, qué ingerir antes, durante y después de correr, las bebidas deportivas), y subraya las particularidades de correr en la infancia, en la tercera edad o durante el embarazo, si es bueno tener sexo antes de una carrera, cómo llegar a correr distancias imposibles, la acción terapéutica del running. En suma, un abordaje amplio y minucioso de este fenómeno que no para de crecer.",
+    "image": "https://contentv2.tap-commerce.com/cover/large/9789876275125_1.jpg?id_com=1113",
+    "rating": 3,
+    "price": 19.4,
+    "released": "2015-02-01",
+    "language": "español"
+  },
+  {
+    "name": "Cuerpos al límite",
+    "author": "Federico Bianchini",
+    "genre": ["biografía", "deporte"],
+    "category": "todos",
+    "pages": 144,
+    "publisher": "Penguin Random House Grupo Editorial",
+    "description": "Si en Desafiar al cuerpo Federico Bianchini se centraba en el esfuerzo de deportistas que corrían o nadaban más de 80 kilómetros sin detenerse, en Cuerpos al límite el autor pone el foco en la resistencia psicológica que hace posible lograr hazañas aún más impresionantes. Las historias de este volumen se entretejen para entender desafíos imposibles: una mujer que parece poder vivir sin respirar, un hombre que completó 50 maratones en 50 días consecutivos, y otro que gracias al deporte superó sus impulsos suicidas. Bianchini también narra la historia del ganador de la carrera más extrema del mundo y la aventura de un cirujano que, en medio de una competición, debe operar a un compañero. ¿Qué técnicas de concentración usan para correr sin derrumbarse? ¿Cuál es el umbral de dolor que son capaces de soportar? ¿En qué momento deciden parar? La crítica ha dicho... «Federico Bianchini es uno de los mejores cronistas de la nueva generación.» Martín Caparrós en su libro Lacrónica «Es en verdad difícil que el encuentro con un escritor, un artista o un intelectual de lugar a una pieza mayor del periodismo. Estamos ante esa excepción.» Juan Villoro, acta del jurado del premio Las Nuevas Plumas 2010 «Consigue con gran maestría y riqueza del lenguaje retratar a un personaje controvertido en sus múltiples facetas personales y profe sionales, utilizando con brillantez técnicas periodísticas y literarias que hunden sus raíces en la mejor tradición del nuevo periodismo iberoamericano.» José Antonio Vera, presidente de la agencia EFE, Jurado del premio Don Quijote - Rey de España 2013",
+    "image": "https://contentv2.tap-commerce.com/cover/large/9789877351804_1.jpg?id_com=1113",
+    "rating": 3,
+    "price": 6.7,
+    "released": "2017-11-01",
+    "language": "español"
+  },
+  {
+    "name": "El infiltrado",
+    "author": "Uki Goñi",
+    "genre": ["biografía"],
+    "category": "12+",
+    "pages": 280,
+    "publisher": "Editorial Paidós Argentina",
+    "description": "En 1977 Uki Goñi era periodista del diario de habla inglesa Buenos Aires Herald, el único medio en Argentina en informar sobre las desapariciones masivas llevadas a cabo por la dictadura del 1976-1983. Entre las madres que se acercaban al diario a denunciar la desaparición de sus hijos, se encontraba infiltrado el teniente de Marina Alfredo Astiz, agente secreto experto en secuestrar a madres, monjas y activistas de derechos humanos. Astiz logró inclusive infiltrarse en el propio Buenos Aires Herald, haciéndose pasar por hermano de un desaparecido. La infiltración de Astiz culminó con el secuestro de un grupo de doce personas, recibidas regularmente por Goñi en el Herald. Este libro significó para el autor saldar una deuda con aquellas madres de desaparecidos y activistas que lo visitaban en el diario.El infiltrado fue citado como evidencia para sentenciar a Astiz en la Causa ESMA II en 2011 y nuevamente en la Causa ESMA III en 2017, y su autor fue testigo en el juicio. Íntegramente reescrito tras estas históricas condenas para la presente edición aumentada, El infiltrado reconstruye cronológicamente la infiltración de Astiz entre las primeras Madres de Plaza de Mayo y relata en primera persona el modo en que el Buenos Aires Herald se enfrentó a la dictadura en una soledad casi completa en aquellos años sangrientos.",
+    "image": "https://contentv2.tap-commerce.com/cover/large/9789873804656_1.jpg?id_com=1102&r=pad",
+    "rating": 2,
+    "price": 8,
+    "released": "2018-06-02",
+    "language": "español"
+  },
+  {
+    "name": "Secretos del tercer reich",
+    "author": "Guido Knopp",
+    "genre": ["biografía"],
+    "category": "16+",
+    "pages": 320,
+    "publisher": "Editorial Paidós Argentina",
+    "description": "Guido Knopp nos ofrece en este libro los resultados de sus investigaciones acerca de algunos de los secretos del Tercer Reich que han permanecido ocultos hasta hoy. Temas como la verdad acerca de la familia de Hitler, sobre la que el propio Führer procuró crear confusión; sobre la procedencia del 'dinero de Hitler', de los ingresos que le permitieron financiar sus campañas y sostener una vida en medio de lujos, o sobre 'las mujeres de Hitler', una historia que comienza con la misteriosa muerte de su sobrina Geli Raubal y concluye con el suicidio de Eva Braun, pero en la que hay otros nombres menos conocidos. Secretos también acerca de otros personajes: sobre las leyendas que envuelven la historia de Erwin Rommel, sobre las falsedades con las que Albert Speer construyó su biografía de 'nazi bueno' y sobre la vida privada, las fantasías, los crímenes y la misteriosa muerte de Himmler.",
+    "image": "https://katakrak.net/sites/default/files/styles/extra_large/public/portadas/9788498924947.jpeg?itok=u3OwFo_T",
+    "rating": 3,
+    "price": 8.5,
+    "released": "2013-02-25",
     "language": "español"
   }
 ]
