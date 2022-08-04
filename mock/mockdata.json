@@ -264,5 +264,33 @@
     "price": 25.8,
     "released": "2020-28-01",
     "language": "español"
+  },
+  {
+    "name": "Fuera de serie: por qué unas personas tienen éxito y otras no",
+    "author": "Malcolm Gladwell",
+    "genre": ["economía"],
+    "category": "12+",
+    "pages": 365,
+    "publisher": "Hachette",
+    "description": "¿Qué diferencia a quienes hacen algo especial en la vida de quienes no lo hacen? Fuera de serie explora las curiosas historias de los grandes jugadores de fútbol; bucea en la peculiar infancia de Bill Gates; busca qué convirtió a los Beatles en el mejor grupo de rock; y se pregunta qué distingue a los pilotos que estrellan aviones de los que no. A través de su viaje por el mundo de los «fuera de serie», los mejores, los más brillantes y famosos, nos convence de que nuestro modo de pensar en el éxito es erróneo.",
+    "image": "https://images.cdn2.buscalibre.com/fit-in/360x360/d9/fa/d9fa5aab28f97e9099566dbed28a0313.jpg",
+    "rating": 4,
+    "price": 11.69,
+    "released": "2008-18-11",
+    "language": "español"
+  },
+  {
+    "name": "Cien Años de Soledad",
+    "author": "Gabriel García Márquez",
+    "genre": ["ficción"],
+    "category": "12+",
+    "pages": 494,
+    "publisher": "Penguin Random House",
+    "description": "Muchos años después, frente al pelotón de fusilamiento, el coronel Aureliano Buendía había de recordar aquella tarde remota en que su padre lo llevo a conocer el hielo». Con estas palabras empieza una novela legendaria, una de las aventuras literarias más fascinantes del siglo XX. La familia Buendía-lguarán, con sus milagros, fantasías, obsesiones, tragedias, incestos, adulterios, rebeldías, descubrimientos y condenas, representa al mismo tiempo el mito y la historia, la tragedia y el amor del mundo entero.",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51O9mmoZLhL._SX304_BO1,204,203,200_.jpg",
+    "rating": 5,
+    "price": 10.93,
+    "released": "2009-22-09",
+    "language": "español"
   }
 ]
