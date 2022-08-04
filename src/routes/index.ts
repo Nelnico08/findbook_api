@@ -1,11 +1,12 @@
 import { Router } from 'express';
-import { getBooks, postBooks } from '../controllers/GetBooks';
-import { getGenres, postGenre } from '../controllers/Genre';
+import { getBookById, getBooks } from '../controllers/GetBooks';
+import { getGenres } from '../controllers/Genre';
+import { postBooks, postGenre } from '../controllers/CargarDb';
 
 export const router = Router();
 
-
 router.get('/books', getBooks);
-router.post('/books', postBooks);
+router.get('/books/:id', getBookById);
+router.post('/cargardb/books', postBooks);
 router.get('/genres', getGenres);
-router.post('/genres', postGenre);
+router.post('/cargardb/generos', postGenre);
