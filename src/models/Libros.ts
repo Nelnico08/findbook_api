@@ -26,7 +26,7 @@ export class Libros extends Model<iLibros> {
   @Column
   publisher!: string;
 
-  @Column(DataType.STRING(1000))
+  @Column(DataType.STRING(2000))
   description!: string;
 
   @Column
@@ -35,11 +35,11 @@ export class Libros extends Model<iLibros> {
   @Column
   rating!: number;
 
-  @Column
+  @Column(DataType.DECIMAL)
   price!: number;
 
-  @Column(DataType.DATEONLY)
-  released!: Date;
+  @Column
+  released!: string;
 
   @Column
   language!: string;
