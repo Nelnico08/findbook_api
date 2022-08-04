@@ -1,10 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { Generos } from '../models/Generos';
 import { Libros } from '../models/Libros';
-import { LibrosGeneros } from '../models/LibrosGeneros';
-import mockdata from '../../mock/mockdata.json';
-import { iLibros } from '../types/Libros';
-import { Json } from 'sequelize/types/utils';
 
 export const getBooks = async (
   req: Request,
