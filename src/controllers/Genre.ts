@@ -5,17 +5,17 @@ import mockgenre from '../../mock/mockgenre.json';
 import { genre, iGeneros } from '../types/Generos';
 //prettier-ignore
 export const getGenres = async (req: Request, res: Response, next: NextFunction) => {
-    const genre  = req.query.genre as genre;
+  const genre = req.query.genre as genre;
   try {
     const filterGenre = await Generos.findOne({
-      where:{
+      where: {
         genre
       },
-      include:{
+      include: {
         model: Libros,
       }
     })
-    res.json(filterGenre?.genre?filterGenre:`No existe el genero ${genre}`)
+    res.json(filterGenre?.genre ? filterGenre : `No existe el genero ${genre}`)
   } catch (err) {
     next(err);
   }
@@ -30,7 +30,6 @@ export const postGenre = async (
   try {
     //hago que mockgenre tome la interfase de generos y eso lo guardo en una constante genres
     const genres: iGeneros[] = mockgenre as iGeneros[];
-
     //bulkcreate necesita un array, nuestro mock es un array
     await Generos.bulkCreate(genres);
     res.send('se crearon los generos');
