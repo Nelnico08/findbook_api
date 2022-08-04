@@ -292,5 +292,61 @@
     "price": 10.93,
     "released": "2009-22-09",
     "language": "español"
+  },
+  {
+    "name": "El Lórax",
+    "author": "Dr. Seuss",
+    "genre": ["infantil"],
+    "category": "todos",
+    "pages": 72,
+    "publisher": "Random House Books for Young Readers",
+    "description": "Edición en español y rimada del famoso clásico de Dr. Seuss sobre la protección del medio ambiente!.",
+    "image": "https://images-us.bookshop.org/ingram/9780525707318.jpg?height=500&v=v2",
+    "rating": 5,
+    "price": 15.80,
+    "released": "2019-03-26",
+    "language": "español"
+  },
+  {
+    "name": "Learn React with TypeScript 3",
+    "author": "Carl Rippon",
+    "genre": ["computación", "tecnología"],
+    "category": "16+",
+    "pages": 502,
+    "publisher": "Packt Publishing",
+    "description": "React hoy es una de las opciones preferidas para el desarrollo frontend. El uso de React con TypeScript mejora la experiencia de desarrollo y ofrece una poderosa combinación para desarrollar aplicaciones web de alto rendimiento. En este libro, aprenderá a crear componentes de react bien estructurados y reutilizables que son fáciles de leer y mantener mediante el aprovechamiento de técnicas modernas de desarrollo web. Al final del libro, estará bien versado en todo lo que necesita para desarrollar aplicaciones web con todas las funciones con React y TypeScript.",
+    "image": "https://itbook.store/img/books/9781789610253.png",
+    "rating": 4,
+    "price": 44.99,
+    "released": "2018-11-29",
+    "language": "Inglés"
+  },
+  {
+    "name": "Responsive Web Design with HTML5 and CSS, 3rd Edition",
+    "author": "Ben Frain",
+    "genre": ["computación", "tecnología"],
+    "category": "16+",
+    "pages": 408,
+    "publisher": "Packt Publishing",
+    "description": "Responsive Web Design with HTML5 and CSS, Third Edition es una versión renovada y extendida de uno de los libros más completos y más vendidos sobre las últimas herramientas y técnicas de HTML5 y CSS para el diseño web responsive. Al final de este libro, no solo tendrá una comprensión integral del diseño web responsive y lo que es posible con los últimos HTML5 y CSS, sino también el conocimiento de cómo implementar mejor cada técnica.",
+    "image": "https://itbook.store/img/books/9781839211560.png",
+    "rating": 4,
+    "price": 39.99,
+    "released": "2020-04-30",
+    "language": "Inglés"
+  },
+  {
+    "name": "El Principito",
+    "author": "Antoine de Saint-Exupéry",
+    "genre": ["infantil", "novela"],
+    "category": "todos",
+    "pages": 96,
+    "publisher": "Mariner Books",
+    "description": "La adorada historia clásica sobre los viajes espaciales de un joven príncipe, una historia profunda sobre la soledad y la pérdida, el amor y la amistad, en español.",
+    "image": "https://images-us.bookshop.org/ingram/9780156013925.jpg?height=500&v=v2",
+    "rating": 5,
+    "price": 12.08,
+    "released": "2001-09-04",
+    "language": "español"
   }
 ]
