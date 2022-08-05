@@ -8,10 +8,10 @@ import { PostBooks } from '../controllers/PostBooks';
 export const router = Router();
 
 router.get('/books', getBooks);
-router.post('books/', PostBooks);
+router.post('/books', PostBooks);
 router.get('/books/:id', getBookById);
 router.get('/genres', getGenres);
-router.delete('books/:id', deleteBook);
+router.delete('/books/:id', deleteBook);
 
 router.post('/cargardb/books', postBooks);
 router.post('/cargardb/generos', postGenre);
