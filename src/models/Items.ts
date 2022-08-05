@@ -12,9 +12,14 @@ export class Items extends Model<iItems>{
     @Column
     libroid!: number
 
+    
     @HasOne(() => Libros)
     libros!: Libros
-
+    
+    @ForeignKey(() => CarritoCompras)
+    @Column
+    carritocomprasid!: number
+    
     @BelongsTo(() => CarritoCompras)
     shoppingcart!: CarritoCompras
 }
