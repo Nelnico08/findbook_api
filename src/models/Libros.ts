@@ -5,6 +5,7 @@ import {
   DataType,
   BelongsToMany,
   BelongsTo,
+  ForeignKey
 } from 'sequelize-typescript';
 import { iLibros } from '../types/Libros';
 import { Generos } from './Generos';
@@ -48,6 +49,10 @@ export class Libros extends Model<iLibros> {
 
   @BelongsToMany(() => Generos, () => LibrosGeneros)
   generos!: Generos[];
+  
+  @ForeignKey(() => Items)
+  @Column
+  itemsid!: number
 
   @BelongsTo(() => Items)
   items!: Items
