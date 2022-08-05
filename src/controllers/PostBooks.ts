@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
 import { Libros } from '../models/Libros';
+import { Generos } from '../models/Generos';
 import { LibrosGeneros } from '../models/LibrosGeneros';
+import { iLibros } from '../types/Libros';
 
 export const PostBooks = async (
     req: Request,
@@ -8,36 +10,41 @@ export const PostBooks = async (
     next: NextFunction
 ) => {
     try {
-        const [name, author, genre, category, pages, publisher, description, image, rating, price, released, language] = req.body
-        const [newBook, Book] = await Libros.findOrCreate({
-            where: {
-                name: name
+        const book = req.body as iLibros;
+        const [newBook,created] = await Libros.findOrCreate({
+            where:{
+                name:book.name
             },
-            defaults: {
-                name: name,
-                author: author,
-                category: category,
-                pages: pages,
-                publisher: publisher,
-                description: description,
-                image: image,
-                rating: rating,
-                price: price,
-                released: released,
-                language: language
+            defaults:{
+                name: book.name,
+                author: book.author,
+                category: book.category,
+                pages: book.pages,
+                publisher: book.publisher,
+                description: book.description,
+                image: book.image,
+                rating: book.rating,
+                price: book.price,
+                released: book.released,
+                language: book.language
             }
         })
-        let arr = [] as any[];
-        for (let i = 0; i < genre.length; i++) {
-            arr.push(genre[i])
-        }
-        for (let i = 0; i < arr.length; i++) {
+
+        const getGenres = req.body.genre.map((g: any) =>
+        Generos.findOne({ where: { genre: g }, attributes: ['id'] }) )
+        
+        const idGenres = await Promise.all(getGenres).then(values=>values)
+        // let arr = [] as any[];
+        // for (let i = 0; i < genre.length; i++) {
+        //     arr.push(genre[i])
+        // }
+        for (let i = 0; i < idGenres.length; i++) {
             await LibrosGeneros.create({
                 libroid: newBook.id,
-                generoid: arr[i],
+                generoid: idGenres[i].id,
             });
         }
-        res.json('Libro Posteado Correctamente')
+        res.json("YES")
     } catch (error) {
         next(error);
     }
