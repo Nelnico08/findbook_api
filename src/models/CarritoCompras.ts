@@ -1,11 +1,15 @@
-import { Table, Model, Column, ForeignKey, BelongsTo, DataType } from "sequelize-typescript";
-import { iCarritoCompras } from "../types/CarritoCompras";
+import { Table, Model, Column, ForeignKey, BelongsTo, HasMany } from "sequelize-typescript";
+import { Items } from "./Items";
 import { Usuario } from "./Usuario";
 
 @Table
-export class CarritoCompras extends Model<iCarritoCompras>{
-    @Column(DataType.ARRAY(DataType.STRING))
-    items!: string[]
+export class CarritoCompras extends Model {
+    @ForeignKey(() => Items)
+    @Column
+    itemsid!: number
+
+    @HasMany(() => Items)
+    items!: Items[]
 
     @ForeignKey(() => Usuario)
     @Column
