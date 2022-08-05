@@ -4,9 +4,11 @@ import {
   Column,
   DataType,
   BelongsToMany,
+  BelongsTo,
 } from 'sequelize-typescript';
 import { iLibros } from '../types/Libros';
 import { Generos } from './Generos';
+import { Items } from './Items';
 import { LibrosGeneros } from './LibrosGeneros';
 
 @Table
@@ -46,4 +48,7 @@ export class Libros extends Model<iLibros> {
 
   @BelongsToMany(() => Generos, () => LibrosGeneros)
   generos!: Generos[];
+
+  @BelongsTo(() => Items)
+  items!: Items
 }
