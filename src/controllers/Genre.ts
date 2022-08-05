@@ -6,6 +6,10 @@ import { genre } from '../types/Generos';
 export const getGenres = async (req: Request, res: Response, next: NextFunction) => {
   const genre = req.query.genre as genre;
   try {
+    if(!genre){
+      const generos = await Generos.findAll();
+      return res.json(generos.length?generos:"No hay generos")
+    }
     const filterGenre = await Generos.findOne({
       where: {
         genre
