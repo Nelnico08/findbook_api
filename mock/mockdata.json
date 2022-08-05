@@ -429,7 +429,7 @@
     "description": "El Derecho Marítimo está constituido por el conjunto de normas que regulan el régimen de las aguas, el régimen de la navegación, y el comercio marítimo. Siendo éste, esencialmente, un hecho de carácter internacional, el derecho que lo regula debe tener tal carácter pues en caso contrario se originaría un verdadero caos en las relaciones jurídicas resultantes de actos de comercio internacional. Esta nueva edición del libro del profesor Tulio Álvarez da una visión general de un derecho universal, como es el derecho marítimo y el derecho del mar, destacando la fuente internacional de sus normas y proporcionando las bases integrales para evaluar los contratos maríitimos, los riesgos de la navegación y, en general, el impacto del comercio marítimo en la economía mundial.",
     "image": "https://images-us.bookshop.org/ingram/9798749747690.jpg?height=500&v=v2",
     "rating": 3,
-    "price": 30.00,
+    "price": 30.0,
     "released": "2021-05-06",
     "language": "español"
   },
@@ -443,7 +443,7 @@
     "description": "Libro de texto clásico en la enseñanza del álgebra en México y Latinoamérica. Su metodología de enseñanza ha sido aceptada y difundida por más de 50 años. Presenta 6, 523 ejercicios y problemas con respuestas. La obra se divide en 39 capítulos, apéndice con tablas de potencias y raíces y de interés compuesto. Se incluyen al final de la obra, respuestas corregidas a los ejercicios.",
     "image": "https://images-us.bookshop.org/ingram/9786075502090.jpg?height=500&v=v2",
     "rating": 4,
-    "price": 51.10,
+    "price": 51.1,
     "released": "2020-02-25",
     "language": "español"
   },
@@ -485,7 +485,7 @@
     "description": "Una reveladora nueva biografia sobre Adolf Hitler que explora, sobre todo, el aspecto psicol gico de la historia. La autora despliega todo su conocimiento sobre el personaje y su poca, vali ndose de otras biograf as como la de Marlis Steinert, Thomas Weber, Ian Kershaw, la realizada por el amigo de Hitler August Kubizek y, sobre todo, diferentes trabajos psicol gicos y de psicolog a social que apuntan a develar las preguntas vigentes: qu se esconde detr s del F hrer? cu les fueron los mecanismos que posibilitaron su atractivo y su ascenso? por qu un pueblo y su ej rcito se dejaron arrastrar por las fantas as de este personaje tan extra o hacia una destructividad tan alta?.",
     "image": "https://images-us.bookshop.org/ingram/9781520728049.jpg?height=500&v=v2",
     "rating": 4,
-    "price": 15.00,
+    "price": 15.0,
     "released": "2017-02-27",
     "language": "español"
   },
@@ -499,7 +499,7 @@
     "description": "Con más de un millón de copias vendidas, Yoga Anatomy se ha convertido en un recurso invaluable para los practicantes, entusiastas e instructores de yoga de todo el mundo. Ampliada y actualizada, la tercera edición de Yoga Anatomy le proporcionará una comprensión aún más profunda del yoga y de las estructuras y principios que subyacen a cada movimiento.",
     "image": "https://images-us.bookshop.org/ingram/9781492596479.jpg?height=500&v=v2",
     "rating": 4,
-    "price": 23.20,
+    "price": 23.2,
     "released": "2021-10-19",
     "language": "inglés"
   },
@@ -520,7 +520,7 @@
   {
     "name": "El Hombre de Mazapan",
     "author": "J.P. Donleavy",
-    "genre": ["novela","historia"],
+    "genre": ["novela", "historia"],
     "category": "16+",
     "pages": 448,
     "publisher": "Edhasa",
@@ -548,7 +548,7 @@
   {
     "name": "Ha llegado el Aguila",
     "author": "Jack Higgins",
-    "genre": ["novela","historia"],
+    "genre": ["novela", "historia"],
     "category": "16+",
     "pages": 434,
     "publisher": "Torres de papel",
@@ -576,7 +576,7 @@
   {
     "name": "Azabache",
     "author": "Anna Sewell",
-    "genre": ["estudio","historia"],
+    "genre": ["estudio", "historia"],
     "category": "12+",
     "pages": 156,
     "publisher": "Rubeo Ediciones",
@@ -688,7 +688,7 @@
   {
     "name": "Harry Potter y la Camara Secreta",
     "author": "J.k. Rowling",
-    "genre": ["novela","ficción"],
+    "genre": ["novela", "ficción"],
     "category": "12+",
     "pages": 296,
     "publisher": "Salamandra",
@@ -702,7 +702,7 @@
   {
     "name": "Harry Potter y el Prisionero de Azkaban",
     "author": "J.k. Rowling",
-    "genre": ["novela","ficción"],
+    "genre": ["novela", "ficción"],
     "category": "12+",
     "pages": 360,
     "publisher": "Salamandra",
@@ -716,7 +716,7 @@
   {
     "name": "Harry Potter y el Caliz de Fuego",
     "author": "J.k. Rowling",
-    "genre": ["novela","ficción"],
+    "genre": ["novela", "ficción"],
     "category": "12+",
     "pages": 672,
     "publisher": "Salamandra",
@@ -730,7 +730,7 @@
   {
     "name": "Harry Potter y la Orden del Fenix",
     "author": "J.k. Rowling",
-    "genre": ["novela","ficción"],
+    "genre": ["novela", "ficción"],
     "category": "12+",
     "pages": 928,
     "publisher": "Salamandra",
@@ -744,7 +744,7 @@
   {
     "name": "Harry Potter y las Reliquias de la Muerte",
     "author": "J.k. Rowling",
-    "genre": ["novela","ficción"],
+    "genre": ["novela", "ficción"],
     "category": "12+",
     "pages": 704,
     "publisher": "Salamandra",
@@ -758,7 +758,7 @@
   {
     "name": "Harry Potter y el Misterio del Principe",
     "author": "J.k. Rowling",
-    "genre": ["novela","ficción"],
+    "genre": ["novela", "ficción"],
     "category": "12+",
     "pages": 576,
     "publisher": "Salamandra",
@@ -772,14 +772,14 @@
   {
     "name": "El Alquimista",
     "author": "Paulo Coelho",
-    "genre": ["novela","salud - desarrollo personal"],
+    "genre": ["novela", "salud - desarrollo personal"],
     "category": "16+",
     "pages": 192,
     "publisher": "Planeta",
     "description": "Una fábula inspiradora sobre la importancia de luchar por tus sueños. Considerado ya un clásico de nuestros días, El Alquimista relata las aventuras de Santiago, un joven pastor andaluz que un día emprende un viaje por las arenas del desierto en busca de un tesoro. Lo que empieza como la búsqueda de bienes mundanos se convertirá en el descubrimiento del tesoro interior. Evocativa y profundamente humana, esta historia es el testimonio eterno del poder transformador de nuestros sueños, de la importancia de escuchar a nuestros corazones y de descifrar el lenguaje que está más allá de las palabras. Y es que cuando una persona desea realmente algo, el Universo entero conspira para que pueda realizar su sueño.",
     "image": "https://imagessl5.casadellibro.com/a/l/t7/05/9788408253105.jpg",
     "rating": 5,
-    "price": 10.20,
+    "price": 10.2,
     "released": "2022-02-16",
     "language": "español"
   },
@@ -793,7 +793,7 @@
     "description": "Una colección de grandes obras de la literatura adaptadas para los estudiantes. La Odisea, del poeta griego Homero, es uno de los poemas épicos más importantes de Occidente. La historia narra el viaje de regreso del héroe Odiseo a su patria, la isla de Ítaca, tras su participación en la guerra de Troya. Su travesía estará llena de peligros y aventuras. La Odisea es una metáfora del viaje que es la vida para todos nosotros; de ahí que sea un clásico universal.",
     "image": "https://imagessl2.casadellibro.com/a/l/t7/02/9788467828702.jpg",
     "rating": 5,
-    "price": 12.20,
+    "price": 12.2,
     "released": "2012-04-17",
     "language": "español"
   }
