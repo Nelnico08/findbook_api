@@ -8,7 +8,7 @@ export const getBooks = async (
   next: NextFunction
 ) => {
   try {
-    const { name } = req.query;
+    const { name, page, size } = req.query;
     const books = await Libros.findAll({
       include: {
         model: Generos,
