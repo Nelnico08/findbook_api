@@ -80,7 +80,13 @@ export const getBookById = async (
       where: {
         id,
       },
-      include: Generos,
+      include: {
+        model: Generos,
+        attributes: ['genre'],
+        through: {
+          attributes: [],
+        },
+      }
     });
     if (!book) return res.json('Libro no encontrado.');
 
