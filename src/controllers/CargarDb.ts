@@ -15,9 +15,15 @@ export const postGenre = async (
 ) => {
   try {
     //transformo el mock de genero en un array de interfaces de genero
-    const genres: iGeneros[] = mockgenre as iGeneros[];
-    await Generos.bulkCreate(genres);
-    res.send('se crearon los generos');
+    const myDBGenres = await Generos.findAll();
+    if(!myDBGenres.length){
+      const genres: iGeneros[] = mockgenre as iGeneros[];
+      await Generos.bulkCreate(genres);
+      return res.send('se crearon los generos');
+    }
+    else{
+      return res.send('Ya estan creados');
+    }
   } catch (error) {
     next(error);
   }
@@ -29,6 +35,8 @@ export const postBooks = async (
   next: NextFunction
 ) => {
   try {
+    const myDBBooks = await Libros.findAll();
+    if(!myDBBooks.length){ 
     const books: iLibros[] = mockdata as iLibros[];
     await Libros.bulkCreate(
       books.map((b: any) => {
@@ -47,16 +55,28 @@ export const postBooks = async (
         };
       })
     );
-    const BooksId = await Libros.findAll({ attributes: ['id'] });
+    const BooksId = await (await Libros.findAll({ attributes: ['id'] })).sort(function (a, b) {
+      if (a.id > b.id) {
+        return 1;
+      }
+      if (a.id < b.id) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0; 
+    });
+
     const getGenres = books.map((b: any) =>
       b.genre.map((g: any) =>
         Generos.findOne({ where: { genre: g }, attributes: ['id'] })
       )
     );
+  
     let arr = [] as any[];
     for (let i = 0; i < getGenres.length; i++) {
       await Promise.all(getGenres[i]).then((r) => arr.push(r));
     }
+
     for (let i = 0; i < BooksId.length; i++) {
       for (let j = 0; j < arr[i].length; j++) {
         await LibrosGeneros.create({
@@ -65,14 +85,10 @@ export const postBooks = async (
         });
       }
     }
-    const rela = await Libros.findAll({
-      include: {
-        model: Generos,
-        attributes: ['genre'],
-        through: { attributes: [] },
-      },
-    });
-    res.json('DataBase Cargada');
+    return res.json('DataBase Cargada');
+  }else{
+    return res.json('La DataBase Ya Esta Cargada');
+  }
   } catch (error) {
     next(error);
   }
