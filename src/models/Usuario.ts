@@ -1,4 +1,4 @@
-import { Table, Model, Column, HasOne, ForeignKey, DataType, Unique } from "sequelize-typescript";
+import { Table, Model, Column, HasOne, ForeignKey, DataType, Unique, Default } from "sequelize-typescript";
 import { iUsuario } from "../types/Usuario";
 import { CarritoCompras } from "./CarritoCompras";
 
@@ -21,6 +21,7 @@ export class Usuario extends Model<iUsuario>{
     @Column
     lastname!: string
 
+    @Default('user')
     @Column(DataType.ENUM('user','admin'))
     role!: string
 

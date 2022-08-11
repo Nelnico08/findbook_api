@@ -37,7 +37,7 @@ export const registerUser = async (req:Request, res:Response, next: NextFunction
                 password: hashedPass,
                 username: userBody.username,
                 url: userBody.url,
-                role: userBody.role?userBody.role:'user'
+                role: userBody.role
             }) 
             return res.status(200).json("Usuario creado existosamente")
         }else{
