@@ -1,7 +1,9 @@
 export interface iUsuario {
-    name: string
-    lastname: string
-    username: string
     email: string
     password: string
+    username: string
+    name: string
+    lastname: string
+    role: string
+    url: string
 }
