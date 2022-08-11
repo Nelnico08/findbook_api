@@ -1,17 +1,14 @@
 import { Router } from 'express';
-import { getBookById, getBooks } from '../controllers/GetBooks';
-import { getGenres } from '../controllers/Genre';
-import { postBooks, postGenre } from '../controllers/CargarDb';
-import { deleteBook } from '../controllers/DeleteBook';
-import { PostBooks } from '../controllers/PostBooks';
+import booksRouter from './books'
+import genreRouter from './genres';
 import authRouter from './auth';
+import cargarRouter from './cargardb'
+
 export const router = Router();
 
+router.use('/cargardb', cargarRouter)
+
+router.use('/genres', genreRouter)
+router.use('/books', booksRouter)
+
 router.use('/auth',authRouter);
-router.get('/books', getBooks);
-router.post('/books', PostBooks);
-router.get('/books/:id', getBookById);
-router.get('/genres', getGenres);
-router.delete('/books/:id', deleteBook);
-router.post('/cargardb/books', postBooks);
-router.post('/cargardb/generos', postGenre);
