@@ -36,7 +36,7 @@ export const postBooks = async (
 ) => {
   try {
     const genreDb = await Generos.findAll();
-    if(!genreDb){
+    if(genreDb.length){
       const myDBBooks = await Libros.findAll();
       if(!myDBBooks.length){ 
         const books: iLibros[] = mockdata as iLibros[];
