@@ -9,9 +9,9 @@ import { verifyAdmin } from '../middlewares/verifyAdmin';
 const router = Router();
 
 router.put('/users', [verifyToken, verifyAdmin], getUsers)
-router.put('/:id', [verifyToken, verifyAdmin], putUserAdmin)
-router.put('/:id', [verifyToken, verifyAdmin], putBookAdmin)
-router.delete('/:id', [verifyToken, verifyAdmin], deleteUserAdmin)
-router.delete('/:id', [verifyToken, verifyAdmin], deleteBookAdmin);
+router.put('/putuser/:id', [verifyToken, verifyAdmin], putUserAdmin)
+router.put('/putbook/:id', [verifyToken, verifyAdmin], putBookAdmin)
+router.delete('/deleteuser/:id', [verifyToken, verifyAdmin], deleteUserAdmin)
+router.delete('/deletebook/:id', [verifyToken, verifyAdmin], deleteBookAdmin);
 
 export default router;
