@@ -9,7 +9,7 @@ export const deleteUserAdmin = async (
     const { id } = req.params;
     try {
         await Usuario.destroy({ where: { id } });
-        res.json('Usiario Eliminado');
+        res.json('Usuario Eliminado');
     } catch (err) {
         next(err);
     }
