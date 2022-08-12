@@ -41,7 +41,7 @@ export const registerUser = async (req:Request, res:Response, next: NextFunction
             }) 
             return res.status(200).json("Usuario creado existosamente")
         }else{
-            return res.send({error: 'Todos los campos son requeridos'})
+            return res.json({error: 'Todos los campos son requeridos'})
         }
     }
     catch(error){
