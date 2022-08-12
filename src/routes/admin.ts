@@ -8,7 +8,7 @@ import { verifyToken } from '../middlewares/verifyToken';
 import { verifyAdmin } from '../middlewares/verifyAdmin';
 const router = Router();
 
-router.put('/users', [verifyToken, verifyAdmin], getUsers)
+router.get('/users', [verifyToken, verifyAdmin], getUsers)
 router.put('/putuser/:id', [verifyToken, verifyAdmin], putUserAdmin)
 router.put('/putbook/:id', [verifyToken, verifyAdmin], putBookAdmin)
 router.delete('/deleteuser/:id', [verifyToken, verifyAdmin], deleteUserAdmin)
