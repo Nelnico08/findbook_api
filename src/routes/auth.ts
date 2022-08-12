@@ -1,11 +1,13 @@
 import { Router } from "express";
-import { isAdmin } from "../authentication/authAdmin";
 import { registerUser,loginUser } from "../authentication/authLogRes";
 import { verifyToken } from "../middlewares/verifyToken";
+import { isUser } from "../authentication/isUser";
 const router = Router();
 
 router.post('/register',registerUser);
 router.post('/login',loginUser);
-router.get('/admin',[verifyToken],isAdmin);
+router.get('/user',[verifyToken],isUser);
 
 export default router;
+
+
