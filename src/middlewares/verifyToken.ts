@@ -12,10 +12,12 @@ export const verifyToken = async (req:Request, res:Response, next:NextFunction)=
         }
         const token = headerToken.replace("Bearer ", "");
         try {
-            const decoded = jwt.verify(token,process.env.JWT_SECRET)
+            const decoded = jwt.verify(token,process.env.JWT_SECRET);
+            req.user_id = decoded.user_id;
+            next();
         } catch (error) {
             console.log(error);
-            return res.status(404).send('Token invalido');    
+            return res.status(404).json({role:'invalid'});    
         }
     } catch (error) {
         console.log(error);
