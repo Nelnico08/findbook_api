@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { Usuario } from '../models/Usuario';
 
-export const deleteBookAdmin = async (
+export const deleteUserAdmin = async (
     req: Request,
     res: Response,
     next: NextFunction
