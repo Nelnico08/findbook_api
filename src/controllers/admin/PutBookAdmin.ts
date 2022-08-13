@@ -12,17 +12,17 @@ export const putBookAdmin = async (
         const { id } = req.params
         const { name, author, category, pages, publisher, description, image, price, released, language, genres } = req.body
 
-        if (name) await Libros.update({ name: name }, { where: { id: id } })
-        if (author) await Libros.update({ author: author }, { where: { id: id } })
-        if (category) await Libros.update({ category: category }, { where: { id: id } })
-        if (pages) await Libros.update({ pages: pages }, { where: { id: id } })
-        if (publisher) await Libros.update({ publisher: publisher }, { where: { id: id } })
-        if (description) await Libros.update({ description: description }, { where: { id: id } })
-        if (image) await Libros.update({ image: image }, { where: { id: id } })
-        if (price) await Libros.update({ price: price }, { where: { id: id } })
-        if (released) await Libros.update({ released: released }, { where: { id: id } })
-        if (language) await Libros.update({ language: language }, { where: { id: id } })
-        if (genres) {
+        if (name !== '') await Libros.update({ name: name }, { where: { id: id } })
+        if (author !== '') await Libros.update({ author: author }, { where: { id: id } })
+        if (category !== 'disable') await Libros.update({ category: category }, { where: { id: id } })
+        if (pages !== undefined) await Libros.update({ pages: pages }, { where: { id: id } })
+        if (publisher !== '') await Libros.update({ publisher: publisher }, { where: { id: id } })
+        if (description !== '') await Libros.update({ description: description }, { where: { id: id } })
+        if (image !== '') await Libros.update({ image: image }, { where: { id: id } })
+        if (price !== undefined) await Libros.update({ price: price }, { where: { id: id } })
+        if (released !== '') await Libros.update({ released: released }, { where: { id: id } })
+        if (language !== 'disable') await Libros.update({ language: language }, { where: { id: id } })
+        if (genres.length > 0) {
             const rel = await LibrosGeneros.destroy({ where: { libroid: id } })
             const getGenres = genres.map(
                 async (g: any) =>
