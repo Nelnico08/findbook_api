@@ -7,7 +7,7 @@ export const isUser = async (req:Request,res:Response,next:NextFunction)=>{
         if(user){
             return res.json({role:user.role})
         }else{
-            return res.status(404).json({role:'invalid'})
+            return res.json({role:'invalid'})
         }
     }
     catch(error){

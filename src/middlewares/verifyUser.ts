@@ -7,7 +7,7 @@ export const verifyUser = async (req:Request,res:Response,next:NextFunction)=>{
         if(user){
             next();
         }else{
-            return res.status(404).json({role:'invalid'})
+            return res.json({role:'invalid'})
         }
     }
     catch(error){
