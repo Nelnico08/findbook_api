@@ -21,10 +21,10 @@ export const registerUser = async (req:Request, res:Response, next: NextFunction
             const user = await Usuario.findOne({where:{email: userBody.email}})
             const usernameUser = await Usuario.findOne({where:{username:userBody.username}})
             if(user){
-                return res.status(404).json({error: 'El Email ya existe'});
+                return res.json({error: 'El Email ya existe'});
             }
             if(usernameUser){
-                return res.status(404).json({error: 'El Username ya existe'});    
+                return res.json({error: 'El Username ya existe'});    
             }
             const hashedPass = await bcrypt.hash(
                 userBody.password,
@@ -43,7 +43,7 @@ export const registerUser = async (req:Request, res:Response, next: NextFunction
             await Carrito.create({
                     userid:newUser.id
             });
-            return res.status(200).json("Usuario creado existosamente")
+            return res.json("Usuario creado existosamente")
         }else{
             return res.json({error: 'Todos los campos son requeridos'})
         }
@@ -58,18 +58,18 @@ export const loginUser = async (req:Request, res: Response, next:NextFunction)=>
     try {
         const {email, password} = req.body;
         if(!email || !password){
-            return res.status(404).json({error:"Email and Password are both required."})
+            return res.json({error:"Email and Password are both required."})
         }
         const user = await Usuario.findOne({where:{email}})
         if(!user){
-            return res.status(404).json({error: "Email o contraseña incorrectos.",});
+            return res.json({error: "Email o contraseña incorrectos.",});
         }
         const comparePass = await bcrypt.compare(password,user.password);
         if(!comparePass){
-            return res.status(404).json({error: "Email o contraseña incorrectos.",});
+            return res.json({error: "Email o contraseña incorrectos.",});
         }
         const token = jwt.sign({user_id:user.id}, process.env.JWT_SECRET)
-        return res.status(200).json({token})
+        return res.json({token})
         
     } catch (error) {
         console.log(error)

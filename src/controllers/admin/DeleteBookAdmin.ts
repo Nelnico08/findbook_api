@@ -12,7 +12,7 @@ export const deleteBookAdmin = async (
     try {
         const book = await Libros.findByPk(id);
         if(!book){
-            return res.status(404).send('Libro no encontrado')
+            return res.send('Libro no encontrado')
         }
         await Libros.destroy({ where: { id } });
         await LibrosGeneros.destroy({ where: { libroid: id } });

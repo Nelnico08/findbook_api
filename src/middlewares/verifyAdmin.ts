@@ -7,7 +7,7 @@ export const verifyAdmin = async (req:Request,res:Response,next:NextFunction)=>{
         if(user && user.role === 'admin'){
             next();
         }else{
-            return res.status(404).json({role:'invalid'})
+            return res.json({role:'invalid'})
         }
     }
     catch(error){

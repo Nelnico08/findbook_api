@@ -15,7 +15,7 @@ export const getCarrito = async (req:Request,res:Response,next:NextFunction)=>{
         if(carrito){
             return res.json({books:carrito.Libros});
         }
-        return res.status(404).json({role: 'invalid'})
+        return res.json({role: 'invalid'})
     } catch (error) {
         console.log(error);
         next(error)

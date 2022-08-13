@@ -8,7 +8,7 @@ export const verifyToken = async (req:Request, res:Response, next:NextFunction)=
     try {
         const headerToken = req.get('Authorization');
         if(!headerToken){
-            return res.status(404).send('Token no encontrado');
+            return res.send('Token no encontrado');
         }
         const token = headerToken.replace("Bearer ", "");
         try {
@@ -17,7 +17,7 @@ export const verifyToken = async (req:Request, res:Response, next:NextFunction)=
             next();
         } catch (error) {
             console.log(error);
-            return res.status(404).json({role:'invalid'});    
+            return res.json({role:'invalid'});    
         }
     } catch (error) {
         console.log(error);
