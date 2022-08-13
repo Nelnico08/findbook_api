@@ -52,3 +52,23 @@ export const getUserCart = async(req: Request, res: Response, next: NextFunction
     next(error)
   }
 }
+
+export const removeToCart = async(req: Request, res: Response, next: NextFunction) => {
+  const user_id = req.user_id;
+  const book_id = req.body.id;
+  try{
+    const cart = await Carrito.findOne({where:{userid: user_id}});
+
+    if(cart){
+      const bookFound = await CarritoLibros.findOne({where:{libro_id:book_id,carrito_id:cart.id}})
+      if(bookFound) {
+        await bookFound.destroy();
+        return res.json({message: "El libro fue removido del carrito"})
+      }
+      return res.json({message: "El libro no se encuentra en el carrito"})
+    }
+    return res.json({message: "No se encontro el carrito"})
+  }catch(err){
+    next(err)
+  }
+}
