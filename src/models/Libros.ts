@@ -8,8 +8,9 @@ import {
   ForeignKey
 } from 'sequelize-typescript';
 import { iLibros } from '../types/Libros';
+import { Carrito } from './Carrito';
+import { CarritoLibros } from './CarritoLibros';
 import { Generos } from './Generos';
-import { Items } from './Items';
 import { LibrosGeneros } from './LibrosGeneros';
 
 @Table
@@ -50,10 +51,6 @@ export class Libros extends Model<iLibros> {
   @BelongsToMany(() => Generos, () => LibrosGeneros)
   generos!: Generos[];
   
-  @ForeignKey(() => Items)
-  @Column
-  itemsid!: number
-
-  @BelongsTo(() => Items)
-  items!: Items
+  @BelongsToMany(() => Carrito, () => CarritoLibros)
+  Carrito!: Carrito[]
 }
