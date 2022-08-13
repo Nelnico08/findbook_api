@@ -1,9 +1,11 @@
 import express, { Application } from 'express';
-import { router } from './routes';
+import { router } from './routes'
 const cors = require('cors')
+const morgan = require('morgan')
 const app: Application = express();
 
 app.use(express.json());
+app.use(morgan('dev'))
 app.use(
   cors({
    origin: "*",
