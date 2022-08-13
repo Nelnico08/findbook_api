@@ -5,18 +5,16 @@ import authRouter from './auth';
 import cargarRouter from './cargardb'
 import admin from './admin'
 import paymentRouter from './payment'
+import user from './user';
 
 export const router = Router();
 
 router.use('/cargardb', cargarRouter)
-
 router.use('/genres', genreRouter)
 router.use('/books', booksRouter)
-
 router.use('/auth', authRouter);
-
 router.use('/admin', admin);
-
+router.use('/user',user);
 router.use('/payment', paymentRouter);
 
 

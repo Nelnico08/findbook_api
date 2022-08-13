@@ -1,11 +1,11 @@
 import { Request, Response, NextFunction } from "express";
 import { Usuario } from "../models/Usuario";
 
-export const isUser = async (req:Request,res:Response,next:NextFunction)=>{
+export const verifyUser = async (req:Request,res:Response,next:NextFunction)=>{
     try{
         const user = await Usuario.findByPk(req.user_id)
         if(user){
-            return res.json({role:user.role})
+            next();
         }else{
             return res.status(404).json({role:'invalid'})
         }

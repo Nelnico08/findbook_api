@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express'
 import { Op } from 'sequelize';
-import { Usuario } from '../models/Usuario';
+import { Usuario } from '../../models/Usuario';
 import dotenv from 'dotenv';
 
 const jwt = require('jsonwebtoken');

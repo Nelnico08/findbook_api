@@ -1,7 +1,8 @@
 import dotenv from 'dotenv';
 import { NextFunction, Request, Response } from 'express';
-import {Usuario} from '../models/Usuario';
-import {iUsuario} from '../types/Usuario';
+import {Usuario} from '../../models/Usuario';
+import {Carrito} from '../../models/Carrito';
+import {iUsuario} from '../../types/Usuario';
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
@@ -30,7 +31,7 @@ export const registerUser = async (req:Request, res:Response, next: NextFunction
                 Number(process.env.SALT_ROUNDS)
             )
 
-            await Usuario.create({
+            const newUser = await Usuario.create({
                 name: userBody.name,
                 lastname: userBody.lastname,
                 email: userBody.email,
@@ -39,6 +40,9 @@ export const registerUser = async (req:Request, res:Response, next: NextFunction
                 url: userBody.url,
                 role: userBody.role
             }) 
+            await Carrito.create({
+                    userid:newUser.id
+            });
             return res.status(200).json("Usuario creado existosamente")
         }else{
             return res.json({error: 'Todos los campos son requeridos'})
