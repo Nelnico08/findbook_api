@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
-import { Generos } from '../models/Generos';
-import { Libros } from '../models/Libros';
-import { LibrosGeneros } from '../models/LibrosGeneros';
+import { Generos } from '../../models/Generos';
+import { Libros } from '../../models/Libros';
+import { LibrosGeneros } from '../../models/LibrosGeneros';
 
 export const putBookAdmin = async (
     req: Request,

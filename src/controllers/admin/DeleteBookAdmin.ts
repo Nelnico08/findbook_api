@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
-import { Libros } from '../models/Libros';
-import { LibrosGeneros } from '../models/LibrosGeneros';
+import { Libros } from '../../models/Libros';
+import { LibrosGeneros } from '../../models/LibrosGeneros';
 
 export const deleteBookAdmin = async (
     req: Request,

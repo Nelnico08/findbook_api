@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { getUsers } from '../admin/GetUsers';
-import { putUserAdmin } from '../admin/PutUserAdmin';
-import { putBookAdmin } from '../admin/PutBookAdmin';
-import { deleteUserAdmin } from '../admin/DeleteUserAdmin';
-import { deleteBookAdmin } from '../admin/DeleteBookAdmin';
+import { getUsers } from '../controllers/admin/GetUsers';
+import { putUserAdmin } from '../controllers/admin/PutUserAdmin';
+import { putBookAdmin } from '../controllers/admin/PutBookAdmin';
+import { deleteUserAdmin } from '../controllers/admin/DeleteUserAdmin';
+import { deleteBookAdmin } from '../controllers/admin/DeleteBookAdmin';
 import { verifyToken } from '../middlewares/verifyToken';
 import { verifyAdmin } from '../middlewares/verifyAdmin';
 const router = Router();

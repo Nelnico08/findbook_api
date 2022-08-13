@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { registerUser,loginUser } from "../authentication/authLogRes";
+import { registerUser,loginUser } from "../controllers/authentication/authLogRes";
 import { verifyToken } from "../middlewares/verifyToken";
-import { isUser } from "../authentication/isUser";
+import { isUser } from "../controllers/authentication/isUser";
 const router = Router();
 
 router.post('/register',registerUser);
