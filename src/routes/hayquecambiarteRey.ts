@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addToCart, getUserCart } from "../controllers/Cart";
+import { addToCart, getUserCart } from "../controllers/cart";
 import { verifyToken } from "../middlewares/verifyToken";
 import { verifyUser } from "../middlewares/verifyUser";
 
