@@ -62,7 +62,7 @@ export const loginUser = async (req:Request, res: Response, next:NextFunction)=>
         }
         const user = await Usuario.findOne({where:{email}})
         if(!user){
-            return res.json({error: "Email o contraseña incorrectos.",});
+            return res.json({error: "¡No te encuentras registrado!. CREA UNA CUENTA",});
         }
         const comparePass = await bcrypt.compare(password,user.password);
         if(!comparePass){
