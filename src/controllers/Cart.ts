@@ -33,7 +33,7 @@ export const getUserCart = async(req: Request, res: Response, next: NextFunction
         },
         include:{
           model: Libros,
-          attributes: ['id', 'name', 'price', 'image'],
+          attributes: ['id', 'name', 'price', 'image', "author", "language"],
           through: {
             attributes: [],
           }
