@@ -50,8 +50,8 @@ export const paymentInt = async (
               quantity: data[index].quantity,
             }
           }),
-          success_url: "http://localhost:3000/",
-          cancel_url: "http://localhost:3000/payment",
+          success_url: `${process.env.APP_URL}/`,
+          cancel_url: `${process.env.APP_URL}/payment`,
         })
         return res.json({ url: session.url})
       }
