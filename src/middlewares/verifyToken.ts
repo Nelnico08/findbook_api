@@ -7,7 +7,6 @@ dotenv.config();
 export const verifyToken = async (req:Request, res:Response, next:NextFunction)=>{
     try {
         const headerToken = req.get('Authorization');
-        console.log(headerToken)
         if(!headerToken){
             return res.send('Token no encontrado');
         }
