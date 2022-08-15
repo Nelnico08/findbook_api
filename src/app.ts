@@ -8,12 +8,12 @@ app.use(express.json());
 app.use(morgan('dev'))
 app.use(
   cors({
-   origin: "*",
-   credentials: true,
-   methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
-   allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization', 'authorization'],
+    origin: "*",
+    credentials: true,
+    methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
+    allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization', 'authorization'],
   }),
- );
+);
 
 app.use('/', router);
 
