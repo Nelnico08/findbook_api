@@ -7,12 +7,12 @@ export const putUserAdmin = async (
     next: NextFunction
 ) => {
     try {
-        const { id } = req.params
-        const { name, lastname, username } = req.body
+        const { email } = req.params
+        const { name, surname, username } = req.body
 
-        if (name) await Usuario.update({ name: name }, { where: { id: id } })
-        if (lastname) await Usuario.update({ lastname: lastname }, { where: { id: id } })
-        if (username) await Usuario.update({ username: username }, { where: { id: id } })
+        if (name) await Usuario.update({ name: name }, { where: { email: email } })
+        if (surname) await Usuario.update({ lastname: surname }, { where: { email: email } })
+        if (username) await Usuario.update({ username: username }, { where: { email: email } })
         res.json('Usuario Modificado Correctamente')
     } catch (err) {
         next(err);

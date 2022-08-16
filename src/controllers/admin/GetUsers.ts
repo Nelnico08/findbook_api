@@ -1,10 +1,6 @@
 import { NextFunction, Request, Response } from 'express'
 import { Op } from 'sequelize';
 import { Usuario } from '../../models/Usuario';
-import dotenv from 'dotenv';
-
-const jwt = require('jsonwebtoken');
-dotenv.config();
 
 export const getUsers = async (
     req: Request,
@@ -33,7 +29,7 @@ export const getUsers = async (
 
         users = users.map(user=>{
             return {
-                token: jwt.sign({user_id:user.id}, process.env.JWT_SECRET),
+                email: user.email,
                 username: user.username,
                 name: user.name,
                 lastname: user.lastname,
@@ -42,7 +38,7 @@ export const getUsers = async (
         })
 
         return res.json(
-            users.length ? users : { message: 'No hay usuarios' }
+            users.length ? {users} : { message: 'No hay usuarios' }
         )
     } catch (error) {
         next(error);
