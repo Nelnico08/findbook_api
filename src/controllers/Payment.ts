@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
 import dotenv from 'dotenv'
 import { Libros } from '../models/Libros';
+import { Carrito } from '../models/Carrito';
+import { CarritoLibros } from '../models/CarritoLibros';
 dotenv.config()
 
 // Set your secret key. Remember to switch to your live secret key in production.
@@ -62,10 +64,16 @@ export const paymentInt = async (
 
   export const getSessionId = async(req: Request, res: Response, next: NextFunction) => {
     try {
+      const user_id = req.user_id;
       console.log("este es el console log: ", req.query.session_id)
       const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
-      // const customer = await stripe.customers.retrieve(session.customer);
 
+      if(session){
+        const cartUser = await Carrito.findOne({where:{userid: user_id}})
+        if(cartUser){
+          await CarritoLibros.destroy({where:{carrito_id: cartUser.userid}})
+        }
+      }
       res.send(`Gracias por su compra`)
     } catch (error) {
       next(error)

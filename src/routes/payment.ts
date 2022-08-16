@@ -6,7 +6,7 @@ import { verifyUser } from "../middlewares/verifyUser";
 const router = Router();
 
 router.post('/secret',[verifyToken,verifyUser], paymentInt);
-router.get('/secret', getSessionId)
+router.get('/secret',[verifyToken,verifyUser], getSessionId)
 
 
 export default router;
