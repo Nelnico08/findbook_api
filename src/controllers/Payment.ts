@@ -1,8 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import dotenv from 'dotenv'
 import { Libros } from '../models/Libros';
-import { iLibros } from '../types/Libros';
-import { Session } from 'inspector';
 dotenv.config()
 
 // Set your secret key. Remember to switch to your live secret key in production.
@@ -50,7 +48,7 @@ export const paymentInt = async (
               quantity: data[index].quantity,
             }
           }),
-          success_url: `${process.env.APP_URL}/payment/success`,
+          success_url: `${process.env.APP_URL}/payment/success/{CHECKOUT_SESSION_ID}`,
           cancel_url: `${process.env.APP_URL}/payment`,
         })
         return res.json({ url: session.url})
@@ -61,3 +59,15 @@ export const paymentInt = async (
         next(error);
     }
   };
+
+  export const getSessionId = async(req: Request, res: Response, next: NextFunction) => {
+    try {
+      console.log("este es el console log: ", req.query.session_id)
+      const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
+      // const customer = await stripe.customers.retrieve(session.customer);
+
+      res.send(`Gracias por su compra`)
+    } catch (error) {
+      next(error)
+    }
+  }
