@@ -10,12 +10,9 @@ export const PostBooks = async (
   next: NextFunction
 ) => {
   try {
+    const user_id = req.user_id as number
     const book = req.body as iLibros;
-    const [newBook, created] = await Libros.findOrCreate({
-      where: {
-        name: book.name,
-      },
-      defaults: {
+    const newBook = await Libros.create({
         name: book.name,
         author: book.author,
         category: book.category,
@@ -27,7 +24,7 @@ export const PostBooks = async (
         price: book.price,
         released: book.released,
         language: book.language,
-      },
+        User_id: user_id,
     });
 
     const getGenres = req.body.genre.map(
