@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import { Libros } from '../models/Libros';
 import { Carrito } from '../models/Carrito';
 import { CarritoLibros } from '../models/CarritoLibros';
+import { Usuario } from '../models/Usuario';
 dotenv.config()
 
 // Set your secret key. Remember to switch to your live secret key in production.
@@ -18,7 +19,14 @@ export const paymentInt = async (
     ) => {
 
     try {
+      const user_id = req.user_id;
       const data = req.body.data
+      let email: string | undefined = undefined;
+
+      const user = await Usuario.findByPk(user_id);
+      if(user){
+        email = user.email
+      }
       //busco los libros que pasan por body y devuelvo un array con id y precio
       let books = data.map(async(item: any) =>{
         const book = await Libros.findOne({
@@ -51,9 +59,10 @@ export const paymentInt = async (
             }
           }),
           success_url: `${process.env.APP_URL}/payment/success/{CHECKOUT_SESSION_ID}`,
-          cancel_url: `${process.env.APP_URL}/payment`,
+          cancel_url: `${process.env.APP_URL}/payment?cancel_session={CHECKOUT_SESSION_ID}`,
+          customer_email: email
         })
-        return res.json({ url: session.url})
+        return res.json({ url: session.url, orderList: data})
       }
       res.json({error: "No se envio data"})
         
@@ -68,12 +77,20 @@ export const paymentInt = async (
       const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
 
       if(session){
-        const cartUser = await Carrito.findOne({where:{userid: user_id}})
-        if(cartUser){
-          await CarritoLibros.destroy({where:{carrito_id: cartUser.userid}})
+        if(session.status === "complete"){
+          //vaciar carrito
+          const cartUser = await Carrito.findOne({where:{userid: user_id}})
+          if(cartUser){
+            await CarritoLibros.destroy({where:{carrito_id: cartUser.userid}})
+          }
+          return res.send(`Gracias por su compra`)
+        }else if(session.status === "open"){
+          const cancelSession = await stripe.checkout.sessions.expire(req.query.session_id)
+          if(cancelSession){
+            return res.send('El pago no ha sido realizado')
+          }
         }
       }
-      res.send(`Gracias por su compra`)
     } catch (error) {
       next(error)
     }

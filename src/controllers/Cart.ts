@@ -74,5 +74,17 @@ export const removeToCart = async(req: Request, res: Response, next: NextFunctio
 }
 
 export const removeAllBooks = async(req:Request, res:Response, next:NextFunction) =>{
-  
+  const user_id = req.user_id;
+
+  try {
+    const cart = await Carrito.findOne({where:{userid: user_id}});
+
+    if(cart){
+      await CarritoLibros.destroy({where:{carrito_id: cart.id}});
+      return res.json({message: "El carrito ha sido vaciado"})
+    }
+    return res.json({message: "No se encontro el carrito"})
+  } catch (error) {
+    next(error)
+  }
 }

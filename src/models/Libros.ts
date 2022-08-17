@@ -4,13 +4,14 @@ import {
   Column,
   DataType,
   BelongsToMany,
-  BelongsTo,
-  ForeignKey
+  ForeignKey,
+  HasMany,
 } from 'sequelize-typescript';
 import { iLibros } from '../types/Libros';
 import { Carrito } from './Carrito';
 import { CarritoLibros } from './CarritoLibros';
 import { Generos } from './Generos';
+import { Items } from './Items';
 import { LibrosGeneros } from './LibrosGeneros';
 
 @Table
@@ -53,4 +54,7 @@ export class Libros extends Model<iLibros> {
   
   @BelongsToMany(() => Carrito, () => CarritoLibros)
   Carrito!: Carrito[]
+
+  @HasMany(() => Items)
+  Items!: Items[]
 }
