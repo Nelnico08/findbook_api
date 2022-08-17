@@ -7,4 +7,5 @@ export interface iUsuario {
     lastname: string
     role: string
     url: string
+    status: string
 }

@@ -4,7 +4,7 @@ import { Usuario } from "../../models/Usuario";
 export const isUser = async (req:Request,res:Response,next:NextFunction)=>{
     try{
         const user = await Usuario.findByPk(req.user_id)
-        if(user){
+        if(user && user.status === 'true'){
             return res.json({role:user.role})
         }else{
             return res.json({role:'invalid'})
