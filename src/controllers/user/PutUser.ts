@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { Usuario } from '../../models/Usuario';
 
-export const putUserAdmin = async (
+export const putUser = async (
     req: Request,
     res: Response,
     next: NextFunction
