@@ -28,6 +28,10 @@ export class Usuario extends Model<iUsuario>{
     @Column
     url!: string
 
+    @Default('true')
+    @Column(DataType.ENUM('true','false'))
+    status!: string
+
     @HasOne(() => Carrito)
     Carrito!: Carrito
 }
