@@ -6,15 +6,18 @@ import cargarRouter from './cargardb'
 import admin from './admin'
 import paymentRouter from './payment'
 import cartRouter from './cart'
-
+import userPanel from './user'
 export const router = Router();
 
 router.use('/cargardb', cargarRouter)
+
 router.use('/genres', genreRouter)
 
 router.use('/books', booksRouter)
 
 router.use('/auth', authRouter);
+
+router.use('/userPanel', userPanel)
 
 router.use('/admin', admin);
 

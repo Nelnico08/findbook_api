@@ -10,11 +10,11 @@ import { getUser } from "../controllers/admin/GetUser";
 
 const router = Router()
 
-router.delete('/deleteBook',[verifyToken,verifyUser], deleteBookAdmin)
-router.put('/putBook',[verifyToken,verifyUser], putBookAdmin)
-router.delete('/deleteUser',[verifyToken,verifyUser], deleteUserAdmin)
-router.put('/putUser',[verifyToken,verifyUser], putUser)
 router.get('/getBooks',[verifyToken,verifyUser], getBooks)
 router.get('/getUser/:username',[verifyToken,verifyUser], getUser)
+router.put('/putBook/:id',[verifyToken,verifyUser], putBookAdmin)
+router.put('/putUser/:email',[verifyToken,verifyUser], putUser)
+router.delete('/deleteBook/:id',[verifyToken,verifyUser], deleteBookAdmin)
+router.delete('/deleteUser/:email',[verifyToken,verifyUser], deleteUserAdmin)
 
 export default router
