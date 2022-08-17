@@ -65,7 +65,6 @@ export const paymentInt = async (
   export const getSessionId = async(req: Request, res: Response, next: NextFunction) => {
     try {
       const user_id = req.user_id;
-      console.log("este es el console log: ", req.query.session_id)
       const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
 
       if(session){
