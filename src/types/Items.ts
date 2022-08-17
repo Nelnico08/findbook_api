@@ -1,3 +1,5 @@
-export interface iItems {
-    amount: number
+export interface items {
+    id?: number;
+    quantity: number;
+    subTotal: number
 }

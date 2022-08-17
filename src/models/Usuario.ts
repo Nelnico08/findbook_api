@@ -1,6 +1,7 @@
 import { Table, Model, Column, HasOne, ForeignKey, DataType, Unique, Default } from "sequelize-typescript";
 import { iUsuario } from "../types/Usuario";
 import { Carrito } from "./Carrito";
+import { Compras } from "./Compras";
 
 @Table
 export class Usuario extends Model<iUsuario>{
@@ -34,4 +35,7 @@ export class Usuario extends Model<iUsuario>{
 
     @HasOne(() => Carrito)
     Carrito!: Carrito
+
+    @HasOne(() => Compras)
+    compra!: Compras
 }
