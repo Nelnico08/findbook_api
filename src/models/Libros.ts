@@ -6,6 +6,7 @@ import {
   BelongsToMany,
   ForeignKey,
   HasMany,
+  BelongsTo,
 } from 'sequelize-typescript';
 import { category, iLibros } from '../types/Libros';
 import { Carrito } from './Carrito';
@@ -13,6 +14,7 @@ import { CarritoLibros } from './CarritoLibros';
 import { Generos } from './Generos';
 import { Items } from './Items';
 import { LibrosGeneros } from './LibrosGeneros';
+import { Usuario } from './Usuario';
 
 @Table
 export class Libros extends Model<iLibros> {
@@ -51,6 +53,12 @@ export class Libros extends Model<iLibros> {
 
   @ForeignKey(() => Items)
   Items_id!: number
+
+  @ForeignKey(() => Usuario)
+  User_id!: number
+
+  @BelongsTo(() => Usuario)
+  usuario!: Usuario;
 
   @BelongsToMany(() => Generos, () => LibrosGeneros)
   generos!: Generos[];

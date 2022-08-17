@@ -10,11 +10,11 @@ export const getBooks = async (
     try {
         const typeUser = await Usuario.findByPk(user_id)
         if(typeUser?.role === 'user'){
-            //const books = await Libros.findAll({where: { userid: user_id }}) 
-            //return res.json(books)
+            const books = await Libros.findAll({where: { User_id: user_id }}) 
+            return res.json(books)
         }else{
-            //const books = await Libros.findAll({where: { userid: 1 }}) 
-            //return res.json(books)
+            const books = await Libros.findAll({where: { User_id: 1 }}) 
+            return res.json(books)
         }
     } catch (err) {
         next(err);

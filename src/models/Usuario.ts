@@ -1,7 +1,8 @@
-import { Table, Model, Column, HasOne, ForeignKey, DataType, Unique, Default } from "sequelize-typescript";
+import { Table, Model, Column, HasOne, ForeignKey, DataType, Unique, Default, HasMany } from "sequelize-typescript";
 import { iUsuario, role, status } from "../types/Usuario";
 import { Carrito } from "./Carrito";
 import { Compras } from "./Compras";
+import { Libros } from "./Libros";
 
 @Table
 export class Usuario extends Model<iUsuario>{
@@ -35,6 +36,9 @@ export class Usuario extends Model<iUsuario>{
 
     @HasOne(() => Carrito)
     Carrito!: Carrito
+
+    @HasMany(() => Libros)
+    libros!: Libros[]
 
     @HasOne(() => Compras)
     compra!: Compras
