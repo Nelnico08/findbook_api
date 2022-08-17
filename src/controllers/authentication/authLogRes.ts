@@ -38,7 +38,8 @@ export const registerUser = async (req:Request, res:Response, next: NextFunction
                 password: hashedPass,
                 username: userBody.username,
                 url: userBody.url,
-                role: userBody.role
+                role: userBody.role,
+                status:userBody.status
             }) 
             await Carrito.create({
                     userid:newUser.id
@@ -58,7 +59,7 @@ export const loginUser = async (req:Request, res: Response, next:NextFunction)=>
     try {
         const {email, password} = req.body;
         if(!email || !password){
-            return res.json({error:"Email and Password are both required."})
+            return res.json({error:"Email y contraseña son requeridos."})
         }
         const user = await Usuario.findOne({where:{email}})
         if(!user){
@@ -67,6 +68,9 @@ export const loginUser = async (req:Request, res: Response, next:NextFunction)=>
         const comparePass = await bcrypt.compare(password,user.password);
         if(!comparePass){
             return res.json({error: "Email o contraseña incorrectos.",});
+        }
+        if(user.status === 'false'){
+            return res.json({error: "ESTE USUARIO ESTA BLOQUEADO - Comunicate con el ADMIN"})
         }
         const token = jwt.sign({user_id:user.id}, process.env.JWT_SECRET)
         return res.json({token})
