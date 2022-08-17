@@ -72,3 +72,7 @@ export const removeToCart = async(req: Request, res: Response, next: NextFunctio
     next(err)
   }
 }
+
+export const removeAllBooks = async(req:Request, res:Response, next:NextFunction) =>{
+  
+}
