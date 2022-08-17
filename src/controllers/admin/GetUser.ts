@@ -16,7 +16,8 @@ export const getUser = async (
                 lastname: user.lastname,
                 username: user.username,
                 email: user.email,
-                url: user.url
+                url: user.url,
+                status: user.status
             })
         }
         else{

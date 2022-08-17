@@ -34,6 +34,7 @@ export const getUsers = async (
                 name: user.name,
                 lastname: user.lastname,
                 url: user.url,
+                status: user.status
             }
         })
 
