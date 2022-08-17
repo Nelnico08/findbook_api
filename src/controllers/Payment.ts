@@ -68,6 +68,7 @@ export const paymentInt = async (
       const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
 
       if(session){
+        console.log(session)
         const cartUser = await Carrito.findOne({where:{userid: user_id}})
         if(cartUser){
           await CarritoLibros.destroy({where:{carrito_id: cartUser.userid}})
