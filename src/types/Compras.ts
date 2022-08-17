@@ -1,7 +1,7 @@
-export type status = "complete" | "expired"
+export type status = "complete" | "expired";
 
 export interface iCompras {
     id: string;
-    totalPrice: number
+    totalPrice: number;
     status: status
 }

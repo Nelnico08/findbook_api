@@ -1,5 +1,5 @@
 import { Table, Model, Column, HasOne, ForeignKey, DataType, Unique, Default } from "sequelize-typescript";
-import { iUsuario } from "../types/Usuario";
+import { iUsuario, role, status } from "../types/Usuario";
 import { Carrito } from "./Carrito";
 import { Compras } from "./Compras";
 
@@ -23,15 +23,15 @@ export class Usuario extends Model<iUsuario>{
     lastname!: string
 
     @Default('user')
-    @Column(DataType.ENUM('user','admin'))
-    role!: string
+    @Column
+    role!: role
 
     @Column
     url!: string
 
     @Default('true')
-    @Column(DataType.ENUM('true','false'))
-    status!: string
+    @Column
+    status!: status
 
     @HasOne(() => Carrito)
     Carrito!: Carrito
