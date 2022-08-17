@@ -1,9 +1,10 @@
 import { Table, Column, Model, PrimaryKey, ForeignKey, DataType, BelongsTo, HasMany } from "sequelize-typescript";
+import { iCompras, status } from "../types/Compras";
 import { Items } from "./Items";
 import { Usuario } from "./Usuario";
 
 @Table
-export class Compras extends Model{
+export class Compras extends Model<iCompras>{
     @PrimaryKey
     @Column
     id!: string
@@ -12,11 +13,15 @@ export class Compras extends Model{
     @Column
     user_id!: number
 
+    @ForeignKey(() => Items)
+    @Column
+    Items_id!: number
+
     @Column
     totalPrice!: number
 
-    @Column(DataType.ENUM("complete", "expired"))
-    status!: string
+    @Column
+    status!: status
 
     @BelongsTo(() => Usuario)
     Usuario!: Usuario

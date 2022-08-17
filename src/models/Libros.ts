@@ -7,7 +7,7 @@ import {
   ForeignKey,
   HasMany,
 } from 'sequelize-typescript';
-import { iLibros } from '../types/Libros';
+import { category, iLibros } from '../types/Libros';
 import { Carrito } from './Carrito';
 import { CarritoLibros } from './CarritoLibros';
 import { Generos } from './Generos';
@@ -22,8 +22,8 @@ export class Libros extends Model<iLibros> {
   @Column
   author!: string;
 
-  @Column(DataType.ENUM('todos', '12+', '16+', '18+', 'sin clasificación'))
-  category!: string;
+  @Column
+  category!: category;
 
   @Column
   pages!: number;
@@ -48,6 +48,9 @@ export class Libros extends Model<iLibros> {
 
   @Column
   language!: string;
+
+  @ForeignKey(() => Items)
+  Items_id!: number
 
   @BelongsToMany(() => Generos, () => LibrosGeneros)
   generos!: Generos[];

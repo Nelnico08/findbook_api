@@ -1,3 +1,7 @@
+export type role = 'user'|'admin';
+
+export type status = 'true'|'false'
+
 export interface iUsuario {
     id?: number
     email: string
@@ -5,7 +9,7 @@ export interface iUsuario {
     username: string
     name: string
     lastname: string
-    role: string
+    role: role
     url: string
-    status: string
+    status: status
 }

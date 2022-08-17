@@ -1,8 +1,10 @@
+export type category = 'todos' | '12+' | '16+' | '18+' | 'sin clasificación';
+
 export interface iLibros {
   id?: number;
   name: string;
   author: string;
-  category: 'todos' | '12+' | '16+' | '18+' | 'sin clasificación';
+  category: category
   pages: number;
   publisher: string;
   description: string;
