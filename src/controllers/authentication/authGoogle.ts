@@ -11,12 +11,12 @@ export const google =async (req:Request, res:Response, next:NextFunction) => {
         const user =  await Usuario.findOne({ where: { email: req.body.email } });
         if (user) {
             req.body.email = user.email;
-            req.body.password = user.email;
+            req.body.password = user.email.split("").reverse().join("");
             next();
         }else{
             const email = req.body.email;
-            const password = req.body.email;
-            const username = req.body.email.split("@")[0];
+            const password = req.body.email.split("").reverse().join("");
+            const username = req.body.email;
             const name = req.body.given_name.includes(" ")?req.body.given_name.split(" ")[0]:req.body.given_name;
             const lastname = req.body.family_name?req.body.family_name.includes(" ")?req.body.family_name.split(" ")[0]:req.body.family_name:' ';
             const url = `https://ui-avatars.com/api/?name=${name}+${lastname}?background=F0EDE5`;
