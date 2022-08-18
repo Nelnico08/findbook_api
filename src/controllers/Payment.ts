@@ -67,12 +67,15 @@ export const paymentInt = async (
         })
 
         if(session.status === "open"){
+          const checkStatus = await Compras.findOne({where:{user_id, status:"open"}})
+
+          if(checkStatus){
+            // await stripe.checkout.sessions.expire(checkStatus.id);
+            await Compras.update({status: "expired"}, {where:{id: checkStatus.id}})
+          }
           //Busco o creo la lista de compra para el usuario, solo si status es "open"
           await Compras.findOrCreate({
             where:{id: session.id},
-            include: {
-              model:Items
-            },
             defaults:{
               id: session.id,
               user_id: user_id,
@@ -82,22 +85,29 @@ export const paymentInt = async (
           })
           //Por cada item en data, busco o creo un item relacionado con la lista de compra
           promiseBooks.forEach(async(book: any) => {
-            await Items.findOrCreate({
+            const foundItem = await Items.findOne({
               where:{
                 compras_id: session.id,
                 libro_id: book.id,
+              }
+            })
+            if(foundItem){
+              await Items.update({
+                quantity: book.quantity,
+                subTotal: book.quantity * book.price
               },
-              include:{
-                model: Libros,
-                attributes: ["name", "image"],
-              },
-              defaults:{
+              {where:{
+                compras_id: session.id,
+                libro_id: book.id,
+              }})
+            }else{
+              await Items.create({
                 compras_id: session.id,
                 libro_id: book.id,
                 quantity: book.quantity,
-                subTotal: book.price * book.quantity
-              }
-            })
+                subTotal: book.quantity * book.price
+              })
+            }
           })
         }
         return res.json({ url: session.url })
@@ -112,7 +122,9 @@ export const paymentInt = async (
   export const getSessionId = async(req: Request, res: Response, next: NextFunction) => {
     try {
       const user_id = req.user_id;
-      const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
+      const session_id = req.query.session_id
+      const session = await stripe.checkout.sessions.retrieve(session_id);
+      let miStatus = "open";
 
       if(session){
         if(session.status === "complete"){
@@ -121,8 +133,14 @@ export const paymentInt = async (
           if(cartUser){
             await CarritoLibros.destroy({where:{carrito_id: cartUser.userid}})
           }
+          //busco la lista de compra del usuario y cambio su estado a complete
+          const userOrder = await Compras.findByPk(session.id);
+          if(userOrder){
+            await Compras.update({status:"complete"},{where:{id:session.id}})
+          }
           return res.send(`Gracias por su compra`)
-        }else if(session.status === "open"){
+        }
+        else if(session.status === "open"){
           const cancelSession = await stripe.checkout.sessions.expire(req.query.session_id)
           if(cancelSession){
             return res.send('El pago no ha sido realizado')
