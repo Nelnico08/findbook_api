@@ -6,16 +6,12 @@ import { Usuario } from "./Usuario";
 @Table
 export class Compras extends Model<iCompras>{
     @PrimaryKey
-    @Column
+    @Column({primaryKey: true})
     id!: string
 
     @ForeignKey(() => Usuario)
     @Column
     user_id!: number
-
-    @ForeignKey(() => Items)
-    @Column
-    Items_id!: number
 
     @Column
     totalPrice!: number
