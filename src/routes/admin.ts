@@ -11,7 +11,7 @@ import { putUserAdmin } from '../controllers/admin/PutUserAdmin'
 const router = Router();
 
 router.get('/users', [verifyToken, verifyAdmin], getUsers)
-router.get('/users/:username', [verifyToken, verifyAdmin], getUser)
+router.get('/usersDetail', [verifyToken, verifyAdmin], getUser)
 router.get('/books', [verifyToken, verifyAdmin], getBooks)
 router.put('/putbook/:id', [verifyToken, verifyAdmin], putBookAdmin)
 router.put('/putuser/:email', [verifyToken, verifyAdmin], putUserAdmin)
