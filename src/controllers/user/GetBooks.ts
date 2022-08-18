@@ -12,7 +12,7 @@ export const getBooks = async (
         if(typeUser?.role === 'user'){
             const books = await Libros.findAll({where: { User_id: user_id }}) 
             return res.json(books)
-        }else{
+        }else if(typeUser?.role === 'admin'){
             const books = await Libros.findAll({where: { User_id: 1 }}) 
             return res.json(books)
         }
