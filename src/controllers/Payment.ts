@@ -4,6 +4,8 @@ import { Libros } from '../models/Libros';
 import { Carrito } from '../models/Carrito';
 import { CarritoLibros } from '../models/CarritoLibros';
 import { Usuario } from '../models/Usuario';
+import { Compras } from '../models/Compras';
+import { Items } from '../models/Items';
 dotenv.config()
 
 // Set your secret key. Remember to switch to your live secret key in production.
@@ -36,7 +38,8 @@ export const paymentInt = async (
           return{
             id: book.id,
             name: book.name,
-            price: book.price
+            price: book.price,
+            quantity: item.quantity
           }
         }
       })
@@ -46,7 +49,7 @@ export const paymentInt = async (
         const session = await stripe.checkout.sessions.create({
           payment_method_types: ["card"],
           mode: "payment",
-          line_items: promiseBooks.map((book:any, index: number) => {
+          line_items: promiseBooks.map((book:any) => {
             return{
               price_data:{
                 currency: "usd",
@@ -55,14 +58,49 @@ export const paymentInt = async (
                 },
                 unit_amount: book.price * 100
               },
-              quantity: data[index].quantity,
+              quantity: book.quantity,
             }
           }),
           success_url: `${process.env.APP_URL}/payment/success/{CHECKOUT_SESSION_ID}`,
           cancel_url: `${process.env.APP_URL}/payment?cancel_session={CHECKOUT_SESSION_ID}`,
           customer_email: email
         })
-        return res.json({ url: session.url, orderList: data})
+
+        if(session.status === "open"){
+          //Busco o creo la lista de compra para el usuario, solo si status es "open"
+          await Compras.findOrCreate({
+            where:{id: session.id},
+            include: {
+              model:Items
+            },
+            defaults:{
+              id: session.id,
+              user_id: user_id,
+              totalPrice: session.amount_total/100,
+              status: "open"
+            }
+          })
+          //Por cada item en data, busco o creo un item relacionado con la lista de compra
+          promiseBooks.forEach(async(book: any) => {
+            await Items.findOrCreate({
+              where:{
+                compras_id: session.id,
+                libro_id: book.id,
+              },
+              include:{
+                model: Libros,
+                attributes: ["name", "image"],
+              },
+              defaults:{
+                compras_id: session.id,
+                libro_id: book.id,
+                quantity: book.quantity,
+                subTotal: book.price * book.quantity
+              }
+            })
+          })
+        }
+        return res.json({ url: session.url })
       }
       res.json({error: "No se envio data"})
         
