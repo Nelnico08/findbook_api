@@ -21,11 +21,12 @@ export const getUserOrders = async(req:Request, res:Response, next: NextFunction
           const orderList = await Compras.findAll({
             where:{
               user_id: findbookUser
-                },
-              include:{
-                model: Items,
-              }
-            })
+            },
+            include:{
+              model: Items,
+            },
+            order: [['updatedAt', 'DESC']]
+          })
           if(orderList.length){
             return res.json(orderList)
             }else{
@@ -39,7 +40,9 @@ export const getUserOrders = async(req:Request, res:Response, next: NextFunction
         const allOrders = await Compras.findAll({
           include:{
             model: Items,
-          }});
+          },
+          order: [['updatedAt', 'DESC']]
+        });
         if(allOrders.length){
           return res.json(allOrders);
         }else{
@@ -54,7 +57,8 @@ export const getUserOrders = async(req:Request, res:Response, next: NextFunction
         },
         include:{
           model: Items,
-        }
+        },
+        order: [['updatedAt', 'DESC']]
       })
       if(orderUser.length){
         return res.json(orderUser)
