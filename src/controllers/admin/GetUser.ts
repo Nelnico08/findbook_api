@@ -8,17 +8,10 @@ export const getUser = async (
     next: NextFunction
 ) => {
     try {
-        const username = req.params.username;
-        const user = await Usuario.findOne({where:{username:username}})
+        const user_id = req.user_id;
+        const user = await Usuario.findOne({where:{id: user_id}})
         if(user){
-            return res.json({
-                name: user.name,
-                lastname: user.lastname,
-                username: user.username,
-                email: user.email,
-                url: user.url,
-                status: user.status
-            })
+            return res.json(user)
         }
         else{
             return res.json({error:'Usuario no encontrado'});            
