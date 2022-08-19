@@ -72,7 +72,6 @@ export const paymentInt = async (
           const checkStatus = await Compras.findOne({where:{user_id, status:"open"}})
 
           if(checkStatus){
-            // await stripe.checkout.sessions.expire(checkStatus.id);
             await Compras.update({status: "expired"}, {where:{id: checkStatus.id}})
           }
           //Busco o creo la lista de compra para el usuario, solo si status es "open"
@@ -82,7 +81,8 @@ export const paymentInt = async (
               id: session.id,
               user_id: user_id,
               totalPrice: session.amount_total/100,
-              status: "open"
+              status: "open",
+              buttonSwitch: "disable"
             }
           })
           //Por cada item en data, busco o creo un item relacionado con la lista de compra
@@ -123,8 +123,12 @@ export const paymentInt = async (
               status: "open"
             }})
           if(statusCheck){
-            console.log(session)
-            await Compras.update({status:"expired"},{where:{id:session.id}})
+            await Compras.update({status:"expired", buttonSwitch: "active"},{where:{id:session.id}})
+          }else{
+            const button = await Compras.findOne({where:{id: session.id, buttonSwitch: "disable"}});
+            if(button){
+              await Compras.update({buttonSwitch: "active"}, {where:{id:session.id}})
+            }
           }
         }
         statusCheck();
@@ -165,6 +169,21 @@ export const paymentInt = async (
         }
       }else{
         return res.json({message: "session no encontrada"})
+      }
+    } catch (error) {
+      next(error)
+    }
+  }
+
+  export const buttonSwitch = async(req: Request, res: Response, next: NextFunction) => {
+    try {
+      const user_id = req.user_id;
+
+      const buttonStatus = await Compras.findOne({where:{user_id:user_id, buttonSwitch: "disable"}});
+      if(buttonStatus){
+        return res.send("boton deshabilitado")
+      }else{
+        return res.send("boton habilitado")
       }
     } catch (error) {
       next(error)

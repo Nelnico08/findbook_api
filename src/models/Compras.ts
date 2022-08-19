@@ -1,5 +1,5 @@
 import { Table, Column, Model, PrimaryKey, ForeignKey, DataType, BelongsTo, HasMany } from "sequelize-typescript";
-import { iCompras, status } from "../types/Compras";
+import { buttonSwitch, iCompras, status } from "../types/Compras";
 import { Items } from "./Items";
 import { Usuario } from "./Usuario";
 
@@ -18,6 +18,9 @@ export class Compras extends Model<iCompras>{
 
     @Column
     status!: status
+
+    @Column
+    buttonSwitch!: buttonSwitch
 
     @BelongsTo(() => Usuario)
     Usuario!: Usuario
