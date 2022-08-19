@@ -2,6 +2,7 @@ import { Table, Model, Column, HasOne, ForeignKey, DataType, Unique, Default, Ha
 import { iUsuario, role, status } from "../types/Usuario";
 import { Carrito } from "./Carrito";
 import { Compras } from "./Compras";
+import { Favoritos } from "./Favoritos";
 import { Libros } from "./Libros";
 
 @Table
@@ -36,6 +37,9 @@ export class Usuario extends Model<iUsuario>{
 
     @HasOne(() => Carrito)
     Carrito!: Carrito
+
+    @HasOne(() => Favoritos)
+    Favoritos!: Favoritos
 
     @HasMany(() => Libros)
     libros!: Libros[]
