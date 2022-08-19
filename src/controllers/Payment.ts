@@ -124,7 +124,6 @@ export const paymentInt = async (
       const user_id = req.user_id;
       const session_id = req.query.session_id
       const session = await stripe.checkout.sessions.retrieve(session_id);
-      let miStatus = "open";
 
       if(session){
         if(session.status === "complete"){
@@ -146,6 +145,8 @@ export const paymentInt = async (
             return res.send('El pago no ha sido realizado')
           }
         }
+      }else{
+        return res.json({message: "session no encontrada"})
       }
     } catch (error) {
       next(error)

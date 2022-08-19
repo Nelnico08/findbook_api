@@ -13,7 +13,7 @@ export class Compras extends Model<iCompras>{
     @Column
     user_id!: number
 
-    @Column
+    @Column(DataType.DECIMAL)
     totalPrice!: number
 
     @Column
