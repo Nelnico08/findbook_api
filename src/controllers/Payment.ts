@@ -63,7 +63,8 @@ export const paymentInt = async (
           }),
           success_url: `${process.env.APP_URL}/payment/success/{CHECKOUT_SESSION_ID}`,
           cancel_url: `${process.env.APP_URL}/payment?cancel_session={CHECKOUT_SESSION_ID}`,
-          customer_email: email
+          customer_email: email,
+          expires_at: 15000
         })
 
         if(session.status === "open"){
@@ -110,6 +111,21 @@ export const paymentInt = async (
             }
           })
         }
+        async function asyncGenerator(ms:number){
+          await new Promise((resolve) => setTimeout(resolve,ms))
+        }
+        async function statusCheck(){
+          await asyncGenerator(15000);
+          const statusCheck = await Compras.findOne({
+            where:{
+              id:session.id,
+              status: "open"
+            }})
+          if(statusCheck){
+            await Compras.update({status:"expired"},{where:{id:session.id}})
+          }
+        }
+        statusCheck();
         return res.json({ url: session.url })
       }
       res.json({error: "No se envio data"})
