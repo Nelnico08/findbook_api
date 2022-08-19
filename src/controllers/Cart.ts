@@ -10,7 +10,7 @@ export const addToCart = async(req: Request, res: Response, next: NextFunction) 
     const cart = await Carrito.findOne({where:{userid: user_id}});
 
     if(cart){
-      const bookFound = await CarritoLibros.findOne({where:{libro_id:book_id}})
+      const bookFound = await CarritoLibros.findOne({where:{libro_id:book_id,carrito_id:cart.id}})
       if(bookFound) return res.json({message: "El libro ya se encuentra en el carrito"})
       await CarritoLibros.create({libro_id: book_id, carrito_id: cart.id})
 

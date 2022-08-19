@@ -4,6 +4,8 @@ import { Libros } from '../models/Libros';
 import { Carrito } from '../models/Carrito';
 import { CarritoLibros } from '../models/CarritoLibros';
 import { Usuario } from '../models/Usuario';
+import { Compras } from '../models/Compras';
+import { Items } from '../models/Items';
 dotenv.config()
 
 // Set your secret key. Remember to switch to your live secret key in production.
@@ -36,7 +38,8 @@ export const paymentInt = async (
           return{
             id: book.id,
             name: book.name,
-            price: book.price
+            price: book.price,
+            quantity: item.quantity
           }
         }
       })
@@ -46,7 +49,7 @@ export const paymentInt = async (
         const session = await stripe.checkout.sessions.create({
           payment_method_types: ["card"],
           mode: "payment",
-          line_items: promiseBooks.map((book:any, index: number) => {
+          line_items: promiseBooks.map((book:any) => {
             return{
               price_data:{
                 currency: "usd",
@@ -55,14 +58,59 @@ export const paymentInt = async (
                 },
                 unit_amount: book.price * 100
               },
-              quantity: data[index].quantity,
+              quantity: book.quantity,
             }
           }),
           success_url: `${process.env.APP_URL}/payment/success/{CHECKOUT_SESSION_ID}`,
           cancel_url: `${process.env.APP_URL}/payment?cancel_session={CHECKOUT_SESSION_ID}`,
           customer_email: email
         })
-        return res.json({ url: session.url, orderList: data})
+
+        if(session.status === "open"){
+          const checkStatus = await Compras.findOne({where:{user_id, status:"open"}})
+
+          if(checkStatus){
+            // await stripe.checkout.sessions.expire(checkStatus.id);
+            await Compras.update({status: "expired"}, {where:{id: checkStatus.id}})
+          }
+          //Busco o creo la lista de compra para el usuario, solo si status es "open"
+          await Compras.findOrCreate({
+            where:{id: session.id},
+            defaults:{
+              id: session.id,
+              user_id: user_id,
+              totalPrice: session.amount_total/100,
+              status: "open"
+            }
+          })
+          //Por cada item en data, busco o creo un item relacionado con la lista de compra
+          promiseBooks.forEach(async(book: any) => {
+            const foundItem = await Items.findOne({
+              where:{
+                compras_id: session.id,
+                libro_id: book.id,
+              }
+            })
+            if(foundItem){
+              await Items.update({
+                quantity: book.quantity,
+                subTotal: book.quantity * book.price
+              },
+              {where:{
+                compras_id: session.id,
+                libro_id: book.id,
+              }})
+            }else{
+              await Items.create({
+                compras_id: session.id,
+                libro_id: book.id,
+                quantity: book.quantity,
+                subTotal: book.quantity * book.price
+              })
+            }
+          })
+        }
+        return res.json({ url: session.url })
       }
       res.json({error: "No se envio data"})
         
@@ -74,7 +122,8 @@ export const paymentInt = async (
   export const getSessionId = async(req: Request, res: Response, next: NextFunction) => {
     try {
       const user_id = req.user_id;
-      const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
+      const session_id = req.query.session_id
+      const session = await stripe.checkout.sessions.retrieve(session_id);
 
       if(session){
         if(session.status === "complete"){
@@ -83,13 +132,21 @@ export const paymentInt = async (
           if(cartUser){
             await CarritoLibros.destroy({where:{carrito_id: cartUser.userid}})
           }
+          //busco la lista de compra del usuario y cambio su estado a complete
+          const userOrder = await Compras.findByPk(session.id);
+          if(userOrder){
+            await Compras.update({status:"complete"},{where:{id:session.id}})
+          }
           return res.send(`Gracias por su compra`)
-        }else if(session.status === "open"){
+        }
+        else if(session.status === "open"){
           const cancelSession = await stripe.checkout.sessions.expire(req.query.session_id)
           if(cancelSession){
             return res.send('El pago no ha sido realizado')
           }
         }
+      }else{
+        return res.json({message: "session no encontrada"})
       }
     } catch (error) {
       next(error)

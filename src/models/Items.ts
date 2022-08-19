@@ -1,4 +1,4 @@
-import { Table, Model, Column, ForeignKey, HasMany, HasOne } from "sequelize-typescript";
+import { Table, Model, Column, ForeignKey, HasMany, HasOne, BelongsTo, DataType } from "sequelize-typescript";
 import { items } from "../types/Items";
 import { Compras } from "./Compras";
 import { Libros } from "./Libros";
@@ -16,12 +16,12 @@ export class Items extends Model<items> {
     @Column
     quantity!: number
 
-    @Column
+    @Column(DataType.DECIMAL)
     subTotal!: number
 
-    @HasMany(() => Compras)
-    Compras!: Compras[]
+    @BelongsTo(() => Compras)
+    Compras!: Compras
 
-    @HasOne(() => Libros)
+    @BelongsTo(() => Libros)
     libro!: Libros
 }
