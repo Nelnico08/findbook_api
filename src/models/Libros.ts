@@ -11,6 +11,7 @@ import {
 import { category, iLibros } from '../types/Libros';
 import { Carrito } from './Carrito';
 import { CarritoLibros } from './CarritoLibros';
+import { Favoritos } from './Favoritos';
 import { Generos } from './Generos';
 import { Items } from './Items';
 import { LibrosGeneros } from './LibrosGeneros';
@@ -62,9 +63,12 @@ export class Libros extends Model<iLibros> {
 
   @BelongsToMany(() => Generos, () => LibrosGeneros)
   generos!: Generos[];
-  
+
   @BelongsToMany(() => Carrito, () => CarritoLibros)
   Carrito!: Carrito[]
+
+  @BelongsToMany(() => Favoritos, () => CarritoLibros)
+  Favoritos!: Favoritos[]
 
   @HasMany(() => Items)
   Items!: Items[]
