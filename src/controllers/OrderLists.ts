@@ -28,7 +28,25 @@ export const getUserOrders = async(req:Request, res:Response, next: NextFunction
             order: [['updatedAt', 'DESC']]
           })
           if(orderList.length){
-            return res.json(orderList)
+            const userMap = orderList.map(async(user:any) =>{
+              const userFound = await Usuario.findByPk(user.user_id);
+              if(userFound){
+                return{
+                  id: userFound.id,
+                  email: userFound.email,
+                  name: userFound.name,
+                  url: userFound.url
+                }
+              }
+            })
+            const userPromise = await Promise.all(userMap)
+            const list = orderList.map((order: any, index: number) =>{
+              return{
+                order,
+                user: userPromise[index]
+              }
+            })
+            return res.json(list)
             }else{
               return res.json({message:"El usuario no ha registrado ninguna operacion"})
             }
@@ -44,7 +62,25 @@ export const getUserOrders = async(req:Request, res:Response, next: NextFunction
           order: [['updatedAt', 'DESC']]
         });
         if(allOrders.length){
-          return res.json(allOrders);
+          const userMap = allOrders.map(async(user:any) =>{
+            const userFound = await Usuario.findByPk(user.user_id);
+            if(userFound){
+              return{
+                id: userFound.id,
+                email: userFound.email,
+                name: userFound.name,
+                url: userFound.url
+              }
+            }
+          })
+          const userPromise = await Promise.all(userMap)
+          const list = allOrders.map((order: any, index: number) =>{
+            return{
+              order,
+              user: userPromise[index]
+            }
+          })
+          return res.json(list);
         }else{
           return res.json({message:"No hay registros en la aplicacion"})
         }
@@ -89,26 +125,33 @@ export const getOrderById = async(req: Request, res:Response, next: NextFunction
         }
       })
       if(foundOrder){
-        const books = foundOrder.Items.map(async(book : any) => {
-          const libro = await Libros.findByPk(book.libro_id);
-          if(libro){
-            return{
-              Book: libro,
-              quantity: book.quantity,
-              subTotal: book.subTotal
+        const regularUser = await Usuario.findByPk(foundOrder.user_id)
+        if(regularUser){
+          const books = foundOrder.Items.map(async(book : any) => {
+            const libro = await Libros.findByPk(book.libro_id);
+            if(libro){
+              return{
+                Book: libro,
+                quantity: book.quantity,
+                subTotal: book.subTotal
+              }
             }
-          }
-        })
+          })
 
-        const promiseBooks = await Promise.all(books)
-        detail = {
-          compras_id: foundOrder.id,
-          user_id: foundOrder.user_id,
-          totalPrice: foundOrder.totalPrice,
-          status: foundOrder.status,
-          items: promiseBooks
+          const promiseBooks = await Promise.all(books)
+          detail = {
+            compras_id: foundOrder.id,
+            user_id: foundOrder.user_id,
+            totalPrice: foundOrder.totalPrice,
+            status: foundOrder.status,
+            items: promiseBooks,
+            user:regularUser
+          }
+          return res.json(detail)
+        }else{
+          return res.json({message:"El usuario no se encuentra"})
         }
-        return res.json(detail)
+        
       }else{
         return res.json({message:"No se encontro la lista de compras buscada"})
       }
