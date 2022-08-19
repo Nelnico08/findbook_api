@@ -4,15 +4,20 @@ import { Carrito } from '../../models/Carrito';
 import dotenv from 'dotenv';
 dotenv.config();
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 export const google =async (req:Request, res:Response, next:NextFunction) => {
     try{
-
+        if(!req.body.email_verified){
+            return res.json({error: "Ocurrio un error al intentar verificar tu email con Google"})
+        }
         const user =  await Usuario.findOne({ where: { email: req.body.email } });
-        if (user) {
-            req.body.email = user.email;
-            req.body.password = user.email.split("").reverse().join("");
-            next();
+        if(user){
+            if(user.status === 'false'){
+                return res.json({error: "ESTE USUARIO ESTA BLOQUEADO - Comunicate con el ADMIN"})
+            }
+            const token = jwt.sign({user_id:user.id}, process.env.JWT_SECRET)
+            return res.json({token})
         }else{
             const email = req.body.email;
             const password = req.body.email.split("").reverse().join("");
