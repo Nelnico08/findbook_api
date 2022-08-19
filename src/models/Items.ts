@@ -1,4 +1,4 @@
-import { Table, Model, Column, ForeignKey, HasMany, HasOne, BelongsTo } from "sequelize-typescript";
+import { Table, Model, Column, ForeignKey, HasMany, HasOne, BelongsTo, DataType } from "sequelize-typescript";
 import { items } from "../types/Items";
 import { Compras } from "./Compras";
 import { Libros } from "./Libros";
@@ -16,7 +16,7 @@ export class Items extends Model<items> {
     @Column
     quantity!: number
 
-    @Column
+    @Column(DataType.DECIMAL)
     subTotal!: number
 
     @BelongsTo(() => Compras)
