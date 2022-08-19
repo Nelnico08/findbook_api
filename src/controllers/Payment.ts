@@ -24,6 +24,7 @@ export const paymentInt = async (
       const user_id = req.user_id;
       const data = req.body.data
       let email: string | undefined = undefined;
+      let date = Math.round(Date.now() / 1000)
 
       const user = await Usuario.findByPk(user_id);
       if(user){
@@ -64,7 +65,7 @@ export const paymentInt = async (
           success_url: `${process.env.APP_URL}/payment/success/{CHECKOUT_SESSION_ID}`,
           cancel_url: `${process.env.APP_URL}/payment?cancel_session={CHECKOUT_SESSION_ID}`,
           customer_email: email,
-          expires_at: 15000
+          expires_at: date + 1800
         })
 
         if(session.status === "open"){
@@ -115,13 +116,14 @@ export const paymentInt = async (
           await new Promise((resolve) => setTimeout(resolve,ms))
         }
         async function statusCheck(){
-          await asyncGenerator(15000);
+          await asyncGenerator(1800000);
           const statusCheck = await Compras.findOne({
             where:{
               id:session.id,
               status: "open"
             }})
           if(statusCheck){
+            console.log(session)
             await Compras.update({status:"expired"},{where:{id:session.id}})
           }
         }
