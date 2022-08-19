@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
 import { Libros } from '../models/Libros';
 import { Carrito } from '../models/Carrito';
 import { CarritoLibros } from '../models/CarritoLibros';
@@ -163,6 +163,7 @@ export const paymentInt = async (
         }
         else if(session.status === "open"){
           const cancelSession = await stripe.checkout.sessions.expire(req.query.session_id)
+          await Compras.update({status:"expired"}, {where:{id:session.id}})
           if(cancelSession){
             return res.send('El pago no ha sido realizado')
           }
