@@ -7,7 +7,7 @@ const router = Router();
 
 router.post('/secret',[verifyToken,verifyUser], paymentInt);
 router.get('/secret',[verifyToken,verifyUser], getSessionId)
-router.get('/secret',[verifyToken,verifyUser], buttonSwitch)
+router.get('/secret/buttonstate',[verifyToken,verifyUser], buttonSwitch)
 
 
 export default router;
