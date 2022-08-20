@@ -54,7 +54,7 @@ $ npm install
 <ul>
   <li>
     <label>César Arturo Catalán Cantillo</label>
-    <a href="#!">GitHub</a>
+    <a href="https://github.com/catalancesar">GitHub</a>
     <a href="#!">LinkedIn</a>
   </li>
   <li>
