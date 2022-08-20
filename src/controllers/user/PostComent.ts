@@ -20,9 +20,8 @@ export const PostComent = async (req: Request, res: Response, next: NextFunction
     }
 }
 
-export const DeleteComent = async (req: Request, res: Response, next: NextFunction) => {
-    const comentarioid = req.params
-    const user_id = req.user_id
+export const deleteComent = async (req: Request, res: Response, next: NextFunction) => {
+    const comentarioid = req.params.id
     try {
         Comentarios.destroy({ where: { id: comentarioid } })
         res.json('Comentario eliminado correctamente')
