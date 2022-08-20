@@ -8,6 +8,7 @@ import { verifyAdmin } from '../middlewares/verifyAdmin';
 import { getUser } from '../controllers/admin/GetUser';
 import { getBooks } from '../controllers/user/GetBooks';
 import { putUserAdmin } from '../controllers/admin/PutUserAdmin'
+import { deleteComent } from '../controllers/user/PostComent';
 const router = Router();
 
 router.get('/users', [verifyToken, verifyAdmin], getUsers)
@@ -17,5 +18,6 @@ router.put('/putbook/:id', [verifyToken, verifyAdmin], putBookAdmin)
 router.put('/putuser/:email', [verifyToken, verifyAdmin], putUserAdmin)
 router.delete('/deleteuser/:email', [verifyToken, verifyAdmin], deleteUserAdmin)
 router.delete('/deletebook/:id', [verifyToken, verifyAdmin], deleteBookAdmin);
+router.delete('/deletecomment/:id', [verifyToken, verifyAdmin], deleteComent);
 
 export default router;
