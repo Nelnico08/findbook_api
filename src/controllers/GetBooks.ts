@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { Op } from 'sequelize';
+import { Comentarios } from '../models/Comentarios';
 import { Generos } from '../models/Generos';
 import { Libros } from '../models/Libros';
 
@@ -80,13 +81,20 @@ export const getBookById = async (
       where: {
         id,
       },
-      include: {
+      include: [{
         model: Generos,
         attributes: ['genre'],
         through: {
           attributes: [],
         },
-      }
+      },
+      {
+        model: Comentarios,
+        attributes: ['Comentario'],
+        // through: {
+        //   attributes: [],
+        // },
+      }]
     });
     if (!book) return res.json('Libro no encontrado.');
 

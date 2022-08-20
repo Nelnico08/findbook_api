@@ -4,8 +4,8 @@ import { Comentarios } from '../../models/Comentarios'
 
 export const PostComent = async (req: Request, res: Response, next: NextFunction) => {
     const user_id = req.user_id
-    const book_id = Number(req.params)
-    const comentario: string = req.body
+    const book_id = Number(req.params.id)
+    const comentario: string = req.body.Comentario
     try {
         await Comentarios.create({
             Comentario: comentario,
