@@ -3,6 +3,7 @@ import { Op } from 'sequelize';
 import { Comentarios } from '../models/Comentarios';
 import { Generos } from '../models/Generos';
 import { Libros } from '../models/Libros';
+import { Usuario } from '../models/Usuario';
 
 export const getBooks = async (
   req: Request,
@@ -90,14 +91,30 @@ export const getBookById = async (
       },
       {
         model: Comentarios,
-        attributes: ['Comentario'],
+        include:[{
+          model: Usuario,
+          attributes:['name','lastname','url']
+        }]
+        // model: Comentarios,
+        // include: [Usuario],
+        // attributes: ['Comentario'],
+        
         // through: {
         //   attributes: [],
         // },
       }]
     });
     if (!book) return res.json('Libro no encontrado.');
-
+    // const fbook = book.comentarios.map(i => {
+    //   return {
+    //     Comentario: i.Comentario,
+    //     usuario: {
+    //       name: i.usuario.name,
+    //       lastname: i.usuario.lastname,
+    //       url: i.usuario.url,
+    //     }
+    //   }
+    // });
     res.json(book);
   } catch (err) {
     next(err);

@@ -6,6 +6,8 @@ export const PostComent = async (req: Request, res: Response, next: NextFunction
     const user_id = req.user_id
     const book_id = Number(req.params.id)
     const comentario: string = req.body.Comentario
+    if(!comentario.length) return res.json({error: 'El comentario no puede estar vacío.'})
+    console.log(comentario);
     try {
         await Comentarios.create({
             Comentario: comentario,
