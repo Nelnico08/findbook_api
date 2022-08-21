@@ -112,26 +112,21 @@ export const paymentInt = async (
             }
           })
         }
-        async function asyncGenerator(ms:number){
-          await new Promise((resolve) => setTimeout(resolve,ms))
-        }
-        async function statusCheck(){
-          await asyncGenerator(1800000);
-          const statusCheck = await Compras.findOne({
-            where:{
-              id:session.id,
-              status: "open"
-            }})
-          if(statusCheck){
-            await Compras.update({status:"expired", buttonSwitch: "active"},{where:{id:session.id}})
-          }else{
-            const button = await Compras.findOne({where:{id: session.id, buttonSwitch: "disable"}});
-            if(button){
-              await Compras.update({buttonSwitch: "active"}, {where:{id:session.id}})
-            }
-          }
-        }
-        statusCheck();
+        // async function asyncGenerator(ms:number){
+        //   await new Promise((resolve) => setTimeout(resolve,ms))
+        // }
+        // async function statusCheck(){
+        //   await asyncGenerator(1800000);
+        //   const statusCheck = await Compras.findOne({
+        //     where:{
+        //       id:session.id,
+        //       status: "open"
+        //     }})
+        //   if(statusCheck){
+        //     await Compras.update({status:"expired"},{where:{id:session.id}})
+        //   }
+        // }
+        // statusCheck();
         return res.json({ url: session.url })
       }
       res.json({error: "No se envio data"})
@@ -179,13 +174,31 @@ export const paymentInt = async (
   export const buttonSwitch = async(req: Request, res: Response, next: NextFunction) => {
     try {
       const user_id = req.user_id;
-
       const buttonStatus = await Compras.findOne({where:{user_id:user_id, buttonSwitch: "disable"}});
       if(buttonStatus){
-        return res.send("boton deshabilitado")
-      }else{
-        return res.send("boton habilitado")
+        const dateNow = Date.now();
+        const dbDate = new Date(buttonStatus.createdAt)
+        const dbDateToMilliseconds = dbDate.getTime()
+
+        if(dbDateToMilliseconds + 1800000 <= dateNow && buttonStatus.status === "open"){
+          buttonStatus.status="expired"
+          buttonStatus.buttonSwitch = "active";
+          return res.send("boton habilitado")
+        }else if(dbDateToMilliseconds + 1800000 <= dateNow){
+          buttonStatus.buttonSwitch = "active";
+          return res.send("boton habilitado")
+        }else{
+          return res.send("boton deshabilitado")
+        }
       }
+      
+
+      // const buttonStatus = await Compras.findOne({where:{user_id:user_id, buttonSwitch: "disable"}});
+      // if(buttonStatus){
+      //   return res.send("boton deshabilitado")
+      // }else{
+      //   return res.send("boton habilitado")
+      // }
     } catch (error) {
       next(error)
     }
