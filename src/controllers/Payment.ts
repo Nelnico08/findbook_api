@@ -181,11 +181,10 @@ export const paymentInt = async (
         const dbDateToMilliseconds = dbDate.getTime()
 
         if(dbDateToMilliseconds + 1800000 <= dateNow && buttonStatus.status === "open"){
-          buttonStatus.status="expired"
-          buttonStatus.buttonSwitch = "active";
+          await Compras.update({status:"expired", buttonSwitch:"active"},{where:{user_id:user_id, buttonSwitch: "disable"}})
           return res.send("boton habilitado")
         }else if(dbDateToMilliseconds + 1800000 <= dateNow){
-          buttonStatus.buttonSwitch = "active";
+          await Compras.update({buttonSwitch:"active"},{where:{user_id:user_id, buttonSwitch: "disable"}})
           return res.send("boton habilitado")
         }else{
           return res.send("boton deshabilitado")
