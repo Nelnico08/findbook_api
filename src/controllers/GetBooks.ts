@@ -104,7 +104,7 @@ export const getBookById = async (
         // },
       }]
     });
-    if (!book) return res.json('Libro no encontrado.');
+    if (!book) return res.json({error:'El libro no existe'});
     // const fbook = book.comentarios.map(i => {
     //   return {
     //     Comentario: i.Comentario,
@@ -117,6 +117,6 @@ export const getBookById = async (
     // });
     res.json(book);
   } catch (err) {
-    next(err);
+    return res.json({error:"El libro no existe"})
   }
 };

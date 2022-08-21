@@ -7,7 +7,7 @@ export const PostComent = async (req: Request, res: Response, next: NextFunction
     const book_id = Number(req.params.id)
     const comentario: string = req.body.Comentario
     if(!comentario.length) return res.json({error: 'El comentario no puede estar vacío.'})
-    console.log(comentario);
+    if(comentario.length>500) return res.json({error: 'El comentario es muy largo TT_TT'})
     try {
         await Comentarios.create({
             Comentario: comentario,

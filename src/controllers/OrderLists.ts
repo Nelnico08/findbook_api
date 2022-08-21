@@ -195,3 +195,139 @@ export const getOrderById = async(req: Request, res:Response, next: NextFunction
     next(error)
   }
 }
+
+export const getUserSells = async(req:Request, res:Response, next: NextFunction) => {
+  const user_id = req.user_id;
+
+  try{
+    const librosUser = await Libros.findAll({
+      attributes:['id'],
+      where:{
+        User_id: user_id
+      }
+    })
+    if(!librosUser.length) return res.json('El usuario no tiene libros a la venta')
+    
+    const ventas = librosUser.map(async({id})=>{
+      return await Compras.findAll({
+        include:{
+          model: Items,
+          where: {
+            libro_id: id
+          }
+        }
+      })
+    })
+    const ventasPromise = await Promise.all(ventas).then(values=>values);
+    console.log(ventasPromise)
+    let arrayVentas =[] as any[];
+    ventasPromise.forEach(libro=>libro.forEach(v=>arrayVentas.push(v)))
+
+    return res.json({ventas:arrayVentas})
+    // const ventas = await Compras.findAll({
+    //   include:{
+    //     model: Items,
+    //     where:{
+
+    //     }
+    //   },
+    // });
+
+    // if(user && user.role === "admin"){
+    //   //...el admin debe poder tener acceso a todas las lista de compras
+    //   // si el admin quiere ver las listas de un usuario en particular
+    //   const findbookUser = Number(req.query.user_id);
+      
+    //   if(findbookUser){
+    //     const userFound = await Usuario.findByPk(findbookUser)
+    //     if(userFound){
+    //       const orderList = await Compras.findAll({
+    //         where:{
+    //           user_id: findbookUser
+    //         },
+    //         include:{
+    //           model: Items,
+    //         },
+    //         order: [['updatedAt', 'DESC']]
+    //       })
+    //       if(orderList.length){
+    //         const userMap = orderList.map(async(user:any) =>{
+    //           const userFound = await Usuario.findByPk(user.user_id);
+    //           if(userFound){
+    //             return{
+    //               id: userFound.id,
+    //               email: userFound.email,
+    //               name: userFound.name,
+    //               url: userFound.url
+    //             }
+    //           }
+    //         })
+    //         const userPromise = await Promise.all(userMap)
+    //         const list = orderList.map((order: any, index: number) =>{
+    //           return{
+    //             order,
+    //             user: userPromise[index]
+    //           }
+    //         })
+    //         return res.json(list)
+    //         }else{
+    //           return res.json({message:"El usuario no ha registrado ninguna operacion"})
+    //         }
+    //     }else{
+    //         return res.json({message: "usuario no encontrado"})
+    //       }
+              
+    //   }else{
+    //     const allOrders = await Compras.findAll({
+    //       include:{
+    //         model: Items,
+    //       },
+    //       order: [['updatedAt', 'DESC']]
+    //     });
+    //     if(allOrders.length){
+    //       const userMap = allOrders.map(async(user:any) =>{
+    //         const userFound = await Usuario.findByPk(user.user_id);
+    //         if(userFound){
+    //           return{
+    //             id: userFound.id,
+    //             email: userFound.email,
+    //             name: userFound.name,
+    //             url: userFound.url
+    //           }
+    //         }
+    //       })
+    //       const userPromise = await Promise.all(userMap)
+    //       const list = allOrders.map((order: any, index: number) =>{
+    //         return{
+    //           order,
+    //           user: userPromise[index]
+    //         }
+    //       })
+    //       return res.json(list);
+    //     }else{
+    //       return res.json({message:"No hay registros en la aplicacion"})
+    //     }
+    //   }
+    // }else if(user && user.role === "user" && user.status === 'true'){
+    //   //...el usuario debe poder ver solo su lista de compras
+    //     const orderUser = await Compras.findAll({
+    //     where:{
+    //       user_id: user_id
+    //     },
+    //     include:{
+    //       model: Items,
+    //     },
+    //     order: [['updatedAt', 'DESC']]
+    //   })
+    //   if(orderUser.length){
+    //     return res.json(orderUser)
+    //   }else{
+    //     return res.json({message:"No se han registrado operaciones"})
+    //   }
+    // }else{
+    //       return res.json({message:"Usuario invalido"})
+    //   }
+  }catch(err){
+      next(err)
+  }
+}
