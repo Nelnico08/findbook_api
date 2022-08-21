@@ -220,8 +220,10 @@ export const getUserSells = async(req:Request, res:Response, next: NextFunction)
     })
     const ventasPromise = await Promise.all(ventas).then(values=>values);
     console.log(ventasPromise)
+    let arrayVentas =[] as any[];
+    ventasPromise.forEach(libro=>libro.forEach(v=>arrayVentas.push(v)))
 
-    return res.json({ventas:ventasPromise})
+    return res.json({ventas:arrayVentas})
     // const ventas = await Compras.findAll({
     //   include:{
     //     model: Items,
