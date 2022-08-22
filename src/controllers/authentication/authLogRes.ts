@@ -4,14 +4,19 @@ import {Usuario} from '../../models/Usuario';
 import {Carrito} from '../../models/Carrito';
 import {iUsuario} from '../../types/Usuario';
 import { Favoritos } from '../../models/Favoritos';
+import { emails } from '../../types/email';
+import { sendEmail } from '../user/email';
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+
 
 dotenv.config()
 
 export const registerUser = async (req:Request, res:Response, next: NextFunction)=>{
     try{
         const userBody = req.body as iUsuario;
+        const message = ""
+        const subject = "Usuario registrado"
         if(
             userBody.email && 
             userBody.password && 
@@ -48,6 +53,9 @@ export const registerUser = async (req:Request, res:Response, next: NextFunction
             await Favoritos.create({
                 userid:newUser.id
             });
+            //envio de email
+            await sendEmail(userBody.email, userBody.name, message, subject)
+
             return res.json("Usuario creado existosamente")
         }else{
             return res.json({error: 'Todos los campos son requeridos'})
