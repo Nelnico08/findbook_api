@@ -136,69 +136,83 @@ export const paymentInt = async (
     }
   };
 
-  export const getSessionId = async(req: Request, res: Response, next: NextFunction) => {
-    try {
-      const user_id = req.user_id;
-      const session_id = req.query.session_id
-      const session = await stripe.checkout.sessions.retrieve(session_id);
+export const getSessionId = async(req: Request, res: Response, next: NextFunction) => {
+  try {
+    const user_id = req.user_id;
+    const session_id = req.query.session_id
+    const session = await stripe.checkout.sessions.retrieve(session_id);
 
-      if(session){
-        if(session.status === "complete"){
-          //vaciar carrito
-          const cartUser = await Carrito.findOne({where:{userid: user_id}})
-          if(cartUser){
-            await CarritoLibros.destroy({where:{carrito_id: cartUser.userid}})
-          }
-          //busco la lista de compra del usuario y cambio su estado a complete
-          const userOrder = await Compras.findByPk(session.id);
-          if(userOrder){
-            await Compras.update({status:"complete"},{where:{id:session.id}})
-          }
-          return res.send(`Gracias por su compra`)
+    if(session){
+      if(session.status === "complete"){
+        //vaciar carrito
+        const cartUser = await Carrito.findOne({where:{userid: user_id}})
+        if(cartUser){
+          await CarritoLibros.destroy({where:{carrito_id: cartUser.userid}})
         }
-        else if(session.status === "open"){
-          const cancelSession = await stripe.checkout.sessions.expire(req.query.session_id)
-          await Compras.update({status:"expired"}, {where:{id:session.id}})
-          if(cancelSession){
-            return res.send('El pago no ha sido realizado')
-          }
+        //busco la lista de compra del usuario y cambio su estado a complete
+        const userOrder = await Compras.findByPk(session.id);
+        if(userOrder){
+          await Compras.update({status:"complete"},{where:{id:session.id}})
         }
+        return res.send(`Gracias por su compra`)
+      }
+      else if(session.status === "open"){
+        const cancelSession = await stripe.checkout.sessions.expire(req.query.session_id)
+        await Compras.update({status:"expired"}, {where:{id:session.id}})
+        if(cancelSession){
+          return res.send('El pago no ha sido realizado')
+        }
+      }
+    }else{
+      return res.json({message: "session no encontrada"})
+    }
+  } catch (error) {
+    next(error)
+  }
+};
+
+export const buttonSwitch = async(req: Request, res: Response, next: NextFunction) => {
+  try {
+    const user_id = req.user_id;
+    const buttonStatus = await Compras.findOne({where:{user_id:user_id, buttonSwitch: "disable"}});
+    if(buttonStatus){
+      const dateNow = Date.now();
+      const dbDate = new Date(buttonStatus.createdAt)
+      const dbDateToMilliseconds = dbDate.getTime()
+
+      if(dbDateToMilliseconds + 1800000 <= dateNow && buttonStatus.status === "open"){
+        await Compras.update({status:"expired", buttonSwitch:"active"},{where:{user_id:user_id, buttonSwitch: "disable"}})
+        return res.send("boton habilitado")
+      }else if(dbDateToMilliseconds + 1800000 <= dateNow){
+        await Compras.update({buttonSwitch:"active"},{where:{user_id:user_id, buttonSwitch: "disable"}})
+        return res.send("boton habilitado")
       }else{
-        return res.json({message: "session no encontrada"})
+        return res.send("boton deshabilitado")
       }
-    } catch (error) {
-      next(error)
     }
+  } catch (error) {
+    next(error)
   }
+};
 
-  export const buttonSwitch = async(req: Request, res: Response, next: NextFunction) => {
-    try {
-      const user_id = req.user_id;
-      const buttonStatus = await Compras.findOne({where:{user_id:user_id, buttonSwitch: "disable"}});
-      if(buttonStatus){
-        const dateNow = Date.now();
-        const dbDate = new Date(buttonStatus.createdAt)
-        const dbDateToMilliseconds = dbDate.getTime()
+export const counterForButton = async(req: Request, res: Response, next: NextFunction) => {
+  try {
+    const user_id = req.user_id;
+    const buttonStatus = await Compras.findOne({where:{user_id:user_id, buttonSwitch: "disable"}})
+    if(buttonStatus){
+      const dateNow = Date.now();
+      const dbDate = new Date(buttonStatus.createdAt);
+      const dbDateToMilliseconds = dbDate.getTime();
+      const timer = 1800000 + dbDateToMilliseconds - dateNow;
+      const timerMinutes = Math.floor(timer / 60000);
+      const timerSeconds = Math.floor((timer % 60000)/1000)
 
-        if(dbDateToMilliseconds + 1800000 <= dateNow && buttonStatus.status === "open"){
-          await Compras.update({status:"expired", buttonSwitch:"active"},{where:{user_id:user_id, buttonSwitch: "disable"}})
-          return res.send("boton habilitado")
-        }else if(dbDateToMilliseconds + 1800000 <= dateNow){
-          await Compras.update({buttonSwitch:"active"},{where:{user_id:user_id, buttonSwitch: "disable"}})
-          return res.send("boton habilitado")
-        }else{
-          return res.send("boton deshabilitado")
-        }
-      }
-      
-
-      // const buttonStatus = await Compras.findOne({where:{user_id:user_id, buttonSwitch: "disable"}});
-      // if(buttonStatus){
-      //   return res.send("boton deshabilitado")
-      // }else{
-      //   return res.send("boton habilitado")
-      // }
-    } catch (error) {
-      next(error)
+      return res.json({timer: `${timerMinutes}:${timerSeconds < 10 ? '0' : ''}${timerSeconds}`})
     }
+    else{
+      return res.json({Message: "El boton esta activo"})
+    }
+  } catch (error) {
+    next(error)
   }
+}
