@@ -3,6 +3,7 @@ import { NextFunction, Request, Response } from 'express';
 import {Usuario} from '../../models/Usuario';
 import {Carrito} from '../../models/Carrito';
 import {iUsuario} from '../../types/Usuario';
+import { Favoritos } from '../../models/Favoritos';
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
@@ -43,6 +44,9 @@ export const registerUser = async (req:Request, res:Response, next: NextFunction
             }) 
             await Carrito.create({
                     userid:newUser.id
+            });
+            await Favoritos.create({
+                userid:newUser.id
             });
             return res.json("Usuario creado existosamente")
         }else{
