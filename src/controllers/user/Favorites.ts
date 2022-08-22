@@ -10,9 +10,9 @@ export const addToFavo = async (req: Request, res: Response, next: NextFunction)
         const favo = await Favoritos.findOne({ where: { userid: user_id } });
 
         if (favo) {
-            const bookFound = await FavoritosLibros.findOne({ where: { libro_id: book_id } })
+            const bookFound = await FavoritosLibros.findOne({ where: { libro_id: book_id, Favorito_id: favo.id  } })
             if (bookFound) return res.json({ message: "El libro ya se encuentra en favoritos" })
-            await FavoritosLibros.create({ libro_id: book_id, carrito_id: favo.id })
+            await FavoritosLibros.create({ libro_id: book_id, Favorito_id: favo.id })
 
             return res.json({ message: "El libro fue agregado" })
         }
@@ -60,7 +60,7 @@ export const removeToFavo = async (req: Request, res: Response, next: NextFuncti
         const favo = await Favoritos.findOne({ where: { userid: user_id } });
 
         if (favo) {
-            const bookFound = await FavoritosLibros.findOne({ where: { libro_id: book_id, carrito_id: favo.id } })
+            const bookFound = await FavoritosLibros.findOne({ where: { libro_id: book_id, Favorito_id: favo.id } })
             if (bookFound) {
                 await bookFound.destroy();
                 return res.json({ message: "El libro fue removido de favoritos" })
@@ -80,7 +80,7 @@ export const removeAllBooksFavo = async (req: Request, res: Response, next: Next
         const favo = await Favoritos.findOne({ where: { userid: user_id } });
 
         if (favo) {
-            await FavoritosLibros.destroy({ where: { carrito_id: favo.id } });
+            await FavoritosLibros.destroy({ where: { Favorito_id: favo.id } });
             return res.json({ message: "Favoritos ha sido vaciado" })
         }
         return res.json({ message: "No se encontro a favoritos" })
