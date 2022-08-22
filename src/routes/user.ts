@@ -8,7 +8,7 @@ import { putBookAdmin } from "../controllers/admin/PutBookAdmin";
 import { getBookDetail, getBooks } from "../controllers/user/GetBooks";
 import { getUser } from "../controllers/admin/GetUser";
 import { addToFavo, getUserFavo, removeAllBooksFavo, removeToFavo } from "../controllers/user/Favorites";
-import { getOrderById, getUserOrders, getUserSells } from "../controllers/OrderLists";
+import { getOrderById, getUserOrders, getUserSells, getUserSellsById } from "../controllers/OrderLists";
 import { PostComent } from "../controllers/user/PostComent";
 const router = Router()
 
@@ -18,6 +18,7 @@ router.get('/getUser', [verifyToken, verifyUser], getUser)
 router.get("/getfavo", [verifyToken, verifyUser], getUserFavo)
 router.get('/orderlist', [verifyToken, verifyUser], getUserOrders)
 router.get('/sellUser', [verifyToken, verifyUser], getUserSells)
+router.get('/sellUser/:id/:libroid', [verifyToken, verifyUser], getUserSellsById)
 router.get('/orderlist/:id', [verifyToken, verifyUser], getOrderById)
 router.put('/putBook/:id', [verifyToken, verifyUser], putBookAdmin)
 router.put('/putUser/:email', [verifyToken, verifyUser], putUserAdmin)
