@@ -95,26 +95,9 @@ export const getBookById = async (
           model: Usuario,
           attributes:['name','lastname','url']
         }]
-        // model: Comentarios,
-        // include: [Usuario],
-        // attributes: ['Comentario'],
-        
-        // through: {
-        //   attributes: [],
-        // },
       }]
     });
     if (!book) return res.json({error:'El libro no existe'});
-    // const fbook = book.comentarios.map(i => {
-    //   return {
-    //     Comentario: i.Comentario,
-    //     usuario: {
-    //       name: i.usuario.name,
-    //       lastname: i.usuario.lastname,
-    //       url: i.usuario.url,
-    //     }
-    //   }
-    // });
     res.json(book);
   } catch (err) {
     return res.json({error:"El libro no existe"})
