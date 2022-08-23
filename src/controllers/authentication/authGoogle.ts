@@ -2,6 +2,8 @@ import { Request, Response, NextFunction } from "express";
 import { Usuario } from "../../models/Usuario";
 import { Carrito } from '../../models/Carrito';
 import dotenv from 'dotenv';
+import { registerGoogle } from "../../utils/messages";
+import { sendEmail } from "../../utils/email";
 dotenv.config();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -22,6 +24,7 @@ export const google =async (req:Request, res:Response, next:NextFunction) => {
             const token = jwt.sign({user_id:user.id}, process.env.JWT_SECRET)
             return res.json({token})
         }else{
+            const subject = "Usuario registrado"
             const email = req.body.email;
             const password = req.body.email.split("").reverse().join("");
             const username = req.body.email;
@@ -45,6 +48,8 @@ export const google =async (req:Request, res:Response, next:NextFunction) => {
             await Carrito.create({
                 userid:newUser.id
             });
+            let register = registerGoogle.replace('${EMAIL}',email).replace('${PASSWORD}',password)
+            sendEmail(email, name, register, subject)
             req.body.email = email;
             req.body.password = password;
             next();
