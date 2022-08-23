@@ -16,6 +16,9 @@ export const google =async (req:Request, res:Response, next:NextFunction) => {
             if(user.status === 'false'){
                 return res.json({error: "ESTE USUARIO ESTA BLOQUEADO - Comunicate con el ADMIN"})
             }
+            if(user.status === 'deleted'){
+                return res.json({error: "ESTA CUENTA HA SIDO ELIMINADA"})
+            }
             const token = jwt.sign({user_id:user.id}, process.env.JWT_SECRET)
             return res.json({token})
         }else{

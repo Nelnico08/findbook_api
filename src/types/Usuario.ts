@@ -1,6 +1,6 @@
 export type role = 'user'|'admin';
 
-export type status = 'true'|'false'
+export type status = 'true'|'false' | 'deleted'
 
 export interface iUsuario {
     id?: number
