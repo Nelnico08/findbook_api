@@ -238,6 +238,8 @@ export const buttonSwitch = async(req: Request, res: Response, next: NextFunctio
       }else{
         return res.send("boton deshabilitado")
       }
+    }else{
+      return res.send("boton habilitado")
     }
   } catch (error) {
     next(error)
