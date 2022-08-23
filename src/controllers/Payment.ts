@@ -6,6 +6,8 @@ import { CarritoLibros } from '../models/CarritoLibros';
 import { Usuario } from '../models/Usuario';
 import { Compras } from '../models/Compras';
 import { Items } from '../models/Items';
+import { sendEmail } from '../utils/email';
+import { compra, paymentSucces } from '../utils/messages';
 dotenv.config()
 
 // Set your secret key. Remember to switch to your live secret key in production.
@@ -139,8 +141,9 @@ export const paymentInt = async (
 export const getSessionId = async(req: Request, res: Response, next: NextFunction) => {
   try {
     const user_id = req.user_id;
-    const session_id = req.query.session_id
+    const { session_id } = req.params
     const session = await stripe.checkout.sessions.retrieve(session_id);
+
 
     if(session){
       if(session.status === "complete"){
@@ -150,10 +153,56 @@ export const getSessionId = async(req: Request, res: Response, next: NextFunctio
           await CarritoLibros.destroy({where:{carrito_id: cartUser.userid}})
         }
         //busco la lista de compra del usuario y cambio su estado a complete
-        const userOrder = await Compras.findByPk(session.id);
+        const userOrder = await Compras.findOne({
+          where: {id: session.id},
+          include: {
+            model: Items
+          }
+        });
         if(userOrder){
           await Compras.update({status:"complete"},{where:{id:session.id}})
+          const user = await Usuario.findByPk(user_id);
+          //envio un mail al usuario
+          if(user){
+            const payment = paymentSucces.replace("${precio}",`${userOrder.totalPrice}`)
+            sendEmail(user.email, user.name, payment,"Pago confirmado")
+          }
+          //enviar mensaje al vendedor ...
+          const items = userOrder.Items;
+
+          let booksArray: any[] = items.map(async(item) =>{
+            return await Libros.findOne({
+              where:{id: item.libro_id},
+              attributes: ["User_id", "name"]
+            })
+          })
+          booksArray = await Promise.all(booksArray)
+
+          let usersArray: any[] = booksArray.map(async(book) => {
+            return await Usuario.findByPk(book.User_id)
+          })
+
+          usersArray = await Promise.all(usersArray)
+
+          if(usersArray.length){
+            const arrayInfo = items.map((item,index) =>{
+              return {
+                total: item.subTotal,
+                quantity: item.quantity,
+                bookName: booksArray[index].name,
+                email: usersArray[index].email,
+                name: usersArray[index].name
+              }
+            })
+            arrayInfo.forEach(user => {
+              let message = compra.replace("{QUANTITY}", `${user.quantity}`).replace("{BOOKNAME}", `${user.bookName}`).replace("{PRECIO}",`${user.total}`)
+              let subject = `Venta de libro`
+              sendEmail(user.email, user.name, message, subject)
+            })
+          }
         }
+        
+
         return res.send(`Gracias por su compra`)
       }
       else if(session.status === "open"){
