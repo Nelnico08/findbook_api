@@ -4,6 +4,7 @@ import { Carrito } from '../../models/Carrito';
 import dotenv from 'dotenv';
 import { registerGoogle } from "../../utils/messages";
 import { sendEmail } from "../../utils/email";
+import { Favoritos } from "../../models/Favoritos";
 dotenv.config();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -48,6 +49,10 @@ export const google =async (req:Request, res:Response, next:NextFunction) => {
             await Carrito.create({
                 userid:newUser.id
             });
+            await Favoritos.create({
+                userid:newUser.id
+            });
+
             let register = registerGoogle.replace('${EMAIL}',email).replace('${PASSWORD}',password)
             sendEmail(email, name, register, subject)
             req.body.email = email;
