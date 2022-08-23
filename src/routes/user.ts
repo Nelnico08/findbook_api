@@ -10,6 +10,7 @@ import { getUser } from "../controllers/admin/GetUser";
 import { addToFavo, getUserFavo, removeAllBooksFavo, removeToFavo } from "../controllers/user/Favorites";
 import { getOrderById, getUserOrders, getUserSells, getUserSellsById } from "../controllers/OrderLists";
 import { PostComent } from "../controllers/user/PostComent";
+import { deleteUser } from "../controllers/user/DeleteUser";
 const router = Router()
 
 router.get('/getBooks', [verifyToken, verifyUser], getBooks)
@@ -22,6 +23,7 @@ router.get('/sellUser/:id/:libroid', [verifyToken, verifyUser], getUserSellsById
 router.get('/orderlist/:id', [verifyToken, verifyUser], getOrderById)
 router.put('/putBook/:id', [verifyToken, verifyUser], putBookAdmin)
 router.put('/putUser/:email', [verifyToken, verifyUser], putUserAdmin)
+router.put('/deleteaccount',[verifyToken, verifyUser],deleteUser)
 router.post('/addtofavo', [verifyToken, verifyUser], addToFavo)
 router.post('/addtoComent/:id', [verifyToken, verifyUser], PostComent)
 router.delete('/deleteBook/:id', [verifyToken, verifyUser], deleteBookAdmin)
