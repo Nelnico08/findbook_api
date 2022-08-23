@@ -1,7 +1,5 @@
 const Mailjet = require('node-mailjet');
 import dotenv from 'dotenv'
-import { NextFunction, Request, Response } from 'express';
-import { Usuario } from '../models/Usuario';
 dotenv.config
 let { MJ_APIKEY_PUBLIC } = process.env
 let { MJ_APIKEY_PRIVATE }= process.env
