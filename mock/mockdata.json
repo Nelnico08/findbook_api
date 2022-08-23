@@ -2,7 +2,9 @@
   {
     "name": "Renegados",
     "author": "Marissa Meyer",
-    "genre": ["ficción"],
+    "genre": [
+      "ficción"
+    ],
     "category": "12+",
     "pages": 587,
     "publisher": "VRYA",
@@ -16,7 +18,9 @@
   {
     "name": "La granja de Zenón. Un día en la granja",
     "author": "El Reino Infantil",
-    "genre": ["infantil"],
+    "genre": [
+      "infantil"
+    ],
     "category": "todos",
     "pages": 22,
     "publisher": "Grupo Editorial Planeta S.A.I.",
@@ -30,7 +34,10 @@
   {
     "name": "El visitante",
     "author": "Stephen King",
-    "genre": ["ficción", "terror"],
+    "genre": [
+      "ficción",
+      "terror"
+    ],
     "category": "16+",
     "pages": 592,
     "publisher": "Penguin Random House Grupo Editorial",
@@ -44,7 +51,10 @@
   {
     "name": "Destellos de belleza. anécdotas y escenas de una vida",
     "author": "Jonas Mekas",
-    "genre": ["arte", "biografía"],
+    "genre": [
+      "arte",
+      "biografía"
+    ],
     "category": "todos",
     "pages": 368,
     "publisher": "Caja Negra",
@@ -58,7 +68,9 @@
   {
     "name": "El fantasma del faro",
     "author": "Liniers / Del Campo",
-    "genre": ["arte"],
+    "genre": [
+      "arte"
+    ],
     "category": "todos",
     "pages": 192,
     "publisher": "La Editorial Comun",
@@ -72,7 +84,9 @@
   {
     "name": "MARVEL ZOMBIES REUNIOS 1",
     "author": "JIM ZUB",
-    "genre": ["comic"],
+    "genre": [
+      "comic"
+    ],
     "category": "12+",
     "pages": 168,
     "publisher": "PANINI",
@@ -86,7 +100,9 @@
   {
     "name": "EL BATMAN QUE RIE 2.ED",
     "author": "SCOTT SNYDER / JAMES TYNION IV",
-    "genre": ["comic"],
+    "genre": [
+      "comic"
+    ],
     "category": "12+",
     "pages": 232,
     "publisher": "ECC",
@@ -100,7 +116,9 @@
   {
     "name": "V DE VENDETTA (DC POCKET)",
     "author": "ALAN MOORE",
-    "genre": ["comic"],
+    "genre": [
+      "comic"
+    ],
     "category": "12+",
     "pages": 288,
     "publisher": "ECC",
@@ -114,7 +132,9 @@
   {
     "name": "BATMAN: TRES JOKERS",
     "author": "GEOFF JOHNS",
-    "genre": ["comic"],
+    "genre": [
+      "comic"
+    ],
     "category": "12+",
     "pages": 160,
     "publisher": "ECC",
@@ -128,7 +148,9 @@
   {
     "name": "THUNDERBOLTS LA ASCENSION DE NORMAN MARVEL MUST HAVE",
     "author": "WARREN ELLIS / MIKE DEODATO JR.",
-    "genre": ["comic"],
+    "genre": [
+      "comic"
+    ],
     "category": "12+",
     "pages": 304,
     "publisher": "PANINI",
@@ -142,7 +164,9 @@
   {
     "name": "NIGHTWING 1",
     "author": "TOM TAYLOR",
-    "genre": ["comic"],
+    "genre": [
+      "comic"
+    ],
     "category": "12+",
     "pages": 24,
     "publisher": "ECC",
@@ -156,7 +180,9 @@
   {
     "name": "LOS DEFENSORES ¿Y QUIEN HEREDARA LA TIERRA? (MARVEL LIMITED EDITI ON)",
     "author": "JIM STARLIN / SAL BUSCEMA",
-    "genre": ["comic"],
+    "genre": [
+      "comic"
+    ],
     "category": "12+",
     "pages": 472,
     "publisher": "PANINI",
@@ -170,7 +196,9 @@
   {
     "name": "DETECTIVE MARCIANO: IDENTIDAD",
     "author": "STEVE ORLANDO / RILEY ROSSMO",
-    "genre": ["comic"],
+    "genre": [
+      "comic"
+    ],
     "category": "12+",
     "pages": 296,
     "publisher": "ECC",
@@ -184,7 +212,9 @@
   {
     "name": "DRAGON BALL SUPER Nº 01",
     "author": "AKIRA TORIYAMA",
-    "genre": ["manga"],
+    "genre": [
+      "manga"
+    ],
     "category": "todos",
     "pages": 192,
     "publisher": "PLANETA DE AGOSTINI",
@@ -198,7 +228,9 @@
   {
     "name": "DRAGON BALL SUPER Nº 02",
     "author": "AKIRA TORIYAMA / TOYOTARO",
-    "genre": ["manga"],
+    "genre": [
+      "manga"
+    ],
     "category": "todos",
     "pages": 216,
     "publisher": "PLANETA DE AGOSTINI",
@@ -212,7 +244,9 @@
   {
     "name": "ONE PIECE PARTY Nº 01",
     "author": "EIICHIRO ODA",
-    "genre": ["manga"],
+    "genre": [
+      "manga"
+    ],
     "category": "12+",
     "pages": 184,
     "publisher": "PLANETA DE AGOSTINI",
@@ -226,7 +260,9 @@
   {
     "name": "ONE PIECE PARTY Nº 02",
     "author": "EIICHIRO ODA",
-    "genre": ["manga"],
+    "genre": [
+      "manga"
+    ],
     "category": "12+",
     "pages": 192,
     "publisher": "PLANETA DE AGOSTINI",
@@ -240,7 +276,9 @@
   {
     "name": "PLANETA MANGA Nº 01",
     "author": "VV.AA.",
-    "genre": ["manga"],
+    "genre": [
+      "manga"
+    ],
     "category": "12+",
     "pages": 320,
     "publisher": "PLANETA DE AGOSTINI",
@@ -254,7 +292,9 @@
   {
     "name": "PLANETA MANGA Nº 02",
     "author": "VV.AA.",
-    "genre": ["manga"],
+    "genre": [
+      "manga"
+    ],
     "category": "12+",
     "pages": 320,
     "publisher": "PLANETA DE AGOSTINI",
@@ -268,7 +308,9 @@
   {
     "name": "Fuera de serie: por qué unas personas tienen éxito y otras no",
     "author": "Malcolm Gladwell",
-    "genre": ["economía"],
+    "genre": [
+      "economía"
+    ],
     "category": "12+",
     "pages": 365,
     "publisher": "Hachette",
@@ -282,7 +324,9 @@
   {
     "name": "Cien Años de Soledad",
     "author": "Gabriel García Márquez",
-    "genre": ["ficción"],
+    "genre": [
+      "ficción"
+    ],
     "category": "12+",
     "pages": 494,
     "publisher": "Penguin Random House",
@@ -296,7 +340,9 @@
   {
     "name": "El Lórax",
     "author": "Dr. Seuss",
-    "genre": ["infantil"],
+    "genre": [
+      "infantil"
+    ],
     "category": "todos",
     "pages": 72,
     "publisher": "Random House Books for Young Readers",
@@ -310,7 +356,10 @@
   {
     "name": "Learn React with TypeScript 3",
     "author": "Carl Rippon",
-    "genre": ["computación", "tecnología"],
+    "genre": [
+      "computación",
+      "tecnología"
+    ],
     "category": "16+",
     "pages": 502,
     "publisher": "Packt Publishing",
@@ -324,7 +373,10 @@
   {
     "name": "Responsive Web Design with HTML5 and CSS, 3rd Edition",
     "author": "Ben Frain",
-    "genre": ["computación", "tecnología"],
+    "genre": [
+      "computación",
+      "tecnología"
+    ],
     "category": "16+",
     "pages": 408,
     "publisher": "Packt Publishing",
@@ -338,7 +390,10 @@
   {
     "name": "El Principito",
     "author": "Antoine de Saint-Exupéry",
-    "genre": ["infantil", "novela"],
+    "genre": [
+      "infantil",
+      "novela"
+    ],
     "category": "todos",
     "pages": 96,
     "publisher": "Mariner Books",
@@ -352,7 +407,9 @@
   {
     "name": "Todo running",
     "author": "Carlos Andrada",
-    "genre": ["deporte"],
+    "genre": [
+      "deporte"
+    ],
     "category": "todos",
     "pages": 368,
     "publisher": "Penguin Random House Grupo Editorial",
@@ -366,7 +423,10 @@
   {
     "name": "Cuerpos al límite",
     "author": "Federico Bianchini",
-    "genre": ["biografía", "deporte"],
+    "genre": [
+      "biografía",
+      "deporte"
+    ],
     "category": "todos",
     "pages": 144,
     "publisher": "Penguin Random House Grupo Editorial",
@@ -380,7 +440,9 @@
   {
     "name": "El infiltrado",
     "author": "Uki Goñi",
-    "genre": ["biografía"],
+    "genre": [
+      "biografía"
+    ],
     "category": "12+",
     "pages": 280,
     "publisher": "Editorial Paidós Argentina",
@@ -394,7 +456,9 @@
   {
     "name": "Secretos del tercer reich",
     "author": "Guido Knopp",
-    "genre": ["biografía"],
+    "genre": [
+      "biografía"
+    ],
     "category": "16+",
     "pages": 320,
     "publisher": "Editorial Paidós Argentina",
@@ -408,7 +472,9 @@
   {
     "name": "Declaracion Universal de los Derechos humanos: Naciones Unidas",
     "author": "Naciones Unidas",
-    "genre": ["derecho"],
+    "genre": [
+      "derecho"
+    ],
     "category": "16+",
     "pages": 26,
     "publisher": "Createspace Independent Publishing Platform",
@@ -422,7 +488,9 @@
   {
     "name": "Derecho Marítimo: : Una Visión General de un Derecho Universal",
     "author": "Tulio Alberto Álvarez",
-    "genre": ["derecho"],
+    "genre": [
+      "derecho"
+    ],
     "category": "18+",
     "pages": 644,
     "publisher": "Independently Published",
@@ -436,7 +504,10 @@
   {
     "name": "Algebra 4th Edition - Baldor",
     "author": "Aurelio Dr Baldor",
-    "genre": ["matemática", "estudio"],
+    "genre": [
+      "matemática",
+      "estudio"
+    ],
     "category": "12+",
     "pages": 584,
     "publisher": "Patria",
@@ -450,7 +521,9 @@
   {
     "name": "Matematicas En Tu Mundo",
     "author": "Jose Maria Sorando",
-    "genre": ["matemática"],
+    "genre": [
+      "matemática"
+    ],
     "category": "12+",
     "pages": 256,
     "publisher": "Almuzara",
@@ -464,7 +537,9 @@
   {
     "name": "Julio Iglesias. La Biografía",
     "author": "Oscar Garcia Blesa",
-    "genre": ["biografía"],
+    "genre": [
+      "biografía"
+    ],
     "category": "18+",
     "pages": 768,
     "publisher": "Aguilar",
@@ -478,7 +553,10 @@
   {
     "name": "Hitler: Biografia Psicologica",
     "author": "Tamara Lopez",
-    "genre": ["biografía", "historia"],
+    "genre": [
+      "biografía",
+      "historia"
+    ],
     "category": "18+",
     "pages": 124,
     "publisher": "Independently Published",
@@ -492,7 +570,9 @@
   {
     "name": "Yoga Anatomy",
     "author": "Amy Matthews",
-    "genre": ["salud - desarrollo personal"],
+    "genre": [
+      "salud - desarrollo personal"
+    ],
     "category": "16+",
     "pages": 344,
     "publisher": "Human Kinetics Publishers",
@@ -506,7 +586,9 @@
   {
     "name": "The Vaccine: Inside the Race to Conquer the Covid-19 Pandemic",
     "author": "Joe Miller",
-    "genre": ["salud - desarrollo personal"],
+    "genre": [
+      "salud - desarrollo personal"
+    ],
     "category": "16+",
     "pages": 288,
     "publisher": "St. Martin's Press",
@@ -520,7 +602,10 @@
   {
     "name": "El Hombre de Mazapan",
     "author": "J.P. Donleavy",
-    "genre": ["novela", "historia"],
+    "genre": [
+      "novela",
+      "historia"
+    ],
     "category": "16+",
     "pages": 448,
     "publisher": "Edhasa",
@@ -534,7 +619,9 @@
   {
     "name": "Ben-Hur",
     "author": "Lewis Wallace",
-    "genre": ["infantil"],
+    "genre": [
+      "infantil"
+    ],
     "category": "todos",
     "pages": 72,
     "publisher": "Susaeta",
@@ -548,7 +635,10 @@
   {
     "name": "Ha llegado el Aguila",
     "author": "Jack Higgins",
-    "genre": ["novela", "historia"],
+    "genre": [
+      "novela",
+      "historia"
+    ],
     "category": "16+",
     "pages": 434,
     "publisher": "Torres de papel",
@@ -562,7 +652,9 @@
   {
     "name": "La Colina de Watership",
     "author": "Richard Adams",
-    "genre": ["novela"],
+    "genre": [
+      "novela"
+    ],
     "category": "18+",
     "pages": 448,
     "publisher": "Seix Barral",
@@ -576,7 +668,10 @@
   {
     "name": "Azabache",
     "author": "Anna Sewell",
-    "genre": ["estudio", "historia"],
+    "genre": [
+      "estudio",
+      "historia"
+    ],
     "category": "12+",
     "pages": 156,
     "publisher": "Rubeo Ediciones",
@@ -590,7 +685,9 @@
   {
     "name": "El Nombre de la Rosa",
     "author": "Umberto Eco",
-    "genre": ["novela"],
+    "genre": [
+      "novela"
+    ],
     "category": "16+",
     "pages": 752,
     "publisher": "Lumen",
@@ -604,7 +701,9 @@
   {
     "name": "Ana de las Tejas Verdes",
     "author": "Lucy Maud Montgomery",
-    "genre": ["infantil"],
+    "genre": [
+      "infantil"
+    ],
     "category": "12+",
     "pages": 224,
     "publisher": "Alfaguara",
@@ -618,7 +717,9 @@
   {
     "name": "Usted Puede Sanar Su Vida",
     "author": "Louise L. Hay",
-    "genre": ["salud - desarrollo personal"],
+    "genre": [
+      "salud - desarrollo personal"
+    ],
     "category": "18+",
     "pages": 256,
     "publisher": "Books4pocket",
@@ -632,7 +733,9 @@
   {
     "name": "Lolita",
     "author": "Vladimir Nabokov",
-    "genre": ["novela"],
+    "genre": [
+      "novela"
+    ],
     "category": "16+",
     "pages": 392,
     "publisher": "Anagrama",
@@ -646,7 +749,9 @@
   {
     "name": "Heidi",
     "author": "Johanna Spyri",
-    "genre": ["infantil"],
+    "genre": [
+      "infantil"
+    ],
     "category": "todos",
     "pages": 176,
     "publisher": "Alma Europa",
@@ -660,7 +765,9 @@
   {
     "name": "Las Crónicas de Narnia: el León, la Bruja y el Armario",
     "author": "C.s. Lewis",
-    "genre": ["infantil"],
+    "genre": [
+      "infantil"
+    ],
     "category": "12+",
     "pages": 256,
     "publisher": "Planeta",
@@ -674,7 +781,9 @@
   {
     "name": "El Codigo Da Vinci",
     "author": "Dan Brown",
-    "genre": ["novela"],
+    "genre": [
+      "novela"
+    ],
     "category": "18+",
     "pages": 624,
     "publisher": "Planeta",
@@ -688,7 +797,10 @@
   {
     "name": "Harry Potter y la Camara Secreta",
     "author": "J.k. Rowling",
-    "genre": ["novela", "ficción"],
+    "genre": [
+      "novela",
+      "ficción"
+    ],
     "category": "12+",
     "pages": 296,
     "publisher": "Salamandra",
@@ -702,7 +814,10 @@
   {
     "name": "Harry Potter y el Prisionero de Azkaban",
     "author": "J.k. Rowling",
-    "genre": ["novela", "ficción"],
+    "genre": [
+      "novela",
+      "ficción"
+    ],
     "category": "12+",
     "pages": 360,
     "publisher": "Salamandra",
@@ -716,7 +831,10 @@
   {
     "name": "Harry Potter y el Caliz de Fuego",
     "author": "J.k. Rowling",
-    "genre": ["novela", "ficción"],
+    "genre": [
+      "novela",
+      "ficción"
+    ],
     "category": "12+",
     "pages": 672,
     "publisher": "Salamandra",
@@ -730,7 +848,10 @@
   {
     "name": "Harry Potter y la Orden del Fenix",
     "author": "J.k. Rowling",
-    "genre": ["novela", "ficción"],
+    "genre": [
+      "novela",
+      "ficción"
+    ],
     "category": "12+",
     "pages": 928,
     "publisher": "Salamandra",
@@ -744,7 +865,10 @@
   {
     "name": "Harry Potter y las Reliquias de la Muerte",
     "author": "J.k. Rowling",
-    "genre": ["novela", "ficción"],
+    "genre": [
+      "novela",
+      "ficción"
+    ],
     "category": "12+",
     "pages": 704,
     "publisher": "Salamandra",
@@ -758,7 +882,10 @@
   {
     "name": "Harry Potter y el Misterio del Principe",
     "author": "J.k. Rowling",
-    "genre": ["novela", "ficción"],
+    "genre": [
+      "novela",
+      "ficción"
+    ],
     "category": "12+",
     "pages": 576,
     "publisher": "Salamandra",
@@ -772,7 +899,10 @@
   {
     "name": "El Alquimista",
     "author": "Paulo Coelho",
-    "genre": ["novela", "salud - desarrollo personal"],
+    "genre": [
+      "novela",
+      "salud - desarrollo personal"
+    ],
     "category": "16+",
     "pages": 192,
     "publisher": "Planeta",
@@ -786,7 +916,9 @@
   {
     "name": "La Odisea",
     "author": "Homero",
-    "genre": ["infantil"],
+    "genre": [
+      "infantil"
+    ],
     "category": "12+",
     "pages": 160,
     "publisher": "Anaya",
@@ -795,6 +927,646 @@
     "rating": 5,
     "price": 12.2,
     "released": "2012-04-17",
+    "language": "español"
+  },
+  {
+    "name": "ENHORABUENA POR TU FRACASO",
+    "author": "ARTURO GONZALEZ CAMPOS",
+    "genre": [
+      "humor"
+    ],
+    "category": "16+",
+    "pages": 224,
+    "publisher": "PLAN B",
+    "description": "Enhorabuena por tu fracaso es un desnudo integral de Arturo González-Campos, lo que no sabemos si dice mucho a su favor. Una oda a lo genuino y una invitación a que te atrevas a persistir en lo que te apasiona; a fracasar y fracasar y volver a intentarlo para, con toda probabilidad, seguir aprendiendo a fracasar. Este es un relato (¿o unas memorias?) sobre esos fracasos que, sólo a veces, se convierten en éxitos y que han permanecido en la mente de Arturo González-Campos durante toda su vida. Listas de canciones, de películas, de libros, pequeñas historias personales que se hacen universales y anécdotas amargamente tristes que te matarán de risa. Todo eso y mucho más podrás encontrar en esta «artubiografía de las cosas» que es una puta locura.",
+    "image": "https://m.media-amazon.com/images/I/41lrTxtHQnL.jpg",
+    "rating": 4,
+    "price": 17.5,
+    "released": "2022-06-09",
+    "language": "español"
+  },
+  {
+    "name": "ACADEMIA DE MADRES: EL ORIGEN",
+    "author": "NACHTER",
+    "genre": [
+      "humor"
+    ],
+    "category": "16+",
+    "pages": 200,
+    "publisher": "MARTINEZ ROCA",
+    "description": "Madre está harta de que las técnicas ancestrales de la maternidad se estén perdiendo. Pero eso se va a acabar. Ella va a poner orden: ha fundado la Academia de Madres, donde compartirá con otras madres ávidas de sabiduría todos sus conocimientos, desde el legendario lanzamiento de chancla hasta las frasecitas de madre.",
+    "image": "https://www.planetadelibros.com.co/usuaris/libros/fotos/350/m_libros/349986_portada_academia-de-madres-el-origen_nachter_202202251000.jpg",
+    "rating": 4,
+    "price": 14.5,
+    "released": "2022-04-13",
+    "language": "español"
+  },
+  {
+    "name": "CURIOSOS INFORTUNIOS",
+    "author": "JAVIER CAPARROS",
+    "genre": [
+      "humor"
+    ],
+    "category": "12+",
+    "pages": 240,
+    "publisher": "EDICIONES CAMELOT SRL",
+    "description": "Una historia fresca, dinámica y llena de matices que nos presenta a Ismael, un joven universitario al que las desavenencias de su inexperta vida le llevarán a vivir situaciones hilarantes y llenas de acción.",
+    "image": "https://edicionescamelot.com/wp-content/uploads/2022/06/9000100312974-211x300.jpg",
+    "rating": 4,
+    "price": 20.8,
+    "released": "2022-05-27",
+    "language": "español"
+  },
+  {
+    "name": "TODO WILT",
+    "author": "TOM SHARPE",
+    "genre": [
+      "humor"
+    ],
+    "category": "12+",
+    "pages": 10080,
+    "publisher": "ANAGRAMA",
+    "description": "En 1976 Tom Sharpe creó a Henry Wilt, uno de los grandes antiheroes de la literatura contemporánea, que acabó protagonizando las cinco descacharrantes novelas reunidas en este volumen:áWilt, Las tribulaciones de Wilt, ¡Çnimo, Wilt!, Wilt no se aclara y La herencia de Wilt.",
+    "image": "https://www.anagrama-ed.es/uploads/media/portadas/0001/24/4cf50d342d0e15811c2ae6e810d32973a641cc85.jpeg",
+    "rating": 4,
+    "price": 24,
+    "released": "2022-07-01",
+    "language": "español"
+  },
+  {
+    "name": "(PE) FAMILIA NO HAY MAS QUE UNA Y EL PERRO LO ENCONTRAMOS EN LA CALLE",
+    "author": "GUILLERMO FESSER",
+    "genre": [
+      "humor"
+    ],
+    "category": "16+",
+    "pages": 192,
+    "publisher": "TEMAS DE HOY",
+    "description": "He aquí algunos de los protagonistas de este hogareño retrato de familia: La madre: es esa mujer que se pasa la mayor parte del día en bata y lleva en el cabello unos macarrones gordos amados «rulos». Ejerce de víctima y su frase favorita es: «¡Me tenéis hecha una esclava!». El padre: frecuentemente es un señor. A veces lleva gafas, aunque no es indispensable. Conduce el coche y contribuye a la formación de los hijos con dichos como: «¡Te voy a dar una guantazo que vas a ver las estrellas!».",
+    "image": "https://imagessl3.casadellibro.com/a/l/t5/43/9788484606543.jpg",
+    "rating": 4,
+    "price": 24,
+    "released": "1998-01-20",
+    "language": "español"
+  },
+  {
+    "name": "PADRE, EL ULTIMO MONO",
+    "author": "BERTO ROMERO",
+    "genre": [
+      "humor"
+    ],
+    "category": "16+",
+    "pages": 224,
+    "publisher": "PLANETA",
+    "description": "Capítulos tan útiles como: • Bienvenido a la secta • Enhorabuena. Está a punto de adquirir un producto líder • Compruebe que el producto está en perfecto estado • Instalación del producto en su casa • Complementos necesarios para el producto • Uso correcto de los otros miembros de la familia • Cargado de baterías y suministro de combustible • Habilidades básicas del producto adquirido.",
+    "image": "https://www.libreriasinopsis.com/imagenes/9788408/978840800395.JPG",
+    "rating": 4,
+    "price": 6.8,
+    "released": "2013-02-12",
+    "language": "español"
+  },
+  {
+    "name": "NOSTALGIA MILENIAL",
+    "author": "NOSTALGIA MILENIAL",
+    "genre": [
+      "humor"
+    ],
+    "category": "12+",
+    "pages": 160,
+    "publisher": "RANDOM COMICS",
+    "description": "Si la respuesta a la mayoría de preguntas es sí, no hay duda, lo que tú tienes se llama nostalgia milenial. Pero tranqui, ¡no es nada malo! Con este libro podrás recordar los desayunos con Megatrix, las tardes en el ciber, las canciones del verano o la llegada del Tuenti. También los politonos, el fenómeno Harry Potter o el primer OT. Podrás recordar lo maravilloso que fue crecer en pleno cambio de milenio. ¿Te apuntas a este viaje al pasado? Pues sumérgete entre sus páginas y, como diría Mufasa, ¡recuerda quién eres!.",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71lCVsojjXL.jpg",
+    "rating": 4,
+    "price": 18.8,
+    "released": "2021-11-18",
+    "language": "español"
+  },
+  {
+    "name": "LA REVOLUCION DE LA GLUCOSA",
+    "author": "JESSIE INCHAUSPE",
+    "genre": [
+      "comida"
+    ],
+    "category": "todos",
+    "pages": 312,
+    "publisher": "DIANA",
+    "description": "Mejora todos los aspectos de tu salud, desde el peso, el sueño, los antojos, el estado de ánimo, la energía, la piel… e incluso retrasa el envejecimiento con trucos fáciles de implementar y basados en la ciencia que te ayudan a controlar tus niveles de azúcar en sangre mientras sigues comiendo los alimentos que te encantan.",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71Fi-KkUTiL.jpg",
+    "rating": 4,
+    "price": 18.8,
+    "released": "2022-05-11",
+    "language": "español"
+  },
+  {
+    "name": "DIME QUÉ COMES Y TE DIRÉ QUÉ BACTERIAS TIENES",
+    "author": "BLANCA GARCIA-OREA",
+    "genre": [
+      "comida"
+    ],
+    "category": "todos",
+    "pages": 272,
+    "publisher": "GRIJALBO",
+    "description": "Muchas veces sufrimos cansancio, mal humor, ansiedad, estrés e incluso molestias digestivas que tratamos solo con medicamentos. Blanca García-Orea, una de las nutricionistas más influyentes en nuestro país, comparte las claves para entender cómo influyen las bacterias intestinales en tus pensamientos, en tus patrones de conducta y su papel en las enfermedades y en la calidad de vida.",
+    "image": "https://m.media-amazon.com/images/I/51NIo15gsKL._SX260_.jpg",
+    "rating": 4,
+    "price": 18.8,
+    "released": "2020-10-08",
+    "language": "español"
+  },
+  {
+    "name": "DOLOR CRONICO: LA CLAVE PARA TU RECUPERACION",
+    "author": "GEORGIE OLDFIELD",
+    "genre": [
+      "comida"
+    ],
+    "category": "todos",
+    "pages": 248,
+    "publisher": "MANDALA EDICIONES",
+    "description": "El dolor crónico sí puede curarse, y sin necesidad de medicamentos, terapias o cirugía. Este necesita un abordaje diferente al usado en el dolor agudo, en el que se tengan en cuenta los nuevos avances de las neurociencias del dolor, y la demostrada relación que tiene el dolor con nuestras emociones y el estrés. Escrito por una importante fisioterapeuta británica y especialista en dolor crónico, este libro revela cómo una dolencia, por muy física y debilitante que sea, puede ser causada por el propio cerebro como consecuencia de no saber lidiar con nuestras propias emociones. Es un libro que empodera, en el que se explican los resultados de las investigaciones que sostienen este modelo de tratamiento, describe una docena de testimonios y sobre todo proporciona las herramientas prácticas para ayudarle a identificar la causa de su dolor y le pone en el camino que conduce al alivio de una vez por todas..",
+    "image": "https://www.editorialdilema.com/images/osteopatia/9788416765973-dolor-cronico-la-clave-para-tu-recuperacion_0_225.jpg",
+    "rating": 4,
+    "price": 16.8,
+    "released": "2020-12-10",
+    "language": "español"
+  },
+  {
+    "name": "PIERDE GRASA CON COMIDA REAL",
+    "author": "CARLOS RIOS",
+    "genre": [
+      "comida"
+    ],
+    "category": "todos",
+    "pages": 320,
+    "publisher": "PAIDOS IBERICA",
+    "description": "Carlos Ríos ha conseguido que miles de personas salgan de Matrix y se apunten al movimiento Realfooding para eliminar definitivamente de su dieta el consumo de ultraprocesados y vuelvan a comer comida real. Sin embargo, los problemas de sobrepeso y obesidad siguen afectando a una gran parte de la población y ello también redunda en nuestra salud.",
+    "image": "https://www.planetadelibros.com.co/usuaris/libros/fotos/349/m_libros/348936_portada_pierde-grasa-con-comida-real_carlos-rios_202202091713.jpg",
+    "rating": 4,
+    "price": 17.5,
+    "released": "2022-03-16",
+    "language": "español"
+  },
+  {
+    "name": "PREPARADOS, LISTOS, ¡ÑAM!",
+    "author": "LAURA ÁLVAREZ",
+    "genre": [
+      "comida"
+    ],
+    "category": "todos",
+    "pages": 200,
+    "publisher": "ESPASA LIBROS",
+    "description": "Proporcionar a nuestros pequeños la mejor alimentación posible es determinante para una buena salud presente y futura. Además, la infancia es una etapa clave para forjar unos sanos hábitos alimentarios y empezar una relación positiva con la comida. ",
+    "image": "https://m.media-amazon.com/images/I/41Bkvvkxh3L.jpg",
+    "rating": 4,
+    "price": 17.5,
+    "released": "2022-09-07",
+    "language": "español"
+  },
+  {
+    "name": "NUTRICION DEPORTIVA: GUIA PRACTICA",
+    "author": "LAURA ÁLVAREZ",
+    "genre": [
+      "comida"
+    ],
+    "category": "todos",
+    "pages": 192,
+    "publisher": "TUTOR",
+    "description": "Escrito por especialistas, este libro pone al día a los deportistas y entrenadores en los últimos descubrimientos científicos en nutrición, ofreciéndoles consejos prácticos para que tengan el impacto más beneficioso en el rendimiento deportivo.",
+    "image": "https://www.edicionestutor.com/wp-content/uploads/2016/05/1-Gu%C3%ADa-pr%C3%A1ctica-de-nutrici%C3%B3n-deportiva-978-84-7902-878-7.jpg",
+    "rating": 4,
+    "price": 17.10,
+    "released": "2011-05-05",
+    "language": "español"
+  },
+  {
+    "name": "EL EFECTO FRANKENSTEIN (PREMIO EDEBE DE LITERATURA JUVENIL 2019)",
+    "author": "ELIA BARCELO",
+    "genre": [
+      "comida"
+    ],
+    "category": "todos",
+    "pages": 336,
+    "publisher": "EDEBE",
+    "description": "Una intriga en la que confluyen los géneros de novela policíaca y gótica. Todo comienza cuando el joven Max se despierta en una casa en ruinas; su cuerpo está cruzado por enormes cicatrices que evidencian que ha sido atendido por un cirujano, pero él no recuerda nada. Nora estudia Medicina en la ciudad alemana de Ingolstadt y esa misma noche de Carnaval conoce a Max cuando ambos salvan a una niña de morir ahogada en el Danubio. La atracción es inmediata. El problema es que pertenecen a épocas distintas",
+    "image": "https://kbimages1-a.akamaihd.net/d08bfb9e-d01c-4d56-8d4c-a807d9f7a494/1200/1200/False/el-efecto-frankenstein-premio-edebe-2019-de-literatura-juvenil.jpg",
+    "rating": 4,
+    "price": 10.5,
+    "released": "2019-02-28",
+    "language": "español"
+  },
+  {
+    "name": "LAS LAGRIMAS DE SHIVA (PREMIO EDEBE 2002 DE LITERATURA JUVENIL) ( 7ª ED.)",
+    "author": "CESAR MALLORQUI",
+    "genre": [
+      "ocio - tiempo libre"
+    ],
+    "category": "16+",
+    "pages": 240,
+    "publisher": "EDEBE",
+    "description": "En cierta ocasión, hace ya mucho tiempo, vi un fantasma. Sí, un espectro, una aparición, un espíritu; lo puedes llamar como quieras, el caso es que lo vi. Ocurrió el mismo año en que el hombre llegó a la Luna y, aunque hubo momentos en los que pasé mucho miedo, esta historia no es lo que suele llamarse una novela de terror. --Todo comenzó con un enigma: el misterio de un objeto muy valioso que estuvo perdido durante siete décadas. Las Lágrimas de Shiva, así se llamaba ese objeto extraviado. A su alrededor tuvieron lugar venganzas cruzadas, y amores prohibidos, y extrañas desapariciones.--Hubo un fantasma, sí, y un viejo secreto oculto en las sombras, pero también hubo mucho más.",
+    "image": "https://imagessl4.casadellibro.com/a/l/t1/44/9788496352544.jpg",
+    "rating": 4,
+    "price": 10.5,
+    "released": "2005-04-21",
+    "language": "español"
+  },
+  {
+    "name": "BIOGRAFÍA DEL SILENCIO",
+    "author": "PABLO D ORS",
+    "genre": [
+      "ocio - tiempo libre"
+    ],
+    "category": "16+",
+    "pages": 112,
+    "publisher": "GALAXIA GUTENBERG",
+    "description": "Basta un año de meditación perseverante, o incluso medio, para percatarse de que se puede vivir de otra forma. La meditación agrieta la estructura de nuestra personalidad hasta que, de tanto meditar, la grieta se ensancha y la vieja personalidad se rompe y, como una flor, comienza a nacer una nueva. Meditar es asistir a este fascinante y tremendo proceso de muerte y renacimiento. Poco más de un centenar de páginas de inaudita intensidad que nos ayudan a comprender la importancia de esa humilde pero profunda virtud que es la atención. Un libro tan pequeño como exquisito que recoge una obstinada búsqueda de sí mismo. Tras conocer a Franz Jalics -su maestro- y en respuesta a los miles de lectores que le escribieron para comentarle y agradecerle su Biografía del silencio, Pablo d'Ors funda en 2014 la asociación Amigos del Desierto, cuyo propósito es profundizar y promover la práctica contemplativa.",
+    "image": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9788/4179/9788417971717.jpg",
+    "rating": 4,
+    "price": 11.35,
+    "released": "2005-04-21",
+    "language": "español"
+  },
+  {
+    "name": "SANATE TU MISMO: MINDFULNESS EN MEDICINA",
+    "author": "SAKI SANTORELLI",
+    "genre": [
+      "ocio - tiempo libre"
+    ],
+    "category": "16+",
+    "pages": 350,
+    "publisher": "KAIROS",
+    "description": "En la actualidad, disfrutamos de extraordinarios avances tecnológicos en el diagnóstico y tratamiento de las enfermedades, al tiempo que estamos aprendiendo a asumir una mayor responsabilidad en nuestra propia salud y bienestar. En Sánate tú mismo, Saki Santorelli, director de la prestigiosa Clínica de Reducción del Estrés de Massachusetts, explora las antiguas raíces de la medicina y nos muestra el modo de introducir el mindfulness en el crisol de la relación terapéutica. Su enfoque revoluciona la dinámica existente entre profesionales y pacientes, ahondando en la transformación que tiene lugar en este proceso alquímico. Santorelli comparte con nosotros su propio viaje personal a través del mindfulness y su fascinante implicación en las vidas de los pacientes.",
+    "image": "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9788/4179/9788417971717.jpg",
+    "rating": 4,
+    "price": 11.35,
+    "released": "2017-04-26",
+    "language": "español"
+  },
+  {
+    "name": "INTERNATIONAL ENGLISH B2+ WORKBOOK (2ª EDICION)",
+    "author": "(edición en inglés)",
+    "genre": [
+      "ocio - tiempo libre"
+    ],
+    "category": "16+",
+    "pages": 350,
+    "publisher": "BURLINGTON BOOKS",
+    "description": "INTERNATIONAL ENGLISH B1 WORKBOOK es un libro del autor AA.VV. editado por BURLINGTON. INTERNATIONAL ENGLISH B1 WORKBOOK tiene un código de ISBN 9925-30-503-9, de la colección DISCOVER ESO y consta de 154 Páginas..",
+    "image": "https://pictures.abebooks.com/isbn/9789963273799-es.jpg",
+    "rating": 4,
+    "price": 11.35,
+    "released": "2017-04-26",
+    "language": "INGLÉS"
+  },
+  {
+    "name": "INTERNATIONAL ENGLISH B2+ WORKBOOK (1ª EDICION)",
+    "author": "(edición en inglés)",
+    "genre": [
+      "ocio - tiempo libre"
+    ],
+    "category": "16+",
+    "pages": 350,
+    "publisher": "BURLINGTON BOOKS",
+    "description": "INTERNATIONAL ENGLISH B1 WORKBOOK es un libro del autor AA.VV. editado por BURLINGTON. INTERNATIONAL ENGLISH B1 WORKBOOK tiene un código de ISBN 9925-30-503-9, de la colección DISCOVER ESO y consta de 154 Páginas.",
+    "image": "https://www.pasajeslibros.com/static/img/portadas/_visd_0001JPG0CY52.jpg",
+    "rating": 4,
+    "price": 11.35,
+    "released": "2020-03-11",
+    "language": "INGLÉS"
+  },
+  {
+    "name": "VIDA, LA GRAN HISTORIA",
+    "author": "JUAN LUIS ARSUAGA",
+    "genre": [
+      "biología"
+    ],
+    "category": "16+",
+    "pages": 592,
+    "publisher": "DESTINO",
+    "description": "El mayor viaje a la vida desde su aparición en la Tierra hasta hoy, contado por su mayor conocedor. Juan Luis Arsuaga, el investigador de los yacimientos de la sierra de Atapuerca. Su libro más ambicioso después deLa especie elegida.",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71TX1z2fsBL.jpg",
+    "rating": 2,
+    "price": 11.35,
+    "released": "2022-02-03",
+    "language": "español"
+  },
+  {
+    "name": "GENÉTICA. UN ENFOQUE CONCEPTUAL",
+    "author": "BENJAMIN A. PIERCE",
+    "genre": [
+      "biología"
+    ],
+    "category": "16+",
+    "pages": 915,
+    "publisher": "PANAMERICANA",
+    "description": "Cuenta con más de veinte años de trayectoria y esta nueva edición se presenta totalmente actualizada. Ofrece numerosas herramientas pedagógicas para el estudiante, como recuadros con las ideas importantes, ilustraciones, resúmenes de conceptos y preguntas de evaluación, con sus respuestas al final del capítulo, etc. Tiene un sitio web propio, pensado para estudiantes y docentes, que incluye: animaciones de los procesos claves de la genética, preguntas de autoevaluación con sus respuestas, las ilustraciones del libro, así como un banco de preguntas de opción múltiple.",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41cCr5Zc4zL.jpg",
+    "rating": 4,
+    "price": 103.5,
+    "released": "2020-12-02",
+    "language": "español"
+  },
+  {
+    "name": "GENES DE COLORES",
+    "author": "LLUIS MONTOLIU, JESUS ROMERO",
+    "genre": [
+      "biología"
+    ],
+    "category": "16+",
+    "pages": 232,
+    "publisher": "PANAMERICANA",
+    "description": "El color de la piel es un carácter que no debería tener más connotaciones que las puramente descriptivas y fisiológicas, pero con demasiada frecuencia a lo largo de la historia ha sido un desgraciado motivo de discriminación, persecución, ataques o muertes. Resulta inaudito comprobar que apenas unas pocas variaciones genéticas en unos cuantos genes, que tienen un impacto evidente en nuestro aspecto externo, ayuden a determinadas personas al éxito social y condenen a otras al ostracismo, o incluso supongan un claro peligro para sus vidas.",
+    "image": "https://img.txalaparta.eus/Articulos/med/Genes-de-colores.jpg",
+    "rating": 5,
+    "price": 27.4,
+    "released": "2022-04-06",
+    "language": "español"
+  },
+  {
+    "name": "DISFRUTAR EN LA NATURALEZA",
+    "author": "JOSE LUIS GALLEGO",
+    "genre": [
+      "biología"
+    ],
+    "category": "16+",
+    "pages": 256,
+    "publisher": "ALIANZA EDITORIAL",
+    "description": "Compendio de recuerdos y reflexiones sobre lugares, especies animales o vegetales, épocas del año y actividades en la naturaleza y nos hace partícipes de todos esos momentos únicos para animarnos a disfrutar de la naturaleza, y por supuesto, conservarla.",
+    "image": "https://www.alianzaeditorial.es/imagenes/libros/grande/9788491811701-disfrutar-en-la-naturaleza.jpg",
+    "rating": 5,
+    "price": 27.4,
+    "released": "2018-05-31",
+    "language": "español"
+  },
+  {
+    "name": "LA MUERTE CONTADA POR UN SAPIENS A UN NEANDERTAL",
+    "author": "JUAN JOSE MILLAS, JUAN LUIS ARSUAGA",
+    "genre": [
+      "biología"
+    ],
+    "category": "16+",
+    "pages": 312,
+    "publisher": "ALFAGUARA",
+    "description": "Compendio de recuerdos y reflexiones sobre lugares, especies animales o vegetales, épocas del año y actividades en la naturaleza y nos hace partícipes de todos esos momentos únicos para animarnos a disfrutar de la naturaleza, y por supuesto, conservarla.",
+    "image": "https://imagessl2.casadellibro.com/a/l/t5/52/9788420461052.jpg",
+    "rating": 4,
+    "price": 17.5,
+    "released": "2022-02-01",
+    "language": "español"
+  },
+  {
+    "name": "DAMIAN",
+    "author": "ALEX MIREZ",
+    "genre": [
+      "juvenil"
+    ],
+    "category": "16+",
+    "pages": 472,
+    "publisher": "DEJAVU EDICIONES - NOVA CASA EDITORIAL",
+    "description": "Padme ha vivido durante toda su vida en el pueblo de Asfil. Es una chica normal, buena. O eso parece. En el fondo tiene varios secretos, y uno de ellos se llama Damián. Es su peculiar vecino, que siempre le dio la impresión de estar ocultando algo y a quien ella trató de descifrar sin éxito. Un día, Damián desaparece y su vida sigue un curso corriente, pero meses después vuelve, y con él regresa la peligrosa curiosidad que Padme tanto intentó reprimir. Ella decide, finalmente, seguirlo.",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61iOugQFnGL.jpg",
+    "rating": 4,
+    "price": 18.5,
+    "released": "2022-06-09",
+    "language": "español"
+  },
+  {
+    "name": "TODO ES FUEGO (DE ARMAS TOMAR 2)",
+    "author": "ELEANOR RIGBY",
+    "genre": [
+      "juvenil"
+    ],
+    "category": "16+",
+    "pages": 496,
+    "publisher": "B DE BOLSILLO",
+    "description": "Las vidas de ambos han cambiado cuando se reencuentran en un crucero. Dácil no esperaba encontrarse con el chico al que lleva intentando olvidar un año entero. Thiago no sospechaba que volvería a ver los ojos de la chica que le tocó el corazón. En teoría deberían estar acostumbrados al otro, pero hay demasiados asuntos pendientes entre los dos y ninguno ha enterrado el hacha de guerra. Hasta que llega el nuevo acuerdo. Pero jugar con fuego siempre es peligroso...",
+    "image": "https://m.media-amazon.com/images/I/51wSI3udsGL.jpg",
+    "rating": 4,
+    "price": 9.45,
+    "released": "2022-07-07",
+    "language": "español"
+  },
+  {
+    "name": "LA CASA EN EL MAR MAS AZUL",
+    "author": "TJ KLUNE",
+    "genre": [
+      "juvenil"
+    ],
+    "category": "16+",
+    "pages": 496,
+    "publisher": "PLANETA",
+    "description": "Trabajo, trabajo y más trabajo. Linus Baker podría ser una persona cualquiera, en un lugar cualquiera, viviendo una vida cualquiera. Él estaba convencido de esto, y si tú lo hubieras conocido, tampoco habrías dudado en asegurar que Linus pertenecía al montón, ni más, ni menos. Y así era, hasta el día en que este funcionario del Departamento de Jóvenes Mágicos es llamado por Altísima Dirección para supervisar un orfanato del que apenas hay registros.",
+    "image": "https://www.planetadelibros.com/usuaris/libros/fotos/346/m_libros/portada_la-casa-en-el-mar-mas-azul_tj-klune_202203161729.jpg",
+    "rating": 4,
+    "price": 18,
+    "released": "2022-07-07",
+    "language": "español"
+  },
+  {
+    "name": "EL DESPERTAR DEL FUEGO (DESTINO: LA SAGA WINX 2)",
+    "author": "SARAH REES BRENNAN",
+    "genre": [
+      "juvenil"
+    ],
+    "category": "16+",
+    "pages": 304,
+    "publisher": "MOLINO",
+    "description": "Es primavera y la directora Dowling está organizando la jornada de orientación para los estudiantes que asistirán a Alfea el próximo curso. Stella se ofrece para dirigir el comite de bienvenida a los nuevos estudiantes e insiste en que la ayude su novio, Sky. Pero el está preocupado por el mal comportamiento de su compañero de cuarto, el arisco Riven.",
+    "image": "https://editorial.tirant.com/high/9788427277977.jpg",
+    "rating": 4,
+    "price": 17.1,
+    "released": "2022-07-07",
+    "language": "español"
+  },
+  {
+    "name": "LA TRILOGIA DE LA NIEBLA (CONTIENE: EL PRINCIPE DE LA NIEBLA; EL PALACIO DE LA MEDIANOCHE; LAS LUCES DE SEPTIEMBRE)",
+    "author": "CARLOS RUIZ ZAFON",
+    "genre": [
+      "juvenil"
+    ],
+    "category": "16+",
+    "pages": 880,
+    "publisher": "PLANETA",
+    "description": "Todo el misterio y las emociones del primer Carlos Ruiz Zafón. En una misteriosa casa de la costa atlántica, lejos del Londres amenazado por la guerra, Max va a descubrir que los desafíos del presente a menudo tienen su razón de ser en pactos inconfesables sellados mucho tiempo atrás, donde habitan seres como El Príncipe de la Niebla.",
+    "image": "https://imagessl3.casadellibro.com/a/l/t5/03/9788408176503.jpg",
+    "rating": 4,
+    "price": 15.5,
+    "released": "2017-03-10",
+    "language": "español"
+  },
+  {
+    "name": "DEMIAN: HISTORIA DE LA JUVENTUD DE EMIL SINCLAIR",
+    "author": "HERMANN HESSE",
+    "genre": [
+      "juvenil"
+    ],
+    "category": "16+",
+    "pages": 192,
+    "publisher": "ALIANZA EDITORIAL",
+    "description": "Escrita tras las trágicas experiencias de la Gran Guerra, Demian es una de las obras más emblemáticas de Hermann Hesse (1877-1962). La novela -en la que late la repulsa de la sociedad burguesa y masificada y el llamamiento a los elegidos (los que llevan en su frente el «estigma de Caín») para conquistar la autenticidad y emprender la reconstrucción comunitaria de la humanidad- narra, como reza su subtítulo, la «historia de la juventud» de Emil Sinclair, quien, en ruptura con el mundo claro y seguro de su infancia, va a la busca de su personalidad y de su destino, sólo realizables en el mundo oscuro, incierto y amenazador de los adultos.",
+    "image": "https://imagessl3.casadellibro.com/a/l/t5/03/9788408176503.jpg",
+    "rating": 4,
+    "price": 11.35,
+    "released": "2011-01-17",
+    "language": "español"
+  },
+  {
+    "name": "GUIA TERAPEUTICA EN INTENSIVOS PEDIATRICOS (7ª ED.)",
+    "author": "CARMINA GUITART, FRANCISCO JOSE CAMBRA",
+    "genre": [
+      "medicina"
+    ],
+    "category": "16+",
+    "pages": 288,
+    "publisher": "ALIANZA EDITORIAL",
+    "description": "Una nueva edición de esta Guía que se ha convertido en referente de la consulta rápida entre los especialistas de cuidados intensivos pediátricos. La Guía ha ido evolucionando y mejorando, manteniendo el espíritu original de su origen de ofrecer una versión de bolsillo de los protocolos de la Unidad. Los cuidados críticos pediátricos constituyen la subespecialidad más dinámica de la pediatría, no solo en términos de fisiopatología de la enfermedad y su manejo, sino también en términos de actualización de conocimientos. Con la aparición de nuevas evidencias se hace necesario mantener el ritmo de actualización.",
+    "image": "https://www.popularlibros.com/imagenes.webp_peq/9788418/978841857698.webp",
+    "rating": 4,
+    "price": 16.5,
+    "released": "2022-04-11",
+    "language": "español"
+  },
+  {
+    "name": "EL ESPEJO DEL CEREBRO",
+    "author": "NAZARETH CASTELLANOS",
+    "genre": [
+      "medicina"
+    ],
+    "category": "16+",
+    "pages": 288,
+    "publisher": "LA HUERTA GRANDE",
+    "description": "Conocer el cerebro es el gran reto de la neurociencia, y se podría decir que es uno de los grandes retos de nuestro tiempo. La autora de este ensayo nos invita a ha- cerlo a través de su experiencia científica en laboratorios y su continua búsqueda de conocimiento en áreas, todas interco- nectadas, como la medicina, la filosofía o la espiritualidad. Este libro recoge los resultados de la neurociencia de la me- ditación donde se muestran los cambios cerebrales que suceden cuando tenemos una actitud atenta y consciente. Estas investigaciones nos invitan a conocer los obstáculos de la mente y a recordar que la biología nos permite moldearnos y ser escultores de nuestro propio cerebro",
+    "image": "https://images.cdn2.buscalibre.com/fit-in/360x360/8e/8e/8e8e4dd2ae52b381a2a6e3df4848d5f7.jpg",
+    "rating": 4,
+    "price": 11.4,
+    "released": "2021-04-07",
+    "language": "español"
+  },
+  {
+    "name": "9 MESES DESDE DENTRO",
+    "author": "EDUARD GRATACOS SOLSONA",
+    "genre": [
+      "medicina"
+    ],
+    "category": "16+",
+    "pages": 384,
+    "publisher": "PLANETA",
+    "description": "9 meses desde dentro es un diario del embarazo que te ayudará a conocer mejor cada una de les cuarenta semanas de gestación y te emocionará con el sorprendente relato de la evolución de la primera célula en su maravilloso trayecto de feto a bebé.",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71+jhEVER-L.jpg",
+    "rating": 4,
+    "price": 9.4,
+    "released": "2021-04-07",
+    "language": "español"
+  },
+  {
+    "name": "EL PODER DE CREAR VIDA",
+    "author": "PAULA CAMAROS",
+    "genre": [
+      "medicina"
+    ],
+    "category": "16+",
+    "pages": 480,
+    "publisher": "PLANETA",
+    "description": "La información es poder y, en este caso, calma al afrontar el que será uno de los mayores retos de tu vida. El embarazo y la maternidad son deseados por muchas mujeres, pero en la era de la información seguimos desconociendo muchísimas de las realidades que rodean a este proceso.",
+    "image": "https://www.planetadelibros.com/usuaris/libros/fotos/347/m_libros/portada_el-poder-de-crear-vida_paula-camaros-ruiz_202202221620.jpg",
+    "rating": 4,
+    "price": 18.9,
+    "released": "2022-03-23",
+    "language": "español"
+  },
+  {
+    "name": "LO PRIMERO, LA VIDA",
+    "author": "DAVID CALLEJO",
+    "genre": [
+      "medicina"
+    ],
+    "category": "16+",
+    "pages": 288,
+    "publisher": "PLANETA",
+    "description": "La medicina es un camino profundamente vocacional, pero para David Callejo fue casi una casualidad. Ahora, apenas unos años después, ocupa un puesto reservado a los mejores en uno de los hospitales referencia del país, el Gregorio Marañón, y se ha convertido en el médico más seguido y comentado de las redes sociales.",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/41CwX3QgaAL._SX342_SY445_QL70_ML2_.jpg",
+    "rating": 4,
+    "price": 17.3,
+    "released": "2022-01-12",
+    "language": "español"
+  },
+  {
+    "name": "DE LA EUFORIA A LA TRISTEZA",
+    "author": "FRANCESC COLOM I VICTORIANO",
+    "genre": [
+      "medicina"
+    ],
+    "category": "16+",
+    "pages": 396,
+    "publisher": "LA ESFERA DE LOS LIBROS",
+    "description": "Como si de una montaña rusa se tratara, quien padece un trastorno bipolar vive debatiéndose entre la euforia y la tristeza, entre la manía y la depresión. Esta enfermedad psiquiátrica, una de las más comunes, afecta a los mecanismos cerebrales encargados de regular el estado de ánimo. No se trata de un simple cambio de carácter, sino de algo mucho más complejo que requiere tratamiento.",
+    "image": "https://www.esferalibros.com/wp-content/uploads/2021/04/principal-portada-de-la-euforia-a-la-tristeza-es-1-630x1024.jpg",
+    "rating": 4,
+    "price": 9.4,
+    "released": "2020-01-08",
+    "language": "español"
+  },
+  {
+    "name": "PRINCIPIOS PARA ENFRENTARSE AL NUEVO ORDEN MUNDIAL",
+    "author": "RAY DALIO",
+    "genre": [
+      "política"
+    ],
+    "category": "16+",
+    "pages": 672,
+    "publisher": "DEUSTO",
+    "description": "Los tiempos que vienen serán radicalmente diferentes a los que hemos vivido hasta ahora, pero se parecerán mucho a otras etapas de la historia. Esta es la principal conclusión a la que ha llegado el experto inversor Ray Dalio, después de un titánico estudio de episodios análogos al presente en los últimos quinientos años: los ciclos históricos siempre han sido muy similares entre ellos.",
+    "image": "https://imagessl0.casadellibro.com/a/l/t5/90/9788423433490.jpg",
+    "rating": 4,
+    "price": 23.5,
+    "released": "2020-01-08",
+    "language": "español"
+  },
+  {
+    "name": "ECONOMÍA EN UNA LECCIÓN",
+    "author": "HENRY HAZLITT",
+    "genre": [
+      "política"
+    ],
+    "category": "16+",
+    "pages": 240,
+    "publisher": "UNION EDITORIAL",
+    "description": "Este libro en su ya octava edición es un brillante análisis de los sofismas económicos que en los últimos tiempos se han convertido en una nueva ortodoxia, a pesar de sus internas contradicciones. Actualmente, no existe en el mundo un solo gobierno importante cuya política económica no se halle influida, cuando no totalmente determinada, por alguno de estos sofismas.",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61uW1JzSwuL.jpg",
+    "rating": 4,
+    "price": 11.86,
+    "released": "2019-06-05",
+    "language": "español"
+  },
+  {
+    "name": "PRINCIPIOS DE ECONOMIA POLITICA",
+    "author": "CARL MENGER",
+    "genre": [
+      "política"
+    ],
+    "category": "16+",
+    "pages": 450,
+    "publisher": "UNION EDITORIAL",
+    "description": "La labor -crucial— de Mcngcr en la historia del pensamiento económico se desarrolló en una doble vertiente. Por un lado, en el enfoque subjetivista c individualista -el ijidividualismo metodológico— de la teoría del valor y de los precios y, en general, de las diversas categorías económicas. Fruto de este enfoque fueron sus Principios de Economía Política que, junto con la Theory of Political Economy de Jevons (Walras vino más tarde), constituyeron el arranque de lo que se ha dado en llamar la revolución margmalista en la teoría económica.",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71umag3EsHL.jpg",
+    "rating": 4,
+    "price": 23.71,
+    "released": "2020-09-02",
+    "language": "español"
+  },
+  {
+    "name": "CAPITALISME I DEMOCRÀCIA 1756-1848",
+    "author": "JOSEP FONTANA",
+    "genre": [
+      "política"
+    ],
+    "category": "16+",
+    "pages": 216,
+    "publisher": "LABUTXACA",
+    "description": "Capitalisme i democràcia 1756-1848, l'obra pòstuma de l'historiador Josep Fontana, és una anàlisi crítica dels inicis del capitalisme i una denúncia en tota regla de la desigualtat social. Amb un subtítol revelador i contundent, Com va començar aquest engany, les seves reflexions se centren a explicar les causes d?un dels problemes actuals més greus i que amenaça el futur de les nostres societats: la desigualtat social creixent. Fontana aprofundeix en els orígens del capitalisme quan, a cavall del segle XVIII i XIX, es van forjar els mecanismes d?un sistema econòmic que ha tingut en el segle XXI un avenç depredador i imparable, i desemmascara les regles del joc que han portat a l?actual situació social global injusta. En definitiva, una reflexió historiogràfica rigorosa, un cop de puny i un crit d?alerta.",
+    "image": "https://m.media-amazon.com/images/I/31cH5DOib-L.jpg",
+    "rating": 4,
+    "price": 9.45,
+    "released": "2021-01-27",
     "language": "español"
   }
 ]
