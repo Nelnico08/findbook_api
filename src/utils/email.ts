@@ -41,25 +41,3 @@ export let sendEmail = (email: string, name:string, message: string, subject: st
             console.log(err.message)
         })
 };
-
-export const forEmail = async(req:Request, res:Response, next: NextFunction) => {
-    const user_id = req.user_id;
-    const subject = req.body.params;
-    let message: string | undefined = undefined;
-
-    try {
-        const user = await Usuario.findByPk(user_id);
-
-        if(user){
-            if(subject === "pago"){
-                message= "Su pago ha sido aceptado"
-                sendEmail(user.email, user.name, message, subject)
-                return res.send("mensage enviado")
-            }
-        }else{
-            return res.send("no se encontro al usuario")
-        }
-    } catch (error) {
-        next(error)
-    }
-}
