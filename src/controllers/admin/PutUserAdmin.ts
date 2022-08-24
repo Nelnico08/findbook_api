@@ -5,6 +5,7 @@ import { banAccont, permaBanAccont } from '../../utils/messages';
 import { Libros } from '../../models/Libros';
 import { CarritoLibros } from '../../models/CarritoLibros';
 import { Carrito } from '../../models/Carrito';
+import { FavoritosLibros } from '../../models/FavoritosLibros';
 
 export const putUserAdmin = async (
     req: Request,
@@ -36,6 +37,7 @@ export const putUserAdmin = async (
                 await Libros.update({statusBook: 'false'},{where:{User_id: user.id}})
                 await CarritoLibros.destroy({where:{carrito_id:carrito?.id}})
                 await Promise.all(libros.map(b=> CarritoLibros.destroy({where:{libro_id:b.id}})))
+                await Promise.all(libros.map(bk=>FavoritosLibros.destroy({ where: { libro_id: bk.id } })))
                 const subject= "Cuenta suspendida";
                 const message= banAccont.replace("{EMAIL}", `${user.email}`);
                 sendEmail(user.email, user.name, message, subject)
@@ -48,6 +50,7 @@ export const putUserAdmin = async (
                 await Libros.update({statusBook: 'false'},{where:{User_id: user.id}})
                 await CarritoLibros.destroy({where:{carrito_id:carrito?.id}})
                 await Promise.all(libros.map(b=> CarritoLibros.destroy({where:{libro_id:b.id}})))
+                await Promise.all(libros.map(bk=>FavoritosLibros.destroy({ where: { libro_id: bk.id } })))
                 const subject= "Cuenta suspendida permanentemente";
                 const message= permaBanAccont.replace("{EMAIL}", `${user.email}`);
                 sendEmail(user.email, user.name, message, subject)
