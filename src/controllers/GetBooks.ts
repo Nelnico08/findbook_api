@@ -30,6 +30,7 @@ export const getBooks = async (
           name: {
             [Op.iLike]: `%${name}%`,
           },
+          statusBook: 'true'
         },
         include: {
           model: Generos,
@@ -44,6 +45,7 @@ export const getBooks = async (
       });
     } else {
       books = await Libros.findAndCountAll({
+        where:{statusBook:'true'},
         include: {
           model: Generos,
           attributes: ['genre'],
