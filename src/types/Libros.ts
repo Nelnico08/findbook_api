@@ -1,5 +1,5 @@
 export type category = 'todos' | '12+' | '16+' | '18+' | 'sin clasificación';
-
+export type statusBook = 'true'|'false';
 export interface iLibros {
   id?: number;
   name: string;
@@ -14,4 +14,5 @@ export interface iLibros {
   released: string;
   language: string;
   User_id?: number
+  statusBook?: statusBook;
 }

@@ -7,8 +7,9 @@ import {
   ForeignKey,
   HasMany,
   BelongsTo,
+  Default,
 } from 'sequelize-typescript';
-import { category, iLibros } from '../types/Libros';
+import { category, iLibros, statusBook } from '../types/Libros';
 import { Carrito } from './Carrito';
 import { CarritoLibros } from './CarritoLibros';
 import { Comentarios } from './Comentarios';
@@ -53,6 +54,10 @@ export class Libros extends Model<iLibros> {
 
   @Column
   language!: string;
+
+  @Default('true')
+  @Column
+  statusBook!: statusBook;
 
   @ForeignKey(() => Items)
   Items_id!: number

@@ -33,6 +33,9 @@ export const getGenres = async (
       },
       include: {
         model: Libros,
+        where:{
+          statusBook: 'true'
+        }
       },
       distinct: true,
       limit: contentSize,

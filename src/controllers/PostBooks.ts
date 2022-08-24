@@ -24,7 +24,7 @@ export const PostBooks = async (
         price: book.price,
         released: book.released,
         language: book.language,
-        User_id: user_id,
+        User_id: user_id
     });
 
     const getGenres = req.body.genre.map(

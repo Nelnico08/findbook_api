@@ -2,6 +2,9 @@ import { NextFunction, Request, Response } from 'express';
 import { Usuario } from '../../models/Usuario';
 import { sendEmail } from '../../utils/email';
 import { deleteAccount } from '../../utils/messages';
+import { Libros } from '../../models/Libros';
+import { Carrito } from '../../models/Carrito';
+import { CarritoLibros } from '../../models/CarritoLibros';
 
 const bcrypt = require('bcrypt');
 
@@ -26,6 +29,11 @@ export const deleteUser = async (
         await user.update({
             status: 'deleted'
         })
+        const carrito = await Carrito.findOne({where: {userid:user.id}})
+        const libros = await Libros.findAll({where:{User_id: user.id}})
+        await Libros.update({statusBook: 'false'},{where:{User_id: user.id}})
+        await CarritoLibros.destroy({where:{carrito_id:carrito?.id}})
+        await Promise.all(libros.map(b=> CarritoLibros.destroy({where:{libro_id:b.id}})))
         const message= deleteAccount.replace("{EMAIL}", `${user.email}`)
         sendEmail(user.email, user.name, message, subject)
 
