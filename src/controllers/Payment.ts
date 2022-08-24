@@ -114,21 +114,6 @@ export const paymentInt = async (
             }
           })
         }
-        // async function asyncGenerator(ms:number){
-        //   await new Promise((resolve) => setTimeout(resolve,ms))
-        // }
-        // async function statusCheck(){
-        //   await asyncGenerator(1800000);
-        //   const statusCheck = await Compras.findOne({
-        //     where:{
-        //       id:session.id,
-        //       status: "open"
-        //     }})
-        //   if(statusCheck){
-        //     await Compras.update({status:"expired"},{where:{id:session.id}})
-        //   }
-        // }
-        // statusCheck();
         return res.json({ url: session.url })
       }
       res.json({error: "No se envio data"})
@@ -195,7 +180,7 @@ export const getSessionId = async(req: Request, res: Response, next: NextFunctio
               }
             })
             arrayInfo.forEach(user => {
-              let message = compra.replace("{QUANTITY}", `${user.quantity}`).replace("{BOOKNAME}", `${user.bookName}`).replace("{PRECIO}",`${user.total}`)
+              let message = compra.replace("{QUANTITY}", `${user.quantity}`).replace("{BOOKNAME}", `${user.bookName}`).replace("{PRECIO}",`${user.total}`).replace("{COMPRA_ID}", `${session.id}`)
               let subject = `Venta de libro`
               sendEmail(user.email, user.name, message, subject)
             })
