@@ -28,7 +28,7 @@ export const PostComent = async (req: Request, res: Response, next: NextFunction
         });
         if(book && book.usuario.id !== user_id && userComment){
             const subject= "Comentario en una de tus publicaciones";
-            const message= comment.replace("{USER}", `${book.usuario.name}`).replace("{BOOK}", `${book.name}`).replace("{COMENTARIO}",`${comentario}`);
+            const message= comment.replace("{USER}", `${book.usuario.name}`).replace("{BOOK}", `${book.name}`).replace("{COMENTARIO}",`${comentario}`).replace("{BOOK_ID}", `${book.id}`);
             sendEmail(book.usuario.email, book.usuario.name, message, subject)
         }
         res.json('Comentario agregado correctamente')
