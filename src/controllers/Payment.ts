@@ -59,7 +59,7 @@ export const paymentInt = async (
                 product_data: {
                   name: book.name
                 },
-                unit_amount: book.price * 100
+                unit_amount: Math.floor(book.price * 100)
               },
               quantity: 1,
             }
