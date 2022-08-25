@@ -6,6 +6,7 @@ import { Libros } from '../../models/Libros';
 import { CarritoLibros } from '../../models/CarritoLibros';
 import { Carrito } from '../../models/Carrito';
 import { FavoritosLibros } from '../../models/FavoritosLibros';
+import { status } from '../../types/Usuario';
 
 export const putUserAdmin = async (
     req: Request,
@@ -13,8 +14,8 @@ export const putUserAdmin = async (
     next: NextFunction
 ) => {
     try {
-        const { email } = req.params
-        const { status } = req.body
+        const { email  } = req.params
+        const status  = req.params.status as status
 
         if (status) await Usuario.update({status: status},{where:{email:email}})
         const user = await Usuario.findOne({where:{email}});
