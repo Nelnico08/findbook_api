@@ -16,7 +16,7 @@ router.get('/usersDetail', [verifyToken, verifyAdmin], getUser)
 router.get('/books', [verifyToken, verifyAdmin], getBooks)
 router.put('/putbook/:id', [verifyToken, verifyAdmin], putBookAdmin)
 router.put('/putuser/:email', [verifyToken, verifyAdmin], putUserAdmin)
-router.delete('/deleteuser/:email', [verifyToken, verifyAdmin], deleteUserAdmin)
+router.delete('/deleteuser/:email/:status', [verifyToken, verifyAdmin], putUserAdmin)
 router.delete('/deletebook/:id', [verifyToken, verifyAdmin], deleteBookAdmin);
 router.delete('/deletecomment/:id', [verifyToken, verifyAdmin], deleteComent);
 
