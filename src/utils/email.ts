@@ -15,7 +15,7 @@ export let sendEmail = async (email: string, name:string, message: string, subje
             Messages: [
                 {
                     From: {
-                    Email: "customerfindbooks@gmail.com",
+                    Email: "customerfindbook@gmail.com",
                     Name: "Findbook"
                     },
                     To: [
