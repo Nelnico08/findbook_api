@@ -127,13 +127,17 @@ export const getSessionId = async(req: Request, res: Response, next: NextFunctio
   try {
     const user_id = req.user_id;
     const { session_id } = req.params
-    console.log("session id: ", `${session_id}`)
     const session = await stripe.checkout.sessions.retrieve(`${session_id}`);
-    console.log("session ", session)
-
 
     if(session){
-      if(session.status === "complete"){
+      if(session.status === "expired"){
+        const cartUser = await Compras.findOne({where:{id:session_id, status:"expired"}})
+        if(!cartUser){
+          await Compras.update({status:"expired"}, {where:{id:session_id}})
+        }
+        return res.json("session expirada")
+      }
+      else if(session.status === "complete"){
         //vaciar carrito
         const cartUser = await Carrito.findOne({where:{userid: user_id}})
         if(cartUser){
@@ -193,7 +197,7 @@ export const getSessionId = async(req: Request, res: Response, next: NextFunctio
         return res.send(`Gracias por su compra`)
       }
       else if(session.status === "open"){
-        const cancelSession = await stripe.checkout.sessions.expire(req.query.session_id)
+        const cancelSession = await stripe.checkout.sessions.expire(session_id)
         await Compras.update({status:"expired"}, {where:{id:session.id}})
         if(cancelSession){
           return res.send('El pago no ha sido realizado')
