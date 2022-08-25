@@ -42,7 +42,7 @@ export const paymentInt = async (
             id: book.id,
             name: book.name,
             price: book.price,
-            quantity: item.quantity
+            quantity: 1
           }
         }
       })
@@ -61,7 +61,7 @@ export const paymentInt = async (
                 },
                 unit_amount: book.price * 100
               },
-              quantity: book.quantity,
+              quantity: 1,
             }
           }),
           success_url: `${process.env.APP_URL}/payment/success/{CHECKOUT_SESSION_ID}`,
@@ -97,8 +97,8 @@ export const paymentInt = async (
             })
             if(foundItem){
               await Items.update({
-                quantity: book.quantity,
-                subTotal: book.quantity * book.price
+                quantity: 1,
+                subTotal: book.price
               },
               {where:{
                 compras_id: session.id,
@@ -108,8 +108,8 @@ export const paymentInt = async (
               await Items.create({
                 compras_id: session.id,
                 libro_id: book.id,
-                quantity: book.quantity,
-                subTotal: book.quantity * book.price
+                quantity: 1,
+                subTotal: book.price
               })
             }
           })
@@ -179,14 +179,14 @@ export const getSessionId = async(req: Request, res: Response, next: NextFunctio
             const arrayInfo = items.map((item,index) =>{
               return {
                 total: item.subTotal,
-                quantity: item.quantity,
+                quantity: 1,
                 bookName: booksArray[index].name,
                 email: usersArray[index].email,
                 name: usersArray[index].name
               }
             })
             arrayInfo.forEach(user => {
-              let message = compra.replace("{QUANTITY}", `${user.quantity}`).replace("{BOOKNAME}", `${user.bookName}`).replace("{PRECIO}",`${user.total}`).replace("{COMPRA_ID}", `${session.id}`)
+              let message = compra.replace("{BOOKNAME}", `${user.bookName}`).replace("{PRECIO}",`${user.total}`).replace("{COMPRA_ID}", `${session.id}`)
               let subject = `Venta de libro`
               sendEmail(user.email, user.name, message, subject)
             })
