@@ -5,6 +5,7 @@ import { deleteAccount } from '../../utils/messages';
 import { Libros } from '../../models/Libros';
 import { Carrito } from '../../models/Carrito';
 import { CarritoLibros } from '../../models/CarritoLibros';
+import { FavoritosLibros } from '../../models/FavoritosLibros';
 
 const bcrypt = require('bcrypt');
 
@@ -34,6 +35,7 @@ export const deleteUser = async (
         await Libros.update({statusBook: 'false'},{where:{User_id: user.id}})
         await CarritoLibros.destroy({where:{carrito_id:carrito?.id}})
         await Promise.all(libros.map(b=> CarritoLibros.destroy({where:{libro_id:b.id}})))
+        await Promise.all(libros.map(bk=>FavoritosLibros.destroy({ where: { libro_id: bk.id } })))
         const message= deleteAccount.replace("{EMAIL}", `${user.email}`)
         sendEmail(user.email, user.name, message, subject)
 

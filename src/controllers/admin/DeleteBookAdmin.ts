@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
+import { CarritoLibros } from '../../models/CarritoLibros';
 import { Libros } from '../../models/Libros';
-import { LibrosGeneros } from '../../models/LibrosGeneros';
+import { FavoritosLibros } from "../../models/FavoritosLibros";
 
 export const deleteBookAdmin = async (
     req: Request,
@@ -14,8 +15,9 @@ export const deleteBookAdmin = async (
         if(!book){
             return res.send('Libro no encontrado')
         }
-        await Libros.destroy({ where: { id } });
-        await LibrosGeneros.destroy({ where: { libroid: id } });
+        await Libros.update({statusBook:'false'},{ where: { id } });
+        await CarritoLibros.destroy({ where: { libro_id: book.id } })
+        await FavoritosLibros.destroy({ where: { libro_id: book.id } })
         return res.json('Libro eliminado');
     } catch (err) {
         next(err);

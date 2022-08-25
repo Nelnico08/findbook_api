@@ -59,12 +59,12 @@ $ npm install
   </li>
   <li>
     <label>Emilio Jose  Navarro Chavez</label>
-    <a href="#!">GitHub</a>
+    <a href="https://github.com/Aodak9">GitHub</a>
     <a href="https://www.linkedin.com/in/emilio-jose-navarro-chavez/">LinkedIn</a>
   </li>
   <li>
     <label>Heider Lopez Urrea</label>
-    <a href="#!">GitHub</a>
+    <a href="https://github.com/Pebody-h">GitHub</a>
     <a href="https://www.linkedin.com/in/heider-lopez-b71a09217/">LinkedIn</a>
   </li>
   <li>
