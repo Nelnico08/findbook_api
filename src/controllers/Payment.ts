@@ -127,7 +127,9 @@ export const getSessionId = async(req: Request, res: Response, next: NextFunctio
   try {
     const user_id = req.user_id;
     const { session_id } = req.params
+    console.log("session id: ",session_id)
     const session = await stripe.checkout.sessions.retrieve(session_id);
+    console.log("session ", session)
 
 
     if(session){
