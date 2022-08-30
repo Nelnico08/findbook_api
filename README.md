@@ -9,7 +9,7 @@
 
 ---
 
-The goal of the project is to create a trading platform books. In this repository you will find code related to the backend of the Findbook project, work that was presented as the final project of the SoyHenry Bootcamp. For this part of the project, we used TypeScript, Postgress, Sequelize and Express.js.
+The goal of the project is to create a book trading platform. In this repository you will find code related to the backend of the Findbook project, which was presented as the final project of the SoyHenry Bootcamp. For this part of the project, we used TypeScript, Postgress, Sequelize and Express.js.
 For the Frontend part, check this link [Findbook_Repository](https://github.com/NurCord/FT-FindBook)
 
 
