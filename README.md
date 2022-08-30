@@ -9,16 +9,9 @@
 
 ---
 
-<!-- 🚀 Deploy: [VideoGame Library](https://videogames-nelnico08.vercel.app/) -->
+The goal of the project is to create a trading platform books. In this repository you will find code related to the backend of the Findbook project, work that was presented as the final project of the SoyHenry Bootcamp. For this part of the project, we used TypeScript, Postgress, Sequelize and Express.js.
+For the Frontend part, check this link [Findbook_Repository](https://github.com/NurCord/FT-FindBook)
 
-El objetivo del proyecto es crear una plataforma para comprar y vender libros, nuevos o usados. Mediante la creacion de una cuenta, los usuarios podran hacer comentarios, crear lista de favoritos y, como se ha dicho, comprar y vender libros. Todo esto, utillizando Postgress, Express, Sequelize, React, Redux
-
-<!-- * Search video game by name
-* Enter and get details of a video game.
-* Create a video game (if the minimum fields are completed and with a fully controlled form).
-* Delete a created video game
-* Sort alphabetically
-* Filter by: Genre, Best rating, created/API -->
 
 ## Technologies
 
@@ -26,10 +19,9 @@ El objetivo del proyecto es crear una plataforma para comprar y vender libros, n
 
 A list of technologies used within the project:
 
-- [React](https://es.reactjs.org/): Version 17.0.1
-- [Redux](https://es.redux.js.org/): Version 4.2.0
-- [Express](https://expressjs.com/es/): Version 4.17.1
-- [Sequelize](https://sequelize.org/): Version 6.3.5
+- [TypeScript](https://www.typescriptlang.org/): Version 4.7.4
+- [Express](https://expressjs.com/es/): Version 4.18.1
+- [Sequelize](https://sequelize.org/): Version 6.21.3
 - [PostgreSQL](https://www.postgresql.org/): Version 14
 
 ---
@@ -43,8 +35,10 @@ A little intro about the installation.
 ### Backend:
 
 ```
-$ git clone https://github.com/Nelnico08/findbook_back.git
+$ git clone https://github.com/Nelnico08/findbook_api.git
+$ cd ../path/to/the/file/findbook_api
 $ npm install
+$ npm start
 ```
 
 ## Contact
@@ -55,7 +49,7 @@ $ npm install
   <li>
     <label>César Arturo Catalán Cantillo</label>
     <a href="https://github.com/catalancesar">GitHub</a>
-    <a href="#!">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/c%C3%A9sar-catal%C3%A1n-cantillo-65a050248/">LinkedIn</a>
   </li>
   <li>
     <label>Emilio Jose  Navarro Chavez</label>
@@ -70,7 +64,7 @@ $ npm install
   <li>
     <label>Nelson Escurra</label>
     <a href="https://github.com/Nelnico08">GitHub</a>
-    <a href="https://www.linkedin.com/in/nelson-n-escurra-966a50213/">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/nnescurra/">LinkedIn</a>
   </li>
   <li>
     <label>Nuria Candela Córdoba</label>
@@ -79,7 +73,7 @@ $ npm install
   </li>
   <li>
     <label>Robert Mauricio Castilla Cruz</label>
-    <a href="#!">GitHub</a>
+    <a href="https://github.com/rmauriciocastilla">GitHub</a>
     <a href="https://www.linkedin.com/in/rmauriciocastilla/">LinkedIn</a>
   </li>
 </ul>
